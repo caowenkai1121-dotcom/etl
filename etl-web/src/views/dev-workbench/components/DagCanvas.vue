@@ -1253,7 +1253,7 @@ onUnmounted(() => {
 .minimap-toggle {
   position: absolute;
   bottom: 12px;
-  right: 88px;
+  right: 148px;
   z-index: 25;
   width: 28px;
   height: 28px;
@@ -1277,7 +1277,7 @@ onUnmounted(() => {
 .connector-toggle {
   position: absolute;
   bottom: 12px;
-  right: 122px;
+  right: 182px;
   z-index: 25;
   width: 28px;
   height: 28px;
