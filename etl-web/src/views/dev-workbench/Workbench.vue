@@ -220,10 +220,22 @@
           </template>
         </el-table-column>
         <el-table-column prop="createdBy" label="创建人" width="100" />
-        <el-table-column prop="createdAt" label="创建时间" width="160" />
+        <el-table-column prop="createdAt" label="创建时间" width="160">
+          <template #default="{ row }">
+            {{ formatDateTime(row.createdAt) }}
+          </template>
+        </el-table-column>
         <el-table-column prop="updatedBy" label="最近编辑" width="120" />
-        <el-table-column prop="updatedAt" label="最后编辑时间" width="160" />
-        <el-table-column prop="lastPublishTime" label="发布时间" width="160" />
+        <el-table-column prop="updatedAt" label="最后编辑时间" width="160">
+          <template #default="{ row }">
+            {{ formatDateTime(row.updatedAt) }}
+          </template>
+        </el-table-column>
+        <el-table-column prop="lastPublishTime" label="发布时间" width="160">
+          <template #default="{ row }">
+            {{ formatDateTime(row.lastPublishTime) }}
+          </template>
+        </el-table-column>
         <el-table-column label="操作" width="100" fixed="right">
           <template #default="{ row }">
             <div class="row-actions" @click.stop>
@@ -287,6 +299,15 @@ const searchTaskName = ref('')
 const taskSubType = ref('scheduled')
 const currentPage = ref(1)
 const total = ref(0)
+
+const formatDateTime = (val) => {
+  if (!val) return '-'
+  try {
+    const d = new Date(val)
+    const pad = (n) => String(n).padStart(2, '0')
+    return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`
+  } catch { return String(val) }
+}
 
 // 概览数据
 const overview = ref({
