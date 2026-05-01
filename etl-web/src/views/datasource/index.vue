@@ -431,7 +431,7 @@ const fetchData = async () => {
     const res = await datasourceAPI.getPage(params)
     tableData.value = (res.data?.list || []).map(d => ({
       ...d,
-      poolUsage: d.poolUsage || Math.floor(Math.random() * 70) + 10
+      poolUsage: d.poolUsage ?? 0
     }))
     total.value = res.data?.total || 0
     updateStats()

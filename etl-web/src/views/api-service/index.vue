@@ -317,7 +317,7 @@ const stats = reactive({
 })
 
 const updateStats = () => {
-  stats.totalApis = tableData.value.length
+  stats.totalApis = total.value
   stats.onlineCount = tableData.value.filter(a => a.status === 'ONLINE').length
   stats.todayCalls = tableData.value.reduce((sum, a) => sum + (a.todayCalls || 0), 0)
   if (tableData.value.length > 0) {
@@ -389,9 +389,9 @@ const fetchData = async () => {
     })
     tableData.value = (res.data?.list || []).map(d => ({
       ...d,
-      todayCalls: d.todayCalls || Math.floor(Math.random() * 5000),
-      avgResponseTime: d.avgResponseTime || Math.floor(Math.random() * 200) + 50,
-      successRate: d.successRate || (Math.random() * 3 + 97).toFixed(1)
+      todayCalls: d.todayCalls ?? 0,
+      avgResponseTime: d.avgResponseTime ?? 0,
+      successRate: d.successRate ?? 100
     }))
     total.value = res.data?.total || tableData.value.length
     updateStats()
