@@ -214,7 +214,7 @@
       </div>
 
       <!-- 右侧属性面板 -->
-      <div class="ide-right-panel" :class="{ collapsed: !store.selectedNode || !store.propertyPanelExpanded }">
+      <div class="ide-right-panel" :class="{ collapsed: (store.selectedNode && !store.propertyPanelExpanded) || collapsedByUser }">
         <div class="panel-header" v-if="store.selectedNode && store.propertyPanelExpanded">
           <span class="panel-node-name">
             <el-icon :size="16"><Connection /></el-icon>
@@ -238,6 +238,62 @@
             @delete-node="handleNodeRemove"
             @delete-edge="handleEdgeRemove"
           />
+        </div>
+        <!-- 面板收起时的迷你头 -->
+        <div class="panel-header mini" v-if="!store.selectedNode && collapsedByUser">
+          <el-button link size="small" class="expand-btn-full" @click="collapsedByUser = false">
+            <el-icon :size="14"><Expand /></el-icon>
+          </el-button>
+        </div>
+        <!-- 工作流指引面板 - 当未选中节点时显示 -->
+        <div class="workflow-guide" v-if="!store.selectedNode && !collapsedByUser">
+          <div class="guide-header">
+            <span class="guide-title">操作指引</span>
+            <el-button link size="small" @click="collapsedByUser = true">
+              <el-icon><Fold /></el-icon>
+            </el-button>
+          </div>
+          <div class="guide-steps-vertical">
+            <div class="guide-step-v">
+              <div class="step-num">1</div>
+              <div class="step-content">
+                <div class="step-label">拖拽节点</div>
+                <div class="step-hint">从左侧面板拖拽节点到画布</div>
+              </div>
+            </div>
+            <div class="guide-step-v">
+              <div class="step-num">2</div>
+              <div class="step-content">
+                <div class="step-label">连接节点</div>
+                <div class="step-hint">从节点端口拖拽连线到目标节点</div>
+              </div>
+            </div>
+            <div class="guide-step-v">
+              <div class="step-num">3</div>
+              <div class="step-content">
+                <div class="step-label">配置属性</div>
+                <div class="step-hint">点击节点在右侧面板配置详细参数</div>
+              </div>
+            </div>
+            <div class="guide-step-v">
+              <div class="step-num">4</div>
+              <div class="step-content">
+                <div class="step-label">运行调试</div>
+                <div class="step-hint">点击运行按钮执行任务并查看日志</div>
+              </div>
+            </div>
+            <div class="guide-step-v">
+              <div class="step-num">5</div>
+              <div class="step-content">
+                <div class="step-label">发布上线</div>
+                <div class="step-hint">配置调度策略后发布到生产环境</div>
+              </div>
+            </div>
+          </div>
+          <div class="guide-footer">
+            <el-icon><InfoFilled /></el-icon>
+            <span>按住空格键可拖动画布</span>
+          </div>
         </div>
       </div>
     </div>
@@ -286,6 +342,7 @@ const handleTaskTypeChange = (val) => {
 }
 
 // 底部面板状态
+const collapsedByUser = ref(false)
 const bottomCollapsed = ref(false)
 const bottomPanelHeight = ref(220)
 const bottomPanelHeightBeforeCollapse = ref(220)
@@ -1026,6 +1083,97 @@ const createTask = async () => {
     flex: 1;
     overflow-y: auto;
     padding: 12px;
+  }
+
+  .workflow-guide {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+
+    .guide-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .guide-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .guide-steps-vertical {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .guide-step-v {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 0;
+      position: relative;
+
+      &:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        left: 13px;
+        top: 36px;
+        bottom: 0;
+        width: 2px;
+        background: #e8e8e8;
+      }
+
+      .step-num {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: #e6f7ff;
+        color: #1890ff;
+        font-size: 14px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        z-index: 1;
+      }
+
+      .step-content {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .step-label {
+        font-size: 13px;
+        font-weight: 500;
+        color: #333;
+      }
+
+      .step-hint {
+        font-size: 12px;
+        color: #999;
+        margin-top: 2px;
+      }
+    }
+
+    .guide-footer {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 16px;
+      padding: 10px 12px;
+      background: #fafafa;
+      border-radius: 6px;
+      font-size: 12px;
+      color: #666;
+
+      .el-icon { color: #1890ff; }
+    }
   }
 }
 </style>
