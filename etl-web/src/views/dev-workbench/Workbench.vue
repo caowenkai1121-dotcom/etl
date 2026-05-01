@@ -267,7 +267,7 @@
       </el-table>
 
       <div class="table-footer">
-        <span class="footer-info">显示最近 {{ taskList.length }} 条记录</span>
+        <span class="footer-info">共 {{ total }} 条</span>
         <el-pagination
           v-if="total > 10"
           small
