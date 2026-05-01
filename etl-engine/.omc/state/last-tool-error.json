@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"find /opt/code/etl-sync-system/etl-server -name \\\"*Application*\\\" 2>/dev/null; ls /opt/code/etl-sync-system/etl-server/src/main/java/com/etl/ 2>/dev/null\",\"description\":\"Find main applicat...",
+  "error": "Exit code 2",
+  "timestamp": "2026-05-01T02:55:07.832Z",
+  "retry_count": 2
+}

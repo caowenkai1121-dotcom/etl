@@ -1,0 +1,308 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e6]:
+        - generic [ref=e7] [cursor=pointer]:
+          - generic [ref=e8]: demo中心
+          - generic [ref=e10]: 
+        - generic [ref=e12] [cursor=pointer]:
+          - generic [ref=e13]: O&M Center
+          - generic [ref=e15]: 
+        - generic [ref=e16] [cursor=pointer]:
+          - generic [ref=e17]: Data Pipeline
+          - generic [ref=e19]: 
+        - generic [ref=e20] [cursor=pointer]:
+          - generic [ref=e21]: Data Development
+          - generic [ref=e23]: 
+        - generic [ref=e24] [cursor=pointer]:
+          - generic [ref=e25]: Data Service
+          - generic [ref=e27]: 
+        - generic [ref=e28] [cursor=pointer]:
+          - generic [ref=e29]: Data Management
+          - generic [ref=e31]: 
+        - generic [ref=e32] [cursor=pointer]:
+          - generic [ref=e33]: System Management
+          - generic [ref=e35]: 
+        - generic [ref=e36] [cursor=pointer]:
+          - generic [ref=e37]: Recycle Bin
+          - generic [ref=e39]: 
+      - generic [ref=e41]:
+        - text:                               
+        - generic [ref=e259]:
+          - complementary [ref=e260]:
+            - generic [ref=e262]:
+              - menu [ref=e263]:
+                - menuitem [ref=e264] [cursor=pointer]
+                - menuitem [ref=e265] [cursor=pointer]
+              - button "double-right" [ref=e266] [cursor=pointer]:
+                - img "double-right" [ref=e268]:
+                  - img [ref=e269]
+          - main [ref=e271]:
+            - tabpanel [ref=e275]:
+              - tabpanel [ref=e279]:
+                - generic [ref=e280]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: Scheduled Task
+                                  - button:
+                                    - generic:
+                                      - img:
+                                        - generic: 
+                                - button "Create":
+                                  - generic:
+                                    - img:
+                                      - generic: 
+                                  - generic: Create
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - generic:
+                                      - generic:
+                                        - img:
+                                          - generic: 
+                                      - textbox "Task/Folder Search"
+                                - generic:
+                                  - button:
+                                    - generic:
+                                      - img:
+                                        - generic: 
+                              - generic:
+                                - generic:
+                                  - generic: All Tasks
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - generic:
+                                      - generic:
+                                        - tree:
+                                          - generic:
+                                            - textbox "for screen reader"
+                                          - generic:
+                                            - generic:
+                                              - generic:
+                                                - generic:
+                                                  - generic:
+                                                    - generic:
+                                                      - img:
+                                                        - generic: 
+                                                    - generic:
+                                                      - generic:
+                                                        - generic:
+                                                          - generic:
+                                                            - generic: 01产品功能示例
+                                                            - generic: 01产品功能示例
+                                                          - text:  
+                                                  - generic:
+                                                    - generic:
+                                                      - img:
+                                                        - generic: 
+                                                    - generic:
+                                                      - generic:
+                                                        - generic:
+                                                          - generic:
+                                                            - generic: 02业务场景示例
+                                                            - generic: 02业务场景示例
+                                                          - text:  
+                                                  - generic:
+                                                    - generic:
+                                                      - img:
+                                                        - generic: 
+                                                    - generic:
+                                                      - generic:
+                                                        - generic:
+                                                          - generic:
+                                                            - generic: 03数据开发（ERP）示例
+                                                            - generic: 03数据开发（ERP）示例
+                                                          - text:  
+                                                  - generic:
+                                                    - generic:
+                                                      - img:
+                                                        - generic: 
+                                                    - generic:
+                                                      - generic:
+                                                        - generic:
+                                                          - generic:
+                                                            - generic: 用户体验-nqWtlCYG-2269076
+                                                            - generic: 用户体验-nqWtlCYG-2269076
+                                                          - text:  
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img:
+                                  - generic: 
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: Scheduled Task
+                                  - generic:
+                                    - button "Collapse Workflow":
+                                      - generic: Collapse Workflow
+                                    - button "Help Doc":
+                                      - generic: Help Doc
+                                - generic: It enables data extraction, transformation, and loading (ETL) with various nodes and operators on visual pages and supports automatic task execution through scheduling, helping you easily build an offline data warehouse for efficient and stable data production.
+                                - generic:
+                                  - generic:
+                                    - generic: Workflow
+                                    - generic:
+                                      - img:
+                                        - generic: 
+                                  - generic:
+                                    - generic:
+                                      - generic:
+                                        - generic:
+                                          - generic: "01"
+                                          - generic:
+                                            - generic:
+                                              - generic: Data Source Connection
+                                            - generic:
+                                              - generic: ① Create a data connection.
+                                              - generic: ② Identify table data to be processed.
+                                        - generic:
+                                          - generic: "02"
+                                          - generic:
+                                            - generic:
+                                              - generic: Real-Time Task Design
+                                            - generic:
+                                              - generic: ① Create a real-time task.
+                                              - generic: ② Design the data processing workflow.
+                                        - generic:
+                                          - generic: "03"
+                                          - generic:
+                                            - generic:
+                                              - generic: Debugging and Execution
+                                            - generic:
+                                              - generic: View detailed target table data in Database Table Management.
+                                        - generic:
+                                          - generic: "04"
+                                          - generic:
+                                            - generic:
+                                              - generic: Scheduling Configuration
+                                        - generic:
+                                          - generic: "05"
+                                          - generic:
+                                            - generic:
+                                              - generic: Task O&M
+                                            - generic:
+                                              - generic: View execution logs or execution records.
+                              - generic:
+                                - generic: Overview
+                                - generic:
+                                  - generic:
+                                    - generic:
+                                      - generic:
+                                        - generic: Remaining Task Publishing Capacity
+                                        - generic:
+                                          - generic: "0"
+                                      - generic:
+                                        - generic:
+                                          - generic: Created by Me
+                                          - generic: "0"
+                                  - generic:
+                                    - generic:
+                                      - generic: Published
+                                      - generic: "0"
+                                    - generic:
+                                      - img
+                                  - generic:
+                                    - generic:
+                                      - generic: To Be Published
+                                      - generic: "0"
+                                    - generic:
+                                      - img
+                                  - generic:
+                                    - generic:
+                                      - generic: To Be Updated
+                                      - generic: "0"
+                                    - generic:
+                                      - img
+                              - generic:
+                                - tablist:
+                                  - generic:
+                                    - generic:
+                                      - generic:
+                                        - tab "Recent Edits" [selected]
+                                      - generic:
+                                        - tab "My Favorites"
+                                  - generic:
+                                    - button:
+                                      - img:
+                                        - img
+                                  - generic:
+                                    - generic:
+                                      - generic:
+                                        - checkbox "Task Related to Me" [checked]
+                                      - generic: Task Related to Me
+                                - generic:
+                                  - generic:
+                                    - tabpanel "Recent Edits":
+                                      - generic:
+                                        - generic:
+                                          - generic:
+                                            - generic:
+                                              - generic:
+                                                - generic:
+                                                  - generic:
+                                                    - table:
+                                                      - rowgroup:
+                                                        - row "Task Name Directory Creator Creation Time Last Editor Last Edit Time Last Publishing Time":
+                                                          - columnheader "Task Name":
+                                                            - generic: Task Name
+                                                          - columnheader "Directory":
+                                                            - generic: Directory
+                                                          - columnheader "Creator":
+                                                            - generic: Creator
+                                                          - columnheader "Creation Time":
+                                                            - generic: Creation Time
+                                                          - columnheader "Last Editor":
+                                                            - generic: Last Editor
+                                                          - columnheader "Last Edit Time":
+                                                            - generic: Last Edit Time
+                                                          - columnheader "Last Publishing Time":
+                                                            - generic: Last Publishing Time
+                                                          - columnheader:
+                                                            - generic:
+                                                              - generic:
+                                                                - button:
+                                                                  - generic:
+                                                                    - img:
+                                                                      - generic: 
+                                                  - generic:
+                                                    - table:
+                                                      - rowgroup:
+                                                        - row "Loading…":
+                                                          - cell "Loading…":
+                                                            - generic:
+                                                              - generic:
+                                                                - generic:
+                                                                  - generic: Loading…
+                                        - generic: Show the latest 20 records.
+    - generic [ref=e212]:
+      - generic [ref=e216]: FineDataLink数据集成平台
+      - generic [ref=e217]:
+        - link "反馈Demo问题" [ref=e218] [cursor=pointer]:
+          - /url: https://sk6xa7bj2w.jiandaoyun.com/f/60f632b1190a340008177595
+          - img [ref=e220]
+          - generic [ref=e224]: 反馈Demo问题
+        - generic [ref=e226]: 4.2.16.2#persist-2026.03.12
+        - generic [ref=e228] [cursor=pointer]:
+          - generic [ref=e230]: English
+          - generic [ref=e232]: 
+        - generic [ref=e234] [cursor=pointer]: 
+        - generic [ref=e239] [cursor=pointer]: 
+        - button [ref=e242] [cursor=pointer]:
+          - img [ref=e244]:
+            - generic: 
+        - generic [ref=e246] [cursor=pointer]:
+          - generic [ref=e248]: 
+          - generic [ref=e250]: nqWtlCYG
+          - generic [ref=e252]: 
+  - log [ref=e3]

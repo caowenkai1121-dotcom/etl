@@ -1,0 +1,24 @@
+# 测试环境配置
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb;MODE=MySQL;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+
+  h2:
+    console:
+      enabled: true
+
+  quartz:
+    job-store-type: memory
+    auto-startup: true
+
+# MyBatis Plus - 开启SQL日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+logging:
+  level:
+    com.etl: DEBUG

@@ -1,0 +1,202 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e5]:
+        - img [ref=e7]
+        - generic [ref=e9]: ETL Sync
+      - menubar [ref=e10]:
+        - menuitem "仪表盘" [expanded] [ref=e11]:
+          - generic [ref=e12] [cursor=pointer]:
+            - generic [ref=e13]: 仪表盘
+            - img [ref=e15]
+          - menu [ref=e258]:
+            - menuitem "监控大盘" [ref=e17] [cursor=pointer]:
+              - img [ref=e19]
+              - text: 监控大盘
+        - menuitem "数据开发" [expanded] [ref=e21]:
+          - generic [ref=e22] [cursor=pointer]:
+            - generic [ref=e23]: 数据开发
+            - img [ref=e25]
+          - menu [ref=e266]:
+            - menuitem "数据开发工作台" [ref=e267] [cursor=pointer]:
+              - img [ref=e269]
+              - text: 数据开发工作台
+            - menuitem "数据源管理" [ref=e271] [cursor=pointer]:
+              - img [ref=e273]
+              - text: 数据源管理
+            - menuitem "任务编排" [ref=e277] [cursor=pointer]:
+              - img [ref=e279]
+              - text: 任务编排
+            - menuitem "任务管理" [ref=e281] [cursor=pointer]:
+              - img [ref=e283]
+              - text: 任务管理
+            - menuitem "CDC配置" [ref=e285] [cursor=pointer]:
+              - img [ref=e287]
+              - text: CDC配置
+        - menuitem "数据服务" [ref=e27]:
+          - generic [ref=e28] [cursor=pointer]:
+            - generic [ref=e29]: 数据服务
+            - img [ref=e31]
+        - menuitem "发布管理" [ref=e33]:
+          - generic [ref=e34] [cursor=pointer]:
+            - generic [ref=e35]: 发布管理
+            - img [ref=e37]
+        - menuitem "ETL调度" [ref=e39]:
+          - generic [ref=e40] [cursor=pointer]:
+            - generic [ref=e41]: ETL调度
+            - img [ref=e43]
+        - menuitem "数据转换" [ref=e45]:
+          - generic [ref=e46] [cursor=pointer]:
+            - generic [ref=e47]: 数据转换
+            - img [ref=e49]
+        - menuitem "监控日志" [ref=e51]:
+          - generic [ref=e52] [cursor=pointer]:
+            - generic [ref=e53]: 监控日志
+            - img [ref=e55]
+        - menuitem "系统管理" [ref=e57]:
+          - generic [ref=e58] [cursor=pointer]:
+            - generic [ref=e59]: 系统管理
+            - img [ref=e61]
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - generic [ref=e65]:
+          - img [ref=e68] [cursor=pointer]
+          - navigation "面包屑" [ref=e70]:
+            - generic [ref=e71]:
+              - link "首页" [ref=e72]
+              - text: /
+            - link "新建任务" [ref=e447]
+        - generic [ref=e75]:
+          - img [ref=e79] [cursor=pointer]
+          - generic [ref=e83] [cursor=pointer]:
+            - img [ref=e86]
+            - generic [ref=e88]: 管理员
+      - main [ref=e89]:
+        - generic [ref=e448]:
+          - generic [ref=e449]:
+            - generic [ref=e450]:
+              - button "返回" [ref=e451] [cursor=pointer]:
+                - img [ref=e453]
+                - generic [ref=e455]: 返回
+              - generic [ref=e456]: 数据开发工作台
+              - radiogroup "radio-group" [ref=e457]:
+                - generic [ref=e458]:
+                  - radio "开发模式" [checked] [ref=e459]
+                  - generic [ref=e460] [cursor=pointer]: 开发模式
+                - generic [ref=e461]:
+                  - radio "生产模式" [ref=e462]
+                  - generic [ref=e463] [cursor=pointer]: 生产模式
+            - generic [ref=e464]:
+              - generic [ref=e466]:
+                - button "运行" [ref=e467] [cursor=pointer]:
+                  - generic [ref=e468]:
+                    - img [ref=e470]
+                    - text: 运行
+                - button "切换下拉选项" [ref=e472] [cursor=pointer]:
+                  - img [ref=e475]
+              - button "保存" [ref=e477] [cursor=pointer]:
+                - generic [ref=e478]:
+                  - img [ref=e480]
+                  - text: 保存
+              - button "还原" [ref=e482] [cursor=pointer]:
+                - generic [ref=e483]:
+                  - img [ref=e485]
+                  - text: 还原
+              - button "发布" [ref=e487] [cursor=pointer]:
+                - generic [ref=e488]:
+                  - img [ref=e490]
+                  - text: 发布
+              - button "调度配置" [disabled] [ref=e492]:
+                - generic [ref=e493]:
+                  - img [ref=e495]
+                  - text: 调度配置
+              - separator [ref=e499]
+              - button "更多" [ref=e501] [cursor=pointer]:
+                - generic [ref=e502]:
+                  - text: 更多
+                  - img [ref=e504]
+              - separator [ref=e506]
+              - generic [ref=e507]:
+                - button "放大" [ref=e508] [cursor=pointer]:
+                  - img [ref=e511]
+                - button "缩小" [ref=e513] [cursor=pointer]:
+                  - img [ref=e516]
+                - button "适应画布" [ref=e518] [cursor=pointer]:
+                  - img [ref=e521]
+                - button "自动布局" [ref=e523] [cursor=pointer]:
+                  - img [ref=e526]
+              - button "收起底部面板" [ref=e528] [cursor=pointer]:
+                - img [ref=e531]
+          - generic [ref=e533]:
+            - generic [ref=e534]:
+              - generic [ref=e535]:
+                - generic [ref=e536] [cursor=pointer]:
+                  - img [ref=e538]
+                  - generic [ref=e540]: 目录
+                - generic [ref=e541] [cursor=pointer]:
+                  - img [ref=e543]
+                  - generic [ref=e546]: 节点
+              - generic [ref=e548]:
+                - generic [ref=e549]:
+                  - generic [ref=e550]: 任务目录
+                  - generic [ref=e551]:
+                    - button [ref=e552] [cursor=pointer]:
+                      - img [ref=e554]
+                    - button [ref=e556] [cursor=pointer]:
+                      - img [ref=e558]
+                - tree [ref=e562]:
+                  - generic [ref=e564]: 暂无数据
+              - img [ref=e567] [cursor=pointer]
+            - generic [ref=e569]:
+              - generic [ref=e570]: 100%
+              - img [ref=e573]
+            - generic [ref=e574]:
+              - generic [ref=e575]:
+                - generic [ref=e576]: 属性配置
+                - button [ref=e577] [cursor=pointer]:
+                  - img [ref=e579]
+              - generic [ref=e584]:
+                - img [ref=e586]
+                - paragraph [ref=e603]: 请选择节点或连线
+          - generic [ref=e604]:
+            - generic [ref=e605]:
+              - radiogroup "radio-group" [ref=e607]:
+                - generic [ref=e608]:
+                  - radio "运行日志" [checked] [ref=e609]
+                  - generic [ref=e610] [cursor=pointer]: 运行日志
+                - generic [ref=e611]:
+                  - radio "执行统计" [ref=e612]
+                  - generic [ref=e613] [cursor=pointer]: 执行统计
+              - generic [ref=e614]:
+                - generic [ref=e615]:
+                  - generic [ref=e617]:
+                    - img [ref=e620]
+                    - textbox "搜索日志" [ref=e622]
+                  - generic [ref=e624] [cursor=pointer]:
+                    - generic:
+                      - combobox [ref=e626]
+                      - generic [ref=e627]: 级别
+                    - img [ref=e630]
+                  - button "清空" [ref=e632] [cursor=pointer]:
+                    - generic [ref=e633]: 清空
+                - button [ref=e634] [cursor=pointer]:
+                  - img [ref=e637]
+            - generic [ref=e642]: 暂无运行日志
+  - alert [ref=e643]:
+    - img [ref=e645]
+    - paragraph [ref=e647]: Request failed with status code 500
+  - dialog "新建任务" [ref=e649]:
+    - generic [ref=e650]:
+      - generic [ref=e651]:
+        - generic [ref=e652]: 新建任务
+        - button "关闭此对话框" [ref=e653] [cursor=pointer]:
+          - img [ref=e655]
+      - generic [ref=e657]:
+        - generic [ref=e659]: 请输入任务名称
+        - textbox "请输入任务名称" [active] [ref=e663]:
+          - /placeholder: ""
+      - generic [ref=e664]:
+        - button "取消" [ref=e665] [cursor=pointer]:
+          - generic [ref=e666]: 取消
+        - button "确定" [ref=e667] [cursor=pointer]:
+          - generic [ref=e668]: 确定

@@ -1,0 +1,201 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1777625129249,
+  "projectRoot": "/opt/code/etl-sync-system",
+  "techStack": {
+    "languages": [
+      {
+        "name": "Java",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "pom.xml"
+        ]
+      }
+    ],
+    "frameworks": [],
+    "packageManager": "maven",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "docs"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "docker": {
+      "path": "docker",
+      "purpose": null,
+      "fileCount": 3,
+      "lastAccessed": 1777625129239,
+      "keyFiles": [
+        "Dockerfile",
+        "docker-compose.yml"
+      ]
+    },
+    "docs": {
+      "path": "docs",
+      "purpose": "Documentation",
+      "fileCount": 6,
+      "lastAccessed": 1777625129240,
+      "keyFiles": [
+        "API-V2.0.md",
+        "CHANGELOG-V2.0.md",
+        "DATABASE_ENCODING_GUIDE.md",
+        "FINEDATALINK_UPGRADE_PLAN.md",
+        "UPGRADE-GUIDE-V2.0.md"
+      ]
+    },
+    "etl-api": {
+      "path": "etl-api",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1777625129243,
+      "keyFiles": [
+        "pom.xml"
+      ]
+    },
+    "etl-common": {
+      "path": "etl-common",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1777625129243,
+      "keyFiles": [
+        "pom.xml"
+      ]
+    },
+    "etl-datasource": {
+      "path": "etl-datasource",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1777625129243,
+      "keyFiles": [
+        "pom.xml"
+      ]
+    },
+    "etl-engine": {
+      "path": "etl-engine",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1777625129243,
+      "keyFiles": [
+        "pom.xml"
+      ]
+    },
+    "etl-monitor": {
+      "path": "etl-monitor",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1777625129244,
+      "keyFiles": [
+        "pom.xml"
+      ]
+    },
+    "etl-scheduler": {
+      "path": "etl-scheduler",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1777625129245,
+      "keyFiles": [
+        "pom.xml"
+      ]
+    },
+    "etl-web": {
+      "path": "etl-web",
+      "purpose": null,
+      "fileCount": 10,
+      "lastAccessed": 1777625129245,
+      "keyFiles": [
+        "e2e-cdc-deep.mjs",
+        "e2e-etl-deep.mjs",
+        "e2e-test.mjs",
+        "e2e-ui.cjs",
+        "e2e-ultra-deep.mjs"
+      ]
+    },
+    "logs": {
+      "path": "logs",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1777625129245,
+      "keyFiles": []
+    },
+    "etl-api/src": {
+      "path": "etl-api/src",
+      "purpose": "Source code",
+      "fileCount": 0,
+      "lastAccessed": 1777625129246,
+      "keyFiles": []
+    },
+    "etl-common/src": {
+      "path": "etl-common/src",
+      "purpose": "Source code",
+      "fileCount": 0,
+      "lastAccessed": 1777625129247,
+      "keyFiles": []
+    },
+    "etl-datasource/src": {
+      "path": "etl-datasource/src",
+      "purpose": "Source code",
+      "fileCount": 0,
+      "lastAccessed": 1777625129247,
+      "keyFiles": []
+    },
+    "etl-engine/src": {
+      "path": "etl-engine/src",
+      "purpose": "Source code",
+      "fileCount": 0,
+      "lastAccessed": 1777625129247,
+      "keyFiles": []
+    },
+    "etl-monitor/src": {
+      "path": "etl-monitor/src",
+      "purpose": "Source code",
+      "fileCount": 0,
+      "lastAccessed": 1777625129248,
+      "keyFiles": []
+    },
+    "etl-scheduler/src": {
+      "path": "etl-scheduler/src",
+      "purpose": "Source code",
+      "fileCount": 0,
+      "lastAccessed": 1777625129248,
+      "keyFiles": []
+    },
+    "etl-web/dist": {
+      "path": "etl-web/dist",
+      "purpose": "Distribution/build output",
+      "fileCount": 1,
+      "lastAccessed": 1777625129249,
+      "keyFiles": [
+        "index.html"
+      ]
+    },
+    "etl-web/node_modules": {
+      "path": "etl-web/node_modules",
+      "purpose": "Dependencies",
+      "fileCount": 1,
+      "lastAccessed": 1777625129249,
+      "keyFiles": []
+    }
+  },
+  "hotPaths": [],
+  "userDirectives": []
+}

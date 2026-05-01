@@ -1,0 +1,362 @@
+- iframe [active] [ref=e2]:
+  - generic [ref=f1e1]:
+    - generic [ref=f1e2]:
+      - generic [ref=f1e4]:
+        - generic [ref=f1e6]:
+          - generic [ref=f1e7] [cursor=pointer]:
+            - generic [ref=f1e8]: demo中心
+            - generic [ref=f1e10]: 
+          - generic [ref=f1e12] [cursor=pointer]:
+            - generic [ref=f1e13]: O&M Center
+            - generic [ref=f1e15]: 
+          - generic [ref=f1e16] [cursor=pointer]:
+            - generic [ref=f1e17]: Data Pipeline
+            - generic [ref=f1e19]: 
+          - generic [ref=f1e20] [cursor=pointer]:
+            - generic [ref=f1e21]: Data Development
+            - generic [ref=f1e23]: 
+          - generic [ref=f1e24] [cursor=pointer]:
+            - generic [ref=f1e25]: Data Service
+            - generic [ref=f1e27]: 
+          - generic [ref=f1e28] [cursor=pointer]:
+            - generic [ref=f1e29]: Data Management
+            - generic [ref=f1e31]: 
+          - generic [ref=f1e32] [cursor=pointer]:
+            - generic [ref=f1e33]: System Management
+            - generic [ref=f1e35]: 
+          - generic [ref=f1e36] [cursor=pointer]:
+            - generic [ref=f1e37]: Recycle Bin
+            - generic [ref=f1e39]: 
+        - generic [ref=f1e41]:
+          - text:                               
+          - generic [ref=f1e259]:
+            - complementary [ref=f1e260]:
+              - generic [ref=f1e262]:
+                - menu [ref=f1e263]:
+                  - menuitem [ref=f1e264] [cursor=pointer]
+                  - menuitem [ref=f1e265] [cursor=pointer]
+                - button "double-right" [ref=f1e266] [cursor=pointer]:
+                  - img "double-right" [ref=f1e268]:
+                    - img [ref=f1e269]
+            - main [ref=f1e271]:
+              - tabpanel [ref=f1e275]:
+                - tabpanel [active] [ref=f1e279]:
+                  - generic [ref=f1e282]:
+                    - generic [ref=f1e284]:
+                      - generic [ref=f1e286]:
+                        - generic [ref=f1e287]:
+                          - generic [ref=f1e288]:
+                            - generic [ref=f1e289]: Scheduled Task
+                            - button [ref=f1e290] [cursor=pointer]:
+                              - img [ref=f1e292]:
+                                - generic: 
+                          - button "Create" [ref=f1e293] [cursor=pointer]:
+                            - img [ref=f1e295]:
+                              - generic: 
+                            - generic [ref=f1e296]: Create
+                        - generic [ref=f1e297]:
+                          - generic [ref=f1e300] [cursor=pointer]:
+                            - img [ref=f1e302]:
+                              - generic: 
+                            - textbox "Task/Folder Search" [ref=f1e303]
+                          - button [ref=f1e306] [cursor=pointer]:
+                            - img [ref=f1e308]:
+                              - generic: 
+                        - generic [ref=f1e312] [cursor=pointer]: All Tasks
+                        - tree [ref=f1e318]:
+                          - generic:
+                            - textbox "for screen reader"
+                          - generic [ref=f1e322]:
+                            - generic [ref=f1e323]:
+                              - img [ref=f1e664] [cursor=pointer]:
+                                - generic: 
+                              - generic [ref=f1e329] [cursor=pointer]:
+                                - generic [ref=f1e330]:
+                                  - generic [ref=f1e331]: 01产品功能示例
+                                  - generic [ref=f1e332]: 01产品功能示例
+                                - generic [ref=f1e665]:
+                                  - button [ref=f1e667]:
+                                    - img [ref=f1e669]:
+                                      - generic: 
+                                  - button [ref=f1e671]:
+                                    - img [ref=f1e673]:
+                                      - generic: 
+                            - generic [ref=f1e674]:
+                              - img [ref=f1e677] [cursor=pointer]:
+                                - generic: 
+                              - generic [ref=f1e681] [cursor=pointer]:
+                                - generic [ref=f1e682]:
+                                  - generic [ref=f1e683]: 01.快速入门
+                                  - generic [ref=f1e684]: 01.快速入门
+                                - text:  
+                            - generic [ref=f1e685]:
+                              - img [ref=f1e688] [cursor=pointer]:
+                                - generic: 
+                              - generic [ref=f1e692] [cursor=pointer]:
+                                - generic [ref=f1e693]:
+                                  - generic [ref=f1e694]: 02.基础功能
+                                  - generic [ref=f1e695]: 02.基础功能
+                                - text:  
+                            - generic [ref=f1e696]:
+                              - img [ref=f1e699] [cursor=pointer]:
+                                - generic: 
+                              - generic [ref=f1e703] [cursor=pointer]:
+                                - generic [ref=f1e704]:
+                                  - generic [ref=f1e705]: 03.管道&服务demo辅助
+                                  - generic [ref=f1e706]: 03.管道&服务demo辅助
+                                - text:  
+                            - generic [ref=f1e707]:
+                              - img [ref=f1e710] [cursor=pointer]:
+                                - generic: 
+                              - generic [ref=f1e714] [cursor=pointer]:
+                                - generic [ref=f1e715]:
+                                  - generic [ref=f1e716]: ADS_VOLUME
+                                  - generic [ref=f1e717]: ADS_VOLUME
+                                - text:  
+                            - generic [ref=f1e718]:
+                              - img [ref=f1e721] [cursor=pointer]:
+                                - generic: 
+                              - generic [ref=f1e725] [cursor=pointer]:
+                                - generic [ref=f1e726]:
+                                  - generic [ref=f1e727]: ODS_IMS
+                                  - generic [ref=f1e728]: ODS_IMS
+                                - text:  
+                            - generic [ref=f1e333]:
+                              - img [ref=f1e335] [cursor=pointer]:
+                                - generic: 
+                              - generic [ref=f1e339] [cursor=pointer]:
+                                - generic [ref=f1e340]:
+                                  - generic [ref=f1e341]: 02业务场景示例
+                                  - generic [ref=f1e342]: 02业务场景示例
+                                - text:  
+                            - generic [ref=f1e343]:
+                              - img [ref=f1e345] [cursor=pointer]:
+                                - generic: 
+                              - generic [ref=f1e349] [cursor=pointer]:
+                                - generic [ref=f1e350]:
+                                  - generic [ref=f1e351]: 03数据开发（ERP）示例
+                                  - generic [ref=f1e352]: 03数据开发（ERP）示例
+                                - text:  
+                            - generic [ref=f1e353]:
+                              - img [ref=f1e355] [cursor=pointer]:
+                                - generic: 
+                              - generic [ref=f1e359] [cursor=pointer]:
+                                - generic [ref=f1e360]:
+                                  - generic [ref=f1e361]: 用户体验-nqWtlCYG-2269076
+                                  - generic [ref=f1e362]: 用户体验-nqWtlCYG-2269076
+                                - text:  
+                      - img [ref=f1e365]:
+                        - generic: 
+                    - generic [ref=f1e369]:
+                      - generic [ref=f1e370]:
+                        - generic [ref=f1e371]:
+                          - generic [ref=f1e372]: Scheduled Task
+                          - generic [ref=f1e373]:
+                            - button "Collapse Workflow" [ref=f1e374] [cursor=pointer]:
+                              - generic [ref=f1e375]: Collapse Workflow
+                            - button "Help Doc" [ref=f1e376] [cursor=pointer]:
+                              - generic [ref=f1e378]: Help Doc
+                        - generic [ref=f1e379]: It enables data extraction, transformation, and loading (ETL) with various nodes and operators on visual pages and supports automatic task execution through scheduling, helping you easily build an offline data warehouse for efficient and stable data production.
+                        - generic [ref=f1e380]:
+                          - generic [ref=f1e381]:
+                            - generic [ref=f1e382]: Workflow
+                            - img [ref=f1e384] [cursor=pointer]:
+                              - generic: 
+                          - generic [ref=f1e387]:
+                            - generic [ref=f1e388]:
+                              - generic [ref=f1e389]: "01"
+                              - generic [ref=f1e390]:
+                                - generic [ref=f1e392]: Data Source Connection
+                                - generic [ref=f1e394]:
+                                  - generic [ref=f1e395]: ① Create a data connection.
+                                  - generic [ref=f1e396]: ② Identify table data to be processed.
+                            - generic [ref=f1e397]:
+                              - generic [ref=f1e398]: "02"
+                              - generic [ref=f1e399]:
+                                - generic [ref=f1e401]: Real-Time Task Design
+                                - generic [ref=f1e403]:
+                                  - generic [ref=f1e404]: ① Create a real-time task.
+                                  - generic [ref=f1e405]: ② Design the data processing workflow.
+                            - generic [ref=f1e406]:
+                              - generic [ref=f1e407]: "03"
+                              - generic [ref=f1e408]:
+                                - generic [ref=f1e410]: Debugging and Execution
+                                - generic [ref=f1e413]: View detailed target table data in Database Table Management.
+                            - generic [ref=f1e414]:
+                              - generic [ref=f1e415]: "04"
+                              - generic [ref=f1e418]: Scheduling Configuration
+                            - generic [ref=f1e420]:
+                              - generic [ref=f1e421]: "05"
+                              - generic [ref=f1e422]:
+                                - generic [ref=f1e424]: Task O&M
+                                - generic [ref=f1e426]: View execution logs or execution records.
+                      - generic [ref=f1e427]:
+                        - generic [ref=f1e428]: Overview
+                        - generic [ref=f1e429]:
+                          - generic [ref=f1e433]:
+                            - generic [ref=f1e434]:
+                              - generic [ref=f1e435]: Remaining Task Publishing Capacity
+                              - generic [ref=f1e436]:
+                                - generic [ref=f1e437]: "--"
+                                - generic [ref=f1e549]: (No Limit)
+                            - generic [ref=f1e439]:
+                              - generic [ref=f1e440]: Created by Me
+                              - generic [ref=f1e441]: "6"
+                          - generic [ref=f1e442]:
+                            - generic [ref=f1e443]:
+                              - generic [ref=f1e444]: Published
+                              - generic [ref=f1e445]: "179"
+                            - img [ref=f1e447]
+                          - generic [ref=f1e450]:
+                            - generic [ref=f1e451]:
+                              - generic [ref=f1e452]: To Be Published
+                              - generic [ref=f1e453]: "111"
+                            - img [ref=f1e455]
+                          - generic [ref=f1e458]:
+                            - generic [ref=f1e459]:
+                              - generic [ref=f1e460]: To Be Updated
+                              - generic [ref=f1e461]: "44"
+                            - img [ref=f1e463]
+                      - generic [ref=f1e466]:
+                        - tablist [ref=f1e467]:
+                          - generic [ref=f1e469]:
+                            - tab "Recent Edits" [selected] [ref=f1e471] [cursor=pointer]
+                            - tab "My Favorites" [ref=f1e473] [cursor=pointer]
+                          - button [ref=f1e475] [cursor=pointer]:
+                            - img [ref=f1e476]:
+                              - img [ref=f1e477]
+                          - generic [ref=f1e480] [cursor=pointer]:
+                            - checkbox "Task Related to Me" [checked] [ref=f1e482]
+                            - generic [ref=f1e484]: Task Related to Me
+                        - tabpanel "Recent Edits" [ref=f1e487]:
+                          - generic [ref=f1e488]:
+                            - generic [ref=f1e492]:
+                              - table [ref=f1e494]:
+                                - rowgroup [ref=f1e504]:
+                                  - row "Task Name Directory Creator Creation Time Last Editor Last Edit Time Last Publishing Time" [ref=f1e505]:
+                                    - columnheader "Task Name" [ref=f1e506]:
+                                      - generic [ref=f1e507]: Task Name
+                                    - columnheader "Directory" [ref=f1e508]:
+                                      - generic [ref=f1e509]: Directory
+                                    - columnheader "Creator" [ref=f1e510]:
+                                      - generic [ref=f1e511]: Creator
+                                    - columnheader "Creation Time" [ref=f1e512]:
+                                      - generic [ref=f1e513]: Creation Time
+                                    - columnheader "Last Editor" [ref=f1e514]:
+                                      - generic [ref=f1e515]: Last Editor
+                                    - columnheader "Last Edit Time" [ref=f1e516]:
+                                      - generic [ref=f1e517]: Last Edit Time
+                                    - columnheader "Last Publishing Time" [ref=f1e518]:
+                                      - generic [ref=f1e519]: Last Publishing Time
+                                    - columnheader [ref=f1e520]:
+                                      - button [ref=f1e523] [cursor=pointer]:
+                                        - img [ref=f1e525]:
+                                          - generic: 
+                              - table [ref=f1e528]:
+                                - rowgroup [ref=f1e538]:
+                                  - row "Task169 任务列表/用户体验-nqWtlCYG-2269076/Task169 2269076 2026-04-27 08:47:33 2269076 2026-04-27 08:47:33 --" [ref=f1e550]:
+                                    - cell "Task169" [ref=f1e551]:
+                                      - generic [ref=f1e552]:
+                                        - generic [ref=f1e556] [cursor=pointer]: Task169
+                                        - text: 
+                                    - cell "任务列表/用户体验-nqWtlCYG-2269076/Task169" [ref=f1e557]:
+                                      - generic [ref=f1e559]: 任务列表/用户体验-nqWtlCYG-2269076/Task169
+                                    - cell "2269076" [ref=f1e560]
+                                    - cell "2026-04-27 08:47:33" [ref=f1e561]
+                                    - cell "2269076" [ref=f1e562]
+                                    - cell "2026-04-27 08:47:33" [ref=f1e563]:
+                                      - generic [ref=f1e565]: 2026-04-27 08:47:33
+                                    - cell "--" [ref=f1e567]
+                                    - cell [ref=f1e568]
+                                  - row "任务15856 任务列表/用户体验-nqWtlCYG-2269076/任务15856 2269076 2026-04-27 08:45:20 2269076 2026-04-27 08:45:21 --" [ref=f1e569]:
+                                    - cell "任务15856" [ref=f1e570]:
+                                      - generic [ref=f1e571]:
+                                        - generic [ref=f1e575] [cursor=pointer]: 任务15856
+                                        - text: 
+                                    - cell "任务列表/用户体验-nqWtlCYG-2269076/任务15856" [ref=f1e576]:
+                                      - generic [ref=f1e578]: 任务列表/用户体验-nqWtlCYG-2269076/任务15856
+                                    - cell "2269076" [ref=f1e579]
+                                    - cell "2026-04-27 08:45:20" [ref=f1e580]
+                                    - cell "2269076" [ref=f1e581]
+                                    - cell "2026-04-27 08:45:21" [ref=f1e582]:
+                                      - generic [ref=f1e584]: 2026-04-27 08:45:21
+                                    - cell "--" [ref=f1e586]
+                                    - cell [ref=f1e587]
+                                  - row "任务15851 任务列表/用户体验-nqWtlCYG-2269076/任务15851 2269076 2026-04-27 03:47:55 2269076 2026-04-27 03:47:55 --" [ref=f1e588]:
+                                    - cell "任务15851" [ref=f1e589]:
+                                      - generic [ref=f1e590]:
+                                        - generic [ref=f1e594] [cursor=pointer]: 任务15851
+                                        - text: 
+                                    - cell "任务列表/用户体验-nqWtlCYG-2269076/任务15851" [ref=f1e595]:
+                                      - generic [ref=f1e597]: 任务列表/用户体验-nqWtlCYG-2269076/任务15851
+                                    - cell "2269076" [ref=f1e598]
+                                    - cell "2026-04-27 03:47:55" [ref=f1e599]
+                                    - cell "2269076" [ref=f1e600]
+                                    - cell "2026-04-27 03:47:55" [ref=f1e601]:
+                                      - generic [ref=f1e603]: 2026-04-27 03:47:55
+                                    - cell "--" [ref=f1e605]
+                                    - cell [ref=f1e606]
+                                  - row "任务15841 任务列表/用户体验-nqWtlCYG-2269076/任务15841 2269076 2026-04-26 09:51:47 2269076 2026-04-26 09:51:47 --" [ref=f1e607]:
+                                    - cell "任务15841" [ref=f1e608]:
+                                      - generic [ref=f1e609]:
+                                        - generic [ref=f1e613] [cursor=pointer]: 任务15841
+                                        - text: 
+                                    - cell "任务列表/用户体验-nqWtlCYG-2269076/任务15841" [ref=f1e614]:
+                                      - generic [ref=f1e616]: 任务列表/用户体验-nqWtlCYG-2269076/任务15841
+                                    - cell "2269076" [ref=f1e617]
+                                    - cell "2026-04-26 09:51:47" [ref=f1e618]
+                                    - cell "2269076" [ref=f1e619]
+                                    - cell "2026-04-26 09:51:47" [ref=f1e620]:
+                                      - generic [ref=f1e622]: 2026-04-26 09:51:47
+                                    - cell "--" [ref=f1e624]
+                                    - cell [ref=f1e625]
+                                  - row "任务15838 任务列表/用户体验-nqWtlCYG-2269076/任务15838 2269076 2026-04-25 15:16:21 2269076 2026-04-25 15:16:21 --" [ref=f1e626]:
+                                    - cell "任务15838" [ref=f1e627]:
+                                      - generic [ref=f1e628]:
+                                        - generic [ref=f1e632] [cursor=pointer]: 任务15838
+                                        - text: 
+                                    - cell "任务列表/用户体验-nqWtlCYG-2269076/任务15838" [ref=f1e633]:
+                                      - generic [ref=f1e635]: 任务列表/用户体验-nqWtlCYG-2269076/任务15838
+                                    - cell "2269076" [ref=f1e636]
+                                    - cell "2026-04-25 15:16:21" [ref=f1e637]
+                                    - cell "2269076" [ref=f1e638]
+                                    - cell "2026-04-25 15:16:21" [ref=f1e639]:
+                                      - generic [ref=f1e641]: 2026-04-25 15:16:21
+                                    - cell "--" [ref=f1e643]
+                                    - cell [ref=f1e644]
+                                  - row "任务15837 任务列表/用户体验-nqWtlCYG-2269076/任务15837 2269076 2026-04-25 12:34:09 2269076 2026-04-25 12:34:09 --" [ref=f1e645]:
+                                    - cell "任务15837" [ref=f1e646]:
+                                      - generic [ref=f1e647]:
+                                        - generic [ref=f1e651] [cursor=pointer]: 任务15837
+                                        - text: 
+                                    - cell "任务列表/用户体验-nqWtlCYG-2269076/任务15837" [ref=f1e652]:
+                                      - generic [ref=f1e654]: 任务列表/用户体验-nqWtlCYG-2269076/任务15837
+                                    - cell "2269076" [ref=f1e655]
+                                    - cell "2026-04-25 12:34:09" [ref=f1e656]
+                                    - cell "2269076" [ref=f1e657]
+                                    - cell "2026-04-25 12:34:09" [ref=f1e658]:
+                                      - generic [ref=f1e660]: 2026-04-25 12:34:09
+                                    - cell "--" [ref=f1e662]
+                                    - cell [ref=f1e663]
+                            - generic [ref=f1e548]: Show the latest 20 records.
+      - generic [ref=f1e212]:
+        - generic [ref=f1e216]: FineDataLink数据集成平台
+        - generic [ref=f1e217]:
+          - link "反馈Demo问题" [ref=f1e218] [cursor=pointer]:
+            - /url: https://sk6xa7bj2w.jiandaoyun.com/f/60f632b1190a340008177595
+            - img [ref=f1e220]
+            - generic [ref=f1e224]: 反馈Demo问题
+          - generic [ref=f1e226]: 4.2.16.2#persist-2026.03.12
+          - generic [ref=f1e228] [cursor=pointer]:
+            - generic [ref=f1e230]: English
+            - generic [ref=f1e232]: 
+          - generic [ref=f1e234] [cursor=pointer]: 
+          - generic [ref=f1e239] [cursor=pointer]: 
+          - button [ref=f1e242] [cursor=pointer]:
+            - img [ref=f1e244]:
+              - generic: 
+          - generic [ref=f1e246] [cursor=pointer]:
+            - generic [ref=f1e248]: 
+            - generic [ref=f1e250]: nqWtlCYG
+            - generic [ref=f1e252]: 
+    - log [ref=f1e3]

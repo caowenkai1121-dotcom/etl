@@ -1,0 +1,356 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e6]:
+        - generic [ref=e7] [cursor=pointer]:
+          - generic [ref=e8]: demo中心
+          - generic [ref=e10]: 
+        - generic [ref=e12] [cursor=pointer]:
+          - generic [ref=e13]: O&M Center
+          - generic [ref=e15]: 
+        - generic [ref=e16] [cursor=pointer]:
+          - generic [ref=e17]: Data Pipeline
+          - generic [ref=e19]: 
+        - generic [ref=e20] [cursor=pointer]:
+          - generic [ref=e21]: Data Development
+          - generic [ref=e23]: 
+        - generic [ref=e24] [cursor=pointer]:
+          - generic [ref=e25]: Data Service
+          - generic [ref=e27]: 
+        - generic [ref=e28] [cursor=pointer]:
+          - generic [ref=e29]: Data Management
+          - generic [ref=e31]: 
+        - generic [ref=e32] [cursor=pointer]:
+          - generic [ref=e33]: System Management
+          - generic [ref=e35]: 
+        - generic [ref=e36] [cursor=pointer]:
+          - generic [ref=e37]: Recycle Bin
+          - generic [ref=e39]: 
+      - generic [ref=e41]:
+        - text:                               
+        - generic [ref=e259]:
+          - complementary [ref=e260]:
+            - generic [ref=e262]:
+              - menu [ref=e263]:
+                - menuitem [ref=e264] [cursor=pointer]
+                - menuitem [ref=e265] [cursor=pointer]
+              - button "double-right" [ref=e266] [cursor=pointer]:
+                - img "double-right" [ref=e268]:
+                  - img [ref=e269]
+          - main [ref=e271]:
+            - tabpanel [ref=e275]:
+              - tabpanel [ref=e279]:
+                - generic [ref=e284]:
+                  - generic [ref=e286]:
+                    - generic [ref=e288]:
+                      - generic [ref=e289]:
+                        - generic [ref=e290]:
+                          - generic [ref=e291]: Scheduled Task
+                          - button [ref=e292] [cursor=pointer]:
+                            - img [ref=e294]:
+                              - generic: 
+                        - button "Create" [ref=e295] [cursor=pointer]:
+                          - img [ref=e297]:
+                            - generic: 
+                          - generic [ref=e298]: Create
+                      - generic [ref=e299]:
+                        - generic [ref=e302] [cursor=pointer]:
+                          - img [ref=e304]:
+                            - generic: 
+                          - textbox "Task/Folder Search" [ref=e305]
+                        - button [ref=e308] [cursor=pointer]:
+                          - img [ref=e310]:
+                            - generic: 
+                      - generic [ref=e314] [cursor=pointer]: All Tasks
+                      - tree [ref=e320]:
+                        - generic:
+                          - textbox "for screen reader"
+                        - generic [ref=e324]:
+                          - generic [ref=e325]:
+                            - img [ref=e327] [cursor=pointer]:
+                              - generic: 
+                            - generic [ref=e331] [cursor=pointer]:
+                              - generic [ref=e332]:
+                                - generic [ref=e333]: 01产品功能示例
+                                - generic [ref=e334]: 01产品功能示例
+                              - text:  
+                          - generic [ref=e335]:
+                            - img [ref=e337] [cursor=pointer]:
+                              - generic: 
+                            - generic [ref=e341] [cursor=pointer]:
+                              - generic [ref=e342]:
+                                - generic [ref=e343]: 02业务场景示例
+                                - generic [ref=e344]: 02业务场景示例
+                              - text:  
+                          - generic [ref=e345]:
+                            - img [ref=e347] [cursor=pointer]:
+                              - generic: 
+                            - generic [ref=e351] [cursor=pointer]:
+                              - generic [ref=e352]:
+                                - generic [ref=e353]: 03数据开发（ERP）示例
+                                - generic [ref=e354]: 03数据开发（ERP）示例
+                              - text:  
+                          - generic [ref=e355]:
+                            - img [ref=e357] [cursor=pointer]:
+                              - generic: 
+                            - generic [ref=e361] [cursor=pointer]:
+                              - generic [ref=e362]:
+                                - generic [ref=e363]: 用户体验-nqWtlCYG-2269076
+                                - generic [ref=e364]: 用户体验-nqWtlCYG-2269076
+                              - text:  
+                          - generic [ref=e741] [cursor=pointer]:
+                            - generic [ref=e742]:
+                              - generic [ref=e743]: DAG_Explore_Study
+                              - generic [ref=e744]: DAG_Explore_Study
+                            - text: 
+                            - generic [ref=e745]: To Be Published
+                    - img [ref=e367]:
+                      - generic: 
+                  - generic [ref=e747]:
+                    - generic [ref=e748]:
+                      - generic [ref=e750] [cursor=pointer]:
+                        - generic [ref=e751]: Scheduled Task
+                        - button [ref=e753]:
+                          - img [ref=e755]:
+                            - generic: 
+                      - generic [ref=e756]:
+                        - generic [ref=e757]:
+                          - button "DAG_Explore_Study" [ref=e758] [cursor=pointer]:
+                            - generic [ref=e760]:
+                              - generic [ref=e765]: DAG_Explore_Study
+                              - button [ref=e1001]:
+                                - img [ref=e1003]:
+                                  - generic: 
+                          - status [ref=e770] [cursor=pointer]
+                        - button [ref=e772] [cursor=pointer]:
+                          - img [ref=e774]:
+                            - generic: 
+                      - button [ref=e776] [cursor=pointer]:
+                        - img [ref=e778]:
+                          - generic: 
+                    - generic [ref=e780]:
+                      - generic [ref=e783]:
+                        - generic [ref=e784] [cursor=pointer]:
+                          - radio "Development Mode" [checked]
+                          - generic "Development Mode" [ref=e785]
+                        - generic [ref=e786] [cursor=pointer]:
+                          - radio "Production Mode"
+                          - generic "Production Mode" [ref=e787]
+                      - tabpanel [ref=e791]:
+                        - generic [ref=e792]:
+                          - generic [ref=e796]:
+                            - button "Run" [ref=e799] [cursor=pointer]:
+                              - img [ref=e801]:
+                                - generic: 
+                              - generic [ref=e802]: Run
+                            - button "Save" [ref=e804] [cursor=pointer]:
+                              - img [ref=e806]:
+                                - generic: 
+                              - generic [ref=e807]: Save
+                            - button "Restore" [disabled] [ref=e810]:
+                              - generic:
+                                - img:
+                                  - generic: 
+                              - generic: Restore
+                            - button "Publish" [disabled] [ref=e813]:
+                              - generic:
+                                - img:
+                                  - generic: 
+                              - generic: Publish
+                            - button [ref=e818] [cursor=pointer]:
+                              - img [ref=e820]:
+                                - generic: 
+                            - button [ref=e823] [cursor=pointer]:
+                              - img [ref=e825]:
+                                - generic: 
+                            - button [ref=e828] [cursor=pointer]:
+                              - img [ref=e830]:
+                                - generic: 
+                            - button [ref=e833] [cursor=pointer]:
+                              - img [ref=e835]:
+                                - generic: 
+                          - generic [ref=e837]:
+                            - generic [ref=e841]:
+                              - generic [ref=e842]:
+                                - generic [ref=e844]: General
+                                - generic [ref=e845]:
+                                  - generic [ref=e846]:
+                                    - img [ref=e847]
+                                    - text: Data Synchronization
+                                  - generic [ref=e849]:
+                                    - img [ref=e850]
+                                    - text: Data Transformation
+                                  - generic [ref=e852]:
+                                    - img [ref=e853]
+                                    - text: File Transfer
+                              - generic [ref=e855]:
+                                - generic [ref=e857]: Script
+                                - generic [ref=e858]:
+                                  - generic [ref=e859]:
+                                    - img [ref=e860]
+                                    - text: SQL Script
+                                  - generic [ref=e862]:
+                                    - img [ref=e863]
+                                    - text: Shell Script
+                                  - generic [ref=e865]:
+                                    - img [ref=e866]
+                                    - text: Bat Script
+                                  - generic [ref=e868]:
+                                    - img [ref=e869]
+                                    - text: Python Script
+                              - generic [ref=e871]:
+                                - generic [ref=e873]: Process
+                                - generic [ref=e874]:
+                                  - generic [ref=e875]:
+                                    - img [ref=e876]
+                                    - text: Parameter Assignment
+                                  - generic [ref=e878]:
+                                    - img [ref=e879]
+                                    - text: Conditional Branch
+                                  - generic [ref=e881]:
+                                    - img [ref=e882]
+                                    - text: Scheduled Task Invocation
+                                  - generic [ref=e884]:
+                                    - img [ref=e885]
+                                    - text: Loop Container
+                                  - generic [ref=e887]:
+                                    - img [ref=e888]
+                                    - text: Notification
+                                  - generic [ref=e890]:
+                                    - img [ref=e891]
+                                    - text: Virtual Node
+                              - generic [ref=e893]:
+                                - generic [ref=e895]: Others
+                                - generic [ref=e897]:
+                                  - img [ref=e898]
+                                  - text: Remark
+                            - generic [ref=e904]:
+                              - generic [ref=e905]:
+                                - img [ref=e913]:
+                                  - generic [ref=e1006]:
+                                    - generic "Data Synchronization" [ref=e1008]:
+                                      - generic [ref=e1009]: Data Synchronization
+                                    - generic "-"
+                                - generic:
+                                  - generic [ref=e917] [cursor=pointer]:
+                                    - img [ref=e919]:
+                                      - generic: 
+                                    - generic [ref=e920]: 1 Exception(s)
+                                  - generic [ref=e921]:
+                                    - button [ref=e922] [cursor=pointer]:
+                                      - img [ref=e1019]:
+                                        - generic: 
+                                    - button [disabled] [ref=e923]:
+                                      - generic:
+                                        - img:
+                                          - generic: 
+                                    - button [ref=e926] [cursor=pointer]:
+                                      - img [ref=e928]:
+                                        - generic: 
+                                    - button [ref=e931] [cursor=pointer]:
+                                      - img [ref=e933]:
+                                        - generic: 
+                                    - button [ref=e936] [cursor=pointer]:
+                                      - img [ref=e938]:
+                                        - generic: 
+                                      - img [ref=e939]:
+                                        - generic: 
+                                    - generic [ref=e941]:
+                                      - button [ref=e942] [cursor=pointer]:
+                                        - img [ref=e944]:
+                                          - generic: 
+                                      - generic [ref=e945]: 100%
+                                      - button [ref=e946] [cursor=pointer]:
+                                        - img [ref=e948]:
+                                          - generic: 
+                                    - button [ref=e950] [cursor=pointer]:
+                                      - img [ref=e952]:
+                                        - generic: 
+                                    - button [ref=e956] [cursor=pointer]:
+                                      - img [ref=e958]:
+                                        - generic: 
+                                    - button [ref=e962] [cursor=pointer]:
+                                      - img [ref=e964]:
+                                        - generic: 
+                                - text: 
+                              - generic [ref=e966]:
+                                - generic [ref=e1020]:
+                                  - generic [ref=e1021]:
+                                    - img [ref=e1023]
+                                    - generic "Data Synchronization" [ref=e1025]:
+                                      - generic [ref=e1027]:
+                                        - generic [ref=e1029]: Data Synchronization
+                                        - button [ref=e1030] [cursor=pointer]:
+                                          - img [ref=e1032]:
+                                            - generic: 
+                                    - generic [ref=e1034]:
+                                      - button "Generate Data Transformation" [ref=e1036] [cursor=pointer]:
+                                        - generic [ref=e1037]: Generate Data Transformation
+                                      - button [ref=e1040] [cursor=pointer]:
+                                        - img [ref=e1042]:
+                                          - generic: 
+                                    - button [ref=e1044] [cursor=pointer]:
+                                      - img [ref=e1046]:
+                                        - generic: 
+                                  - generic [ref=e1048]:
+                                    - tablist [ref=e1049]:
+                                      - generic [ref=e1051]:
+                                        - tab "Node Information" [ref=e1053] [cursor=pointer]:
+                                          - generic [ref=e1055]: Node Information
+                                        - tab "Data Source" [selected] [ref=e1057] [cursor=pointer]:
+                                          - generic [ref=e1059]: Data Source
+                                        - tab "Data Destination and Mapping" [ref=e1061] [cursor=pointer]:
+                                          - generic [ref=e1063]: Data Destination and Mapping
+                                        - tab "Write Method" [ref=e1065] [cursor=pointer]:
+                                          - generic [ref=e1067]: Write Method
+                                    - tabpanel "Data Source" [ref=e1070]:
+                                      - generic [ref=e1073]:
+                                        - generic [ref=e1076]: Data Connection
+                                        - generic [ref=e1080]:
+                                          - generic [ref=e1082]:
+                                            - generic [ref=e1084] [cursor=pointer]:
+                                              - generic [ref=e1085]:
+                                                - combobox [ref=e1087]
+                                                - generic: Data Source
+                                              - generic:
+                                                - img:
+                                                  - img
+                                            - generic [ref=e1089] [cursor=pointer]:
+                                              - generic [ref=e1090]:
+                                                - combobox [ref=e1092]
+                                                - generic: Data Connection
+                                              - generic:
+                                                - img:
+                                                  - img
+                                            - button "Test Connection" [ref=e1093] [cursor=pointer]:
+                                              - generic [ref=e1094]: Test Connection
+                                          - button "Data Preview" [ref=e1096] [cursor=pointer]:
+                                            - generic [ref=e1097]: Data Preview
+                                - img [ref=e1000]:
+                                  - generic: 
+    - generic [ref=e212]:
+      - generic [ref=e216]: FineDataLink数据集成平台
+      - generic [ref=e217]:
+        - link "反馈Demo问题" [ref=e218] [cursor=pointer]:
+          - /url: https://sk6xa7bj2w.jiandaoyun.com/f/60f632b1190a340008177595
+          - img [ref=e220]
+          - generic [ref=e224]: 反馈Demo问题
+        - generic [ref=e226]: 4.2.16.2#persist-2026.03.12
+        - generic [ref=e228] [cursor=pointer]:
+          - generic [ref=e230]: English
+          - generic [ref=e232]: 
+        - generic [ref=e234] [cursor=pointer]: 
+        - generic [ref=e239] [cursor=pointer]: 
+        - button [ref=e242] [cursor=pointer]:
+          - img [ref=e244]:
+            - generic: 
+        - generic [ref=e246] [cursor=pointer]:
+          - generic [ref=e248]: 
+          - generic [ref=e250]: nqWtlCYG
+          - generic [ref=e252]: 
+  - log [ref=e3]
+  - generic: 
+  - generic [ref=e1100]:
+    - img "close-circle" [ref=e1101]:
+      - img [ref=e1102]
+    - generic [ref=e1104]: Server internal error

@@ -1,0 +1,173 @@
+- iframe [ref=e2]:
+  - generic [active] [ref=f7e1]:
+    - generic [ref=f7e2]:
+      - generic [ref=f7e4]:
+        - generic [ref=f7e6]:
+          - generic [ref=f7e7] [cursor=pointer]:
+            - generic [ref=f7e8]: demo中心
+            - generic [ref=f7e10]: 
+          - generic [ref=f7e12] [cursor=pointer]:
+            - generic [ref=f7e13]: O&M Center
+            - generic [ref=f7e15]: 
+          - generic [ref=f7e16] [cursor=pointer]:
+            - generic [ref=f7e17]: Data Pipeline
+            - generic [ref=f7e19]: 
+          - generic [ref=f7e20] [cursor=pointer]:
+            - generic [ref=f7e21]: Data Development
+            - generic [ref=f7e23]: 
+          - generic [ref=f7e24] [cursor=pointer]:
+            - generic [ref=f7e25]: Data Service
+            - generic [ref=f7e27]: 
+          - generic [ref=f7e28] [cursor=pointer]:
+            - generic [ref=f7e29]: Data Management
+            - generic [ref=f7e31]: 
+          - generic [ref=f7e32] [cursor=pointer]:
+            - generic [ref=f7e33]: System Management
+            - generic [ref=f7e35]: 
+          - generic [ref=f7e36] [cursor=pointer]:
+            - generic [ref=f7e37]: Recycle Bin
+            - generic [ref=f7e39]: 
+        - generic [ref=f7e41]:
+          - text:                                    
+          - main [ref=f7e314]:
+            - tabpanel [ref=f7e318]:
+              - tabpanel [ref=f7e323]:
+                - generic [ref=f7e324]:
+                  - generic [ref=f7e325]:
+                    - generic [ref=f7e327]:
+                      - generic [ref=f7e328]:
+                        - generic [ref=f7e330]: Real-Time Pipeline
+                        - button "Create" [ref=f7e331] [cursor=pointer]:
+                          - img [ref=f7e333]:
+                            - generic: 
+                          - generic [ref=f7e334]: Create
+                      - generic [ref=f7e335]:
+                        - generic [ref=f7e338] [cursor=pointer]:
+                          - img [ref=f7e340]:
+                            - generic: 
+                          - textbox "Task/Folder Search" [ref=f7e341]
+                        - button [ref=f7e344] [cursor=pointer]:
+                          - img [ref=f7e346]:
+                            - generic: 
+                      - generic [ref=f7e350] [cursor=pointer]: All Tasks
+                      - tree [ref=f7e356]:
+                        - generic:
+                          - textbox "for screen reader"
+                        - generic [ref=f7e360]:
+                          - generic [ref=f7e361]:
+                            - img [ref=f7e363] [cursor=pointer]:
+                              - generic: 
+                            - generic [ref=f7e367] [cursor=pointer]:
+                              - generic [ref=f7e368]:
+                                - generic [ref=f7e369]: 00管道任务示例
+                                - generic [ref=f7e370]: 00管道任务示例
+                              - text:  
+                          - generic [ref=f7e371]:
+                            - img [ref=f7e373] [cursor=pointer]:
+                              - generic: 
+                            - generic [ref=f7e377] [cursor=pointer]:
+                              - generic [ref=f7e378]:
+                                - generic [ref=f7e379]: 用户体验-nqWtlCYG-2269076
+                                - generic [ref=f7e380]: 用户体验-nqWtlCYG-2269076
+                              - text:  
+                    - img [ref=f7e383]:
+                      - generic: 
+                  - generic [ref=f7e385]:
+                    - generic [ref=f7e386]:
+                      - generic [ref=f7e387]:
+                        - generic [ref=f7e388]: Real-Time Pipeline
+                        - generic [ref=f7e389]:
+                          - button "Collapse Workflow" [ref=f7e390] [cursor=pointer]:
+                            - generic [ref=f7e391]: Collapse Workflow
+                          - button "Help Doc" [ref=f7e392] [cursor=pointer]:
+                            - generic [ref=f7e394]: Help Doc
+                      - generic [ref=f7e395]: It supports real-time full and incremental synchronization of single tables, multiple tables, entire databases, and multi-source to single-target data, based on data source adaptability.
+                      - generic [ref=f7e396]:
+                        - generic [ref=f7e397]:
+                          - generic [ref=f7e398]: Workflow
+                          - img [ref=f7e400] [cursor=pointer]:
+                            - generic: 
+                        - generic [ref=f7e403]:
+                          - generic [ref=f7e404]:
+                            - generic [ref=f7e405]: "01"
+                            - generic [ref=f7e408]: Environment Preparation
+                          - generic [ref=f7e410]:
+                            - generic [ref=f7e411]: "02"
+                            - generic [ref=f7e414]: Data Source Selection
+                          - generic [ref=f7e416]:
+                            - generic [ref=f7e417]: "03"
+                            - generic [ref=f7e420]: Table Field Mapping
+                          - generic [ref=f7e422]:
+                            - generic [ref=f7e423]: "04"
+                            - generic [ref=f7e426]: Pipeline Control
+                          - generic [ref=f7e428]:
+                            - generic [ref=f7e429]: "05"
+                            - generic [ref=f7e432]: Task O&M
+                    - generic [ref=f7e433]:
+                      - generic [ref=f7e434]: Overview
+                      - generic [ref=f7e439]:
+                        - generic [ref=f7e440]:
+                          - generic [ref=f7e441]: Remaining Task Capacity
+                          - generic [ref=f7e442]:
+                            - generic [ref=f7e443]: "--"
+                            - generic [ref=f7e444]: (No Limit)
+                        - generic [ref=f7e446]:
+                          - generic [ref=f7e447]: Created by Me
+                          - generic [ref=f7e448]: "0"
+                    - generic [ref=f7e449]:
+                      - tablist [ref=f7e450]:
+                        - generic [ref=f7e452]:
+                          - tab "Recent Edits" [selected] [ref=f7e454] [cursor=pointer]
+                          - tab "My Favorites" [ref=f7e456] [cursor=pointer]
+                        - generic [ref=f7e458] [cursor=pointer]:
+                          - checkbox "Task Related to Me" [checked] [ref=f7e460]
+                          - generic [ref=f7e462]: Task Related to Me
+                      - tabpanel "Recent Edits" [ref=f7e465]:
+                        - generic [ref=f7e466]:
+                          - generic [ref=f7e470]:
+                            - table [ref=f7e472]:
+                              - rowgroup [ref=f7e481]:
+                                - row "Task Name Directory Creator Creation Time Last Editor Last Edit Time" [ref=f7e482]:
+                                  - columnheader "Task Name" [ref=f7e483]:
+                                    - generic [ref=f7e484]: Task Name
+                                  - columnheader "Directory" [ref=f7e485]:
+                                    - generic [ref=f7e486]: Directory
+                                  - columnheader "Creator" [ref=f7e487]:
+                                    - generic [ref=f7e488]: Creator
+                                  - columnheader "Creation Time" [ref=f7e489]:
+                                    - generic [ref=f7e490]: Creation Time
+                                  - columnheader "Last Editor" [ref=f7e491]:
+                                    - generic [ref=f7e492]: Last Editor
+                                  - columnheader "Last Edit Time" [ref=f7e493]:
+                                    - generic [ref=f7e494]: Last Edit Time
+                                  - columnheader [ref=f7e495]:
+                                    - button [ref=f7e498] [cursor=pointer]:
+                                      - img [ref=f7e500]:
+                                        - generic: 
+                            - table [ref=f7e503]:
+                              - rowgroup [ref=f7e512]:
+                                - row "No content currently." [ref=f7e513]:
+                                  - cell "No content currently." [ref=f7e514]:
+                                    - generic [ref=f7e520]: No content currently.
+                          - generic [ref=f7e521]: Show the latest 20 records.
+      - generic [ref=f7e212]:
+        - generic [ref=f7e216]: FineDataLink数据集成平台
+        - generic [ref=f7e217]:
+          - link "反馈Demo问题" [ref=f7e218] [cursor=pointer]:
+            - /url: https://sk6xa7bj2w.jiandaoyun.com/f/60f632b1190a340008177595
+            - img [ref=f7e220]
+            - generic [ref=f7e224]: 反馈Demo问题
+          - generic [ref=f7e226]: 4.2.16.2#persist-2026.03.12
+          - generic [ref=f7e228] [cursor=pointer]:
+            - generic [ref=f7e230]: English
+            - generic [ref=f7e232]: 
+          - generic [ref=f7e234] [cursor=pointer]: 
+          - generic [ref=f7e239] [cursor=pointer]: 
+          - button [ref=f7e242] [cursor=pointer]:
+            - img [ref=f7e244]:
+              - generic: 
+          - generic [ref=f7e246] [cursor=pointer]:
+            - generic [ref=f7e248]: 
+            - generic [ref=f7e250]: nqWtlCYG
+            - generic [ref=f7e252]: 
+    - log [ref=f7e3]

@@ -1,0 +1,146 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e7]
+      - generic [ref=e9]: ETL Sync
+    - menubar [ref=e10]:
+      - menuitem "仪表盘" [expanded] [ref=e11]:
+        - generic [ref=e12] [cursor=pointer]:
+          - generic [ref=e13]: 仪表盘
+          - img [ref=e15]
+        - menu [ref=e258]:
+          - menuitem "监控大盘" [ref=e17] [cursor=pointer]:
+            - img [ref=e19]
+            - text: 监控大盘
+      - menuitem "数据开发" [expanded] [ref=e21]:
+        - generic [ref=e22] [cursor=pointer]:
+          - generic [ref=e23]: 数据开发
+          - img [ref=e25]
+        - menu [ref=e266]:
+          - menuitem "数据开发工作台" [ref=e267] [cursor=pointer]:
+            - img [ref=e269]
+            - text: 数据开发工作台
+          - menuitem "数据源管理" [active] [ref=e271] [cursor=pointer]:
+            - img [ref=e273]
+            - text: 数据源管理
+          - menuitem "任务编排" [ref=e277] [cursor=pointer]:
+            - img [ref=e279]
+            - text: 任务编排
+          - menuitem "任务管理" [ref=e281] [cursor=pointer]:
+            - img [ref=e283]
+            - text: 任务管理
+          - menuitem "CDC配置" [ref=e285] [cursor=pointer]:
+            - img [ref=e287]
+            - text: CDC配置
+      - menuitem "数据服务" [ref=e27]:
+        - generic [ref=e28] [cursor=pointer]:
+          - generic [ref=e29]: 数据服务
+          - img [ref=e31]
+      - menuitem "发布管理" [ref=e33]:
+        - generic [ref=e34] [cursor=pointer]:
+          - generic [ref=e35]: 发布管理
+          - img [ref=e37]
+      - menuitem "ETL调度" [ref=e39]:
+        - generic [ref=e40] [cursor=pointer]:
+          - generic [ref=e41]: ETL调度
+          - img [ref=e43]
+      - menuitem "数据转换" [ref=e45]:
+        - generic [ref=e46] [cursor=pointer]:
+          - generic [ref=e47]: 数据转换
+          - img [ref=e49]
+      - menuitem "监控日志" [ref=e51]:
+        - generic [ref=e52] [cursor=pointer]:
+          - generic [ref=e53]: 监控日志
+          - img [ref=e55]
+      - menuitem "系统管理" [ref=e57]:
+        - generic [ref=e58] [cursor=pointer]:
+          - generic [ref=e59]: 系统管理
+          - img [ref=e61]
+  - generic [ref=e63]:
+    - generic [ref=e64]:
+      - generic [ref=e65]:
+        - img [ref=e68] [cursor=pointer]
+        - navigation "面包屑" [ref=e70]:
+          - generic [ref=e71]:
+            - link "首页" [ref=e72]
+            - text: /
+          - link "数据源管理" [ref=e875]
+      - generic [ref=e75]:
+        - img [ref=e79] [cursor=pointer]
+        - generic [ref=e83] [cursor=pointer]:
+          - img [ref=e86]
+          - generic [ref=e88]: 管理员
+    - main [ref=e89]:
+      - generic [ref=e876]:
+        - generic [ref=e877]:
+          - generic [ref=e878]:
+            - textbox "请输入数据源名称" [ref=e880]
+            - button [ref=e882] [cursor=pointer]:
+              - img [ref=e885]
+          - button "新增数据源" [ref=e887] [cursor=pointer]:
+            - generic [ref=e888]:
+              - img [ref=e890]
+              - generic [ref=e892]: 新增数据源
+        - generic [ref=e894]:
+          - generic [ref=e896]:
+            - table [ref=e898]:
+              - rowgroup [ref=e907]:
+                - row "名称 类型 主机 端口 状态 操作" [ref=e908]:
+                  - columnheader [ref=e909]
+                  - columnheader "名称" [ref=e910]:
+                    - generic [ref=e911]: 名称
+                  - columnheader "类型" [ref=e912]:
+                    - generic [ref=e913]: 类型
+                  - columnheader "主机" [ref=e914]:
+                    - generic [ref=e915]: 主机
+                  - columnheader "端口" [ref=e916]:
+                    - generic [ref=e917]: 端口
+                  - columnheader "状态" [ref=e918]:
+                    - generic [ref=e919]: 状态
+                  - columnheader "操作" [ref=e920]:
+                    - generic [ref=e921]: 操作
+            - table [ref=e926]:
+              - rowgroup [ref=e935]:
+                - row "展开当前行 测试MySQL源 MySQL etl-mysql-source 3306 成功 编辑 测试 删除" [ref=e936]:
+                  - cell "展开当前行" [ref=e937]:
+                    - button "展开当前行" [ref=e939] [cursor=pointer]:
+                      - img [ref=e941]
+                  - cell "测试MySQL源" [ref=e943]:
+                    - generic [ref=e944]: 测试MySQL源
+                  - cell "MySQL" [ref=e945]:
+                    - generic [ref=e948]: MySQL
+                  - cell "etl-mysql-source" [ref=e949]:
+                    - generic [ref=e950]: etl-mysql-source
+                  - cell "3306" [ref=e951]:
+                    - generic [ref=e952]: "3306"
+                  - cell "成功" [ref=e953]:
+                    - generic [ref=e957]: 成功
+                  - cell "编辑 测试 删除" [ref=e958]:
+                    - generic [ref=e959]:
+                      - button "编辑" [ref=e960] [cursor=pointer]:
+                        - generic [ref=e961]:
+                          - img [ref=e963]
+                          - text: 编辑
+                      - button "测试" [ref=e966] [cursor=pointer]:
+                        - generic [ref=e967]:
+                          - img [ref=e969]
+                          - text: 测试
+                      - button "删除" [ref=e972] [cursor=pointer]:
+                        - generic [ref=e973]:
+                          - img [ref=e975]
+                          - text: 删除
+          - generic [ref=e977]:
+            - generic [ref=e978]: 共 1 条
+            - generic [ref=e981] [cursor=pointer]:
+              - generic:
+                - combobox [ref=e983]
+                - generic [ref=e984]: 10条/页
+              - img [ref=e987]
+            - button "上一页" [disabled] [ref=e989]:
+              - generic:
+                - img
+            - list [ref=e990]:
+              - listitem "第 1 页" [ref=e991]: "1"
+            - button "下一页" [disabled] [ref=e992]:
+              - generic:
+                - img

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.etl</groupId>
+        <artifactId>etl-sync-system</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>etl-scheduler</artifactId>
+    <name>ETL Scheduler</name>
+    <description>调度管理模块 - Quartz任务调度</description>
+
+    <dependencies>
+        <!-- 内部依赖 -->
+        <dependency>
+            <groupId>com.etl</groupId>
+            <artifactId>etl-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.etl</groupId>
+            <artifactId>etl-engine</artifactId>
+        </dependency>
+
+        <!-- MyBatis Plus -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+        </dependency>
+
+        <!-- Quartz -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-quartz</artifactId>
+        </dependency>
+    </dependencies>
+</project>

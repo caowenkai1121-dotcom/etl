@@ -1,0 +1,13 @@
+{
+  "active": true,
+  "iteration": 8,
+  "max_iterations": 100,
+  "started_at": "2026-05-01T00:27:36.417Z",
+  "prompt": "/ralph 完成后续所有的操作，包括部署、测试、BUG修改、回归测试、与原型对比验证、再调整",
+  "session_id": "3037a4e4-75e9-491b-bb70-fd5691c04fb6",
+  "project_path": "/opt/code/etl-sync-system/etl-web",
+  "linked_ultrawork": true,
+  "awaiting_confirmation": true,
+  "awaiting_confirmation_set_at": "2026-05-01T00:27:36.417Z",
+  "last_checked_at": "2026-05-01T01:03:40.912Z"
+}

@@ -1,0 +1,178 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e7]
+      - generic [ref=e9]: ETL Sync
+    - menubar [ref=e10]:
+      - menuitem "仪表盘" [ref=e11]:
+        - generic [ref=e12] [cursor=pointer]:
+          - generic [ref=e13]: 仪表盘
+          - img [ref=e15]
+      - menuitem "数据开发" [expanded] [ref=e17]:
+        - generic [ref=e18] [cursor=pointer]:
+          - generic [ref=e19]: 数据开发
+          - img [ref=e21]
+        - menu:
+          - menuitem "数据开发工作台" [ref=e23] [cursor=pointer]:
+            - img [ref=e25]
+            - text: 数据开发工作台
+          - menuitem "数据源管理" [ref=e27] [cursor=pointer]:
+            - img [ref=e29]
+            - text: 数据源管理
+          - menuitem "任务编排" [ref=e33] [cursor=pointer]:
+            - img [ref=e35]
+            - text: 任务编排
+          - menuitem "任务管理" [ref=e37] [cursor=pointer]:
+            - img [ref=e39]
+            - text: 任务管理
+          - menuitem "CDC配置" [ref=e41] [cursor=pointer]:
+            - img [ref=e43]
+            - text: CDC配置
+      - menuitem "数据服务" [ref=e46]:
+        - generic [ref=e47] [cursor=pointer]:
+          - generic [ref=e48]: 数据服务
+          - img [ref=e50]
+      - menuitem "发布管理" [ref=e52]:
+        - generic [ref=e53] [cursor=pointer]:
+          - generic [ref=e54]: 发布管理
+          - img [ref=e56]
+      - menuitem "ETL调度" [ref=e58]:
+        - generic [ref=e59] [cursor=pointer]:
+          - generic [ref=e60]: ETL调度
+          - img [ref=e62]
+      - menuitem "数据转换" [ref=e64]:
+        - generic [ref=e65] [cursor=pointer]:
+          - generic [ref=e66]: 数据转换
+          - img [ref=e68]
+      - menuitem "监控日志" [ref=e70]:
+        - generic [ref=e71] [cursor=pointer]:
+          - generic [ref=e72]: 监控日志
+          - img [ref=e74]
+      - menuitem "系统管理" [ref=e76]:
+        - generic [ref=e77] [cursor=pointer]:
+          - generic [ref=e78]: 系统管理
+          - img [ref=e80]
+  - generic [ref=e82]:
+    - generic [ref=e83]:
+      - generic [ref=e84]:
+        - img [ref=e87] [cursor=pointer]
+        - navigation "面包屑" [ref=e89]:
+          - generic [ref=e90]:
+            - link "首页" [ref=e91]
+            - text: /
+          - link "工作台首页" [ref=e93]
+      - generic [ref=e94]:
+        - img [ref=e98] [cursor=pointer]
+        - generic [ref=e102] [cursor=pointer]:
+          - img [ref=e105]
+          - generic [ref=e107]: 管理员
+    - main [ref=e108]:
+      - generic [ref=e109]:
+        - generic [ref=e111]:
+          - generic [ref=e113]:
+            - img [ref=e116]
+            - generic [ref=e118]:
+              - generic [ref=e119]: "0"
+              - generic [ref=e120]: 已发布
+          - generic [ref=e122]:
+            - img [ref=e125]
+            - generic [ref=e129]:
+              - generic [ref=e130]: "0"
+              - generic [ref=e131]: 待发布
+          - generic [ref=e133]:
+            - img [ref=e136]
+            - generic [ref=e138]:
+              - generic [ref=e139]: "0"
+              - generic [ref=e140]: 待更新
+          - generic [ref=e142]:
+            - img [ref=e145]
+            - generic [ref=e147]:
+              - generic [ref=e148]: "0"
+              - generic [ref=e149]: 我创建
+        - generic [ref=e150]:
+          - generic [ref=e151]:
+            - heading "操作流程" [level=3] [ref=e152]
+            - button "收起" [ref=e153] [cursor=pointer]:
+              - generic [ref=e154]:
+                - img [ref=e156]
+                - text: 收起
+          - generic [ref=e158]:
+            - generic [ref=e159] [cursor=pointer]:
+              - generic [ref=e160]: "01"
+              - generic [ref=e161]:
+                - generic [ref=e162]: 连接数据源
+                - generic [ref=e163]:
+                  - generic [ref=e164]: ① 创建数据源
+                  - generic [ref=e165]: ② 确认表和数据
+              - img [ref=e167]
+            - generic [ref=e169] [cursor=pointer]:
+              - generic [ref=e170]: "02"
+              - generic [ref=e171]:
+                - generic [ref=e172]: 设计定时任务
+                - generic [ref=e173]:
+                  - generic [ref=e174]: ① 创建定时任务
+                  - generic [ref=e175]: ② 设计数据处理流程
+              - img [ref=e177]
+            - generic [ref=e179] [cursor=pointer]:
+              - generic [ref=e180]: "03"
+              - generic [ref=e181]:
+                - generic [ref=e182]: 试运行调试
+                - generic [ref=e183]:
+                  - generic [ref=e184]: 试运行任务
+                  - generic [ref=e185]: 查看表数据详情
+              - img [ref=e187]
+            - generic [ref=e189] [cursor=pointer]:
+              - generic [ref=e190]: "04"
+              - generic [ref=e191]:
+                - generic [ref=e192]: 调度配置
+                - generic [ref=e194]: 设置执行周期
+              - img [ref=e196]
+            - generic [ref=e198] [cursor=pointer]:
+              - generic [ref=e199]: "05"
+              - generic [ref=e200]:
+                - generic [ref=e201]: 任务运维
+                - generic [ref=e202]:
+                  - generic [ref=e203]: 任务运行
+                  - generic [ref=e204]: 查看运行日志
+        - generic [ref=e205]:
+          - generic [ref=e206]:
+            - generic [ref=e207]:
+              - tablist [ref=e211]:
+                - tab "最近编辑" [selected] [ref=e213]
+                - tab "我的收藏" [ref=e214]
+              - generic:
+                - tabpanel "最近编辑"
+            - generic [ref=e215] [cursor=pointer]:
+              - generic [ref=e216]:
+                - checkbox "只看我相关的"
+              - generic [ref=e218]: 只看我相关的
+          - generic [ref=e219]:
+            - generic [ref=e220]:
+              - table [ref=e222]:
+                - rowgroup [ref=e232]:
+                  - row "任务名称 所属目录 创建人 创建时间 最近编辑人 最后编辑时间 最后发布时间 操作" [ref=e233]:
+                    - columnheader "任务名称" [ref=e234]:
+                      - generic [ref=e235]: 任务名称
+                    - columnheader "所属目录" [ref=e236]:
+                      - generic [ref=e237]: 所属目录
+                    - columnheader "创建人" [ref=e238]:
+                      - generic [ref=e239]: 创建人
+                    - columnheader "创建时间" [ref=e240]:
+                      - generic [ref=e241]: 创建时间
+                    - columnheader "最近编辑人" [ref=e242]:
+                      - generic [ref=e243]: 最近编辑人
+                    - columnheader "最后编辑时间" [ref=e244]:
+                      - generic [ref=e245]: 最后编辑时间
+                    - columnheader "最后发布时间" [ref=e246]:
+                      - generic [ref=e247]: 最后发布时间
+                    - columnheader "操作" [ref=e248]:
+                      - generic [ref=e249]: 操作
+              - generic [ref=e253]:
+                - table:
+                  - rowgroup
+                - generic [ref=e255]: 暂无数据
+            - img [ref=e258]
+          - generic [ref=e260]:
+            - generic [ref=e261]: 显示最近 10 条记录
+            - button "查看全部任务" [ref=e262] [cursor=pointer]:
+              - generic [ref=e263]: 查看全部任务

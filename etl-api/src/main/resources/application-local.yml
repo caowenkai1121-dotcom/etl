@@ -1,0 +1,63 @@
+# 本地开发环境配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/etl_system?useUnicode=true&characterEncoding=utf8mb4&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true&connectionCollation=utf8mb4_unicode_ci
+    username: root
+    password: root123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+
+# Quartz
+spring.quartz:
+  job-store-type: jdbc
+  jdbc:
+    initialize-schema: always
+  properties:
+    org:
+      quartz:
+        scheduler:
+          instanceName: EtlScheduler
+          instanceId: AUTO
+        jobStore:
+          class: org.springframework.scheduling.quartz.LocalDataSourceJobStore
+          driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+          tablePrefix: QRTZ_
+          isClustered: false
+          useProperties: false
+        threadPool:
+          class: org.quartz.simpl.SimpleThreadPool
+          threadCount: 10
+          threadPriority: 5
+
+# MyBatis Plus - 开启SQL日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# CDC - 本地环境
+cdc:
+  kafka:
+    bootstrap-servers: localhost:9092
+    topic: canal-binlog
+    consumer-group: etl-cdc-group
+  canal:
+    host: localhost
+    port: 11111
+    destination: example
+
+# Debug logging
+logging:
+  level:
+    com.etl: DEBUG
+    org.quartz: INFO

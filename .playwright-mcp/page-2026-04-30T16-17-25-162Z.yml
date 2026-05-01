@@ -1,0 +1,117 @@
+- iframe [ref=e2]:
+  - generic [active] [ref=f7e1]:
+    - generic [ref=f7e2]:
+      - generic [ref=f7e4]:
+        - generic [ref=f7e6]:
+          - generic [ref=f7e7] [cursor=pointer]:
+            - generic [ref=f7e8]: demo中心
+            - generic [ref=f7e10]: 
+          - generic [ref=f7e12] [cursor=pointer]:
+            - generic [ref=f7e13]: O&M Center
+            - generic [ref=f7e15]: 
+          - generic [ref=f7e16] [cursor=pointer]:
+            - generic [ref=f7e17]: Data Pipeline
+            - generic [ref=f7e19]: 
+          - generic [ref=f7e20] [cursor=pointer]:
+            - generic [ref=f7e21]: Data Development
+            - generic [ref=f7e23]: 
+          - generic [ref=f7e24] [cursor=pointer]:
+            - generic [ref=f7e25]: Data Service
+            - generic [ref=f7e27]: 
+          - generic [ref=f7e28] [cursor=pointer]:
+            - generic [ref=f7e29]: Data Management
+            - generic [ref=f7e31]: 
+          - generic [ref=f7e32] [cursor=pointer]:
+            - generic [ref=f7e33]: System Management
+            - generic [ref=f7e35]: 
+          - generic [ref=f7e36] [cursor=pointer]:
+            - generic [ref=f7e37]: Recycle Bin
+            - generic [ref=f7e39]: 
+        - generic [ref=f7e41]:
+          - text:                               
+          - generic [ref=f7e259]:
+            - complementary [ref=f7e260]:
+              - generic [ref=f7e262]:
+                - menu [ref=f7e263]:
+                  - menuitem [ref=f7e264] [cursor=pointer]
+                  - menuitem [ref=f7e265] [cursor=pointer]
+                - button "double-right" [ref=f7e266] [cursor=pointer]:
+                  - img "double-right" [ref=f7e268]:
+                    - img [ref=f7e269]
+            - main [ref=f7e271]:
+              - tabpanel [ref=f7e275]:
+                - tabpanel [ref=f7e279]:
+                  - generic [ref=f7e280]:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - generic: Scheduled Task
+                                    - button:
+                                      - generic:
+                                        - img:
+                                          - generic: 
+                                  - button "Create":
+                                    - generic:
+                                      - img:
+                                        - generic: 
+                                    - generic: Create
+                                - generic:
+                                  - generic:
+                                    - generic:
+                                      - generic:
+                                        - generic:
+                                          - img:
+                                            - generic: 
+                                        - textbox "Task/Folder Search"
+                                  - generic:
+                                    - button:
+                                      - generic:
+                                        - img:
+                                          - generic: 
+                                - generic:
+                                  - generic:
+                                    - generic: All Tasks
+                                - generic:
+                                  - generic:
+                                    - generic:
+                                      - generic:
+                                        - generic:
+                                          - generic: You have no Scheduled Task permission. Contact the administrator.
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - img:
+                                    - generic: 
+                        - generic:
+                          - generic:
+                            - generic: You do not have operation permission on this page. Contact the administrator.
+      - generic [ref=f7e212]:
+        - generic [ref=f7e216]: FineDataLink数据集成平台
+        - generic [ref=f7e217]:
+          - link "反馈Demo问题" [ref=f7e218] [cursor=pointer]:
+            - /url: https://sk6xa7bj2w.jiandaoyun.com/f/60f632b1190a340008177595
+            - img [ref=f7e220]
+            - generic [ref=f7e224]: 反馈Demo问题
+          - generic [ref=f7e226]: 4.2.16.2#persist-2026.03.12
+          - generic [ref=f7e228] [cursor=pointer]:
+            - generic [ref=f7e230]: English
+            - generic [ref=f7e232]: 
+          - generic [ref=f7e234] [cursor=pointer]: 
+          - generic [ref=f7e239] [cursor=pointer]: 
+          - button [ref=f7e242] [cursor=pointer]:
+            - img [ref=f7e244]:
+              - generic: 
+          - generic [ref=f7e246] [cursor=pointer]:
+            - generic [ref=f7e248]: 
+            - generic [ref=f7e250]: nqWtlCYG
+            - generic [ref=f7e252]: 
+    - log [ref=f7e3]
+    - generic:
+      - generic:
+        - generic:
+          - tooltip "Real-Time Task"

@@ -1,0 +1,276 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e7] [cursor=pointer]
+      - generic [ref=e10]:
+        - generic [ref=e11] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e13] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e15] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e18] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e20] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e22] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e26] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e28] [cursor=pointer]:
+          - generic:
+            - img
+      - img [ref=e34] [cursor=pointer]
+    - generic [ref=e36]:
+      - generic [ref=e38]: Data Pipeline
+      - generic [ref=e42]:
+        - generic [ref=e43]: 数据管道
+        - generic [ref=e44] [cursor=pointer]:
+          - img [ref=e46]
+          - generic [ref=e50]: 调度管理
+        - generic [ref=e51] [cursor=pointer]:
+          - img [ref=e53]
+          - generic [ref=e55]: 执行记录
+        - generic [ref=e56] [cursor=pointer]:
+          - img [ref=e58]
+          - generic [ref=e60]: 任务编排
+        - generic [ref=e61] [cursor=pointer]:
+          - img [ref=e63]
+          - generic [ref=e65]: 数据质量
+  - generic [ref=e66]:
+    - banner [ref=e67]:
+      - generic [ref=e69]:
+        - img [ref=e71]
+        - textbox "搜索任务、数据源、API..." [ref=e73]
+      - generic [ref=e74]:
+        - img [ref=e77] [cursor=pointer]
+        - img [ref=e81] [cursor=pointer]
+        - generic [ref=e84] [cursor=pointer]:
+          - img [ref=e86]
+          - superscript [ref=e90]: "3"
+        - button "管理员" [ref=e92] [cursor=pointer]:
+          - img [ref=e95]
+          - generic [ref=e97]: 管理员
+          - img [ref=e99]
+    - navigation "面包屑" [ref=e102]:
+      - link "数据管道" [ref=e104]
+    - main [ref=e105]:
+      - generic [ref=e106]:
+        - generic [ref=e108]:
+          - heading "Real-Time Pipeline" [level=1] [ref=e109]
+          - paragraph [ref=e110]: 实时CDC数据管道，支持MySQL/Oracle/PG等数据库增量同步到Doris/ES/Kafka等目标端
+          - generic [ref=e111]:
+            - button "创建管道任务" [ref=e112] [cursor=pointer]:
+              - generic [ref=e113]:
+                - img [ref=e115]
+                - text: 创建管道任务
+            - button "管理数据源" [ref=e117] [cursor=pointer]:
+              - generic [ref=e118]:
+                - img [ref=e120]
+                - text: 管理数据源
+            - button "查看执行记录" [ref=e124] [cursor=pointer]:
+              - generic [ref=e125]:
+                - img [ref=e127]
+                - text: 查看执行记录
+        - generic [ref=e137]:
+          - generic [ref=e139] [cursor=pointer]:
+            - generic [ref=e140]:
+              - img [ref=e143]
+              - generic [ref=e146]:
+                - text: "+3"
+                - img [ref=e148]
+            - generic [ref=e150]: "5"
+            - generic [ref=e151]: 运行中管道
+          - generic [ref=e153] [cursor=pointer]:
+            - generic [ref=e154]:
+              - img [ref=e157]
+              - generic [ref=e161]: 总容量 15
+            - generic [ref=e162]: "10"
+            - generic [ref=e163]: 剩余任务容量
+          - generic [ref=e165] [cursor=pointer]:
+            - generic [ref=e166]:
+              - img [ref=e169]
+              - generic [ref=e171]: 本周
+            - generic [ref=e172]: "3"
+            - generic [ref=e173]: 我创建的管道
+        - generic [ref=e174]:
+          - generic [ref=e175]:
+            - heading "管道操作指引" [level=3] [ref=e176]
+            - button "收起" [ref=e177] [cursor=pointer]:
+              - generic [ref=e178]:
+                - text: 收起
+                - img [ref=e180]
+          - generic [ref=e182]:
+            - generic [ref=e183]:
+              - generic [ref=e184]: "01"
+              - generic [ref=e185]:
+                - generic [ref=e186]: 环境准备
+                - generic [ref=e187]:
+                  - generic [ref=e188]: 准备数据库、网络等资源
+                  - generic [ref=e189]: 检查数据源连接状态
+              - img [ref=e191]
+            - generic [ref=e193]:
+              - generic [ref=e194]: "02"
+              - generic [ref=e195]:
+                - generic [ref=e196]: 选择数据源
+                - generic [ref=e197]:
+                  - generic [ref=e198]: 选择来源端、去向端数据源
+                  - generic [ref=e199]: 配置数据源连接信息
+              - img [ref=e201]
+            - generic [ref=e203]:
+              - generic [ref=e204]: "03"
+              - generic [ref=e205]:
+                - generic [ref=e206]: 表字段映射
+                - generic [ref=e207]:
+                  - generic [ref=e208]: 选择来源表、目标表
+                  - generic [ref=e209]: 配置字段映射规则
+              - img [ref=e211]
+            - generic [ref=e213]:
+              - generic [ref=e214]: "04"
+              - generic [ref=e215]:
+                - generic [ref=e216]: 管道控制
+                - generic [ref=e217]:
+                  - generic [ref=e218]: 设置管道资源配置
+                  - generic [ref=e219]: 配置同步速率限制
+              - img [ref=e221]
+            - generic [ref=e223]:
+              - generic [ref=e224]: "05"
+              - generic [ref=e225]:
+                - generic [ref=e226]: 任务运维
+                - generic [ref=e227]:
+                  - generic [ref=e228]: 启动/停止管道任务
+                  - generic [ref=e229]: 查看监控与告警
+        - generic [ref=e231]:
+          - generic [ref=e232]:
+            - generic [ref=e235]:
+              - img [ref=e238]
+              - textbox "搜索任务/文件夹" [ref=e240]
+            - tree [ref=e241]:
+              - treeitem "根目录 12" [expanded] [ref=e242]:
+                - generic [ref=e243] [cursor=pointer]:
+                  - img [ref=e245]
+                  - generic [ref=e247]:
+                    - img [ref=e249]
+                    - generic [ref=e251]: 根目录
+                    - generic [ref=e252]: "12"
+                - group [ref=e253]:
+                  - treeitem "00管道任务示例 5" [expanded] [ref=e254]:
+                    - generic [ref=e256] [cursor=pointer]:
+                      - img [ref=e258]
+                      - generic [ref=e260]: 00管道任务示例
+                      - generic [ref=e261]: "5"
+                    - group
+                  - treeitem "生产环境管道 4" [expanded] [ref=e262]:
+                    - generic [ref=e264] [cursor=pointer]:
+                      - img [ref=e266]
+                      - generic [ref=e268]: 生产环境管道
+                      - generic [ref=e269]: "4"
+                    - group
+                  - treeitem "测试环境管道 3" [expanded] [ref=e270]:
+                    - generic [ref=e272] [cursor=pointer]:
+                      - img [ref=e274]
+                      - generic [ref=e276]: 测试环境管道
+                      - generic [ref=e277]: "3"
+                    - group
+              - treeitem "CDC实时同步 8" [expanded] [ref=e278]:
+                - generic [ref=e279] [cursor=pointer]:
+                  - img [ref=e281]
+                  - generic [ref=e283]:
+                    - img [ref=e285]
+                    - generic [ref=e287]: CDC实时同步
+                    - generic [ref=e288]: "8"
+                - group [ref=e289]:
+                  - treeitem "MySQL到Doris 3" [expanded] [ref=e290]:
+                    - generic [ref=e292] [cursor=pointer]:
+                      - img [ref=e294]
+                      - generic [ref=e296]: MySQL到Doris
+                      - generic [ref=e297]: "3"
+                    - group
+                  - treeitem "Oracle到ES 2" [expanded] [ref=e298]:
+                    - generic [ref=e300] [cursor=pointer]:
+                      - img [ref=e302]
+                      - generic [ref=e304]: Oracle到ES
+                      - generic [ref=e305]: "2"
+                    - group
+                  - treeitem "PG到Kafka 3" [expanded] [ref=e306]:
+                    - generic [ref=e308] [cursor=pointer]:
+                      - img [ref=e310]
+                      - generic [ref=e312]: PG到Kafka
+                      - generic [ref=e313]: "3"
+                    - group
+              - treeitem "离线T+1同步 6" [expanded] [ref=e314]:
+                - generic [ref=e315] [cursor=pointer]:
+                  - img [ref=e317]
+                  - generic [ref=e319]:
+                    - img [ref=e321]
+                    - generic [ref=e323]: 离线T+1同步
+                    - generic [ref=e324]: "6"
+                - group [ref=e325]:
+                  - treeitem "数仓ETL任务 4" [expanded] [ref=e326]:
+                    - generic [ref=e328] [cursor=pointer]:
+                      - img [ref=e330]
+                      - generic [ref=e332]: 数仓ETL任务
+                      - generic [ref=e333]: "4"
+                    - group
+                  - treeitem "报表同步 2" [expanded] [ref=e334]:
+                    - generic [ref=e336] [cursor=pointer]:
+                      - img [ref=e338]
+                      - generic [ref=e340]: 报表同步
+                      - generic [ref=e341]: "2"
+                    - group
+              - treeitem "归档备份 3" [expanded] [ref=e342]:
+                - generic [ref=e344] [cursor=pointer]:
+                  - img [ref=e346]
+                  - generic [ref=e348]: 归档备份
+                  - generic [ref=e349]: "3"
+                - group
+          - generic [ref=e350]:
+            - generic [ref=e351]:
+              - generic [ref=e352]:
+                - generic [ref=e353] [cursor=pointer]: 最近编辑
+                - generic [ref=e354] [cursor=pointer]: 我的收藏
+                - generic [ref=e355] [cursor=pointer]: 全部管道
+              - generic [ref=e356]:
+                - generic [ref=e357] [cursor=pointer]:
+                  - generic [ref=e358]:
+                    - checkbox "与我相关"
+                  - generic [ref=e360]: 与我相关
+                - generic [ref=e362]:
+                  - img [ref=e365]
+                  - textbox "搜索管道名称..." [ref=e367]
+            - generic [ref=e368]:
+              - generic [ref=e369]:
+                - table [ref=e371]:
+                  - rowgroup [ref=e382]:
+                    - row "管道名称 所属目录 同步类型 数据源 创建人 创建时间 最近编辑 最后编辑时间 操作" [ref=e383]:
+                      - columnheader "管道名称" [ref=e384]:
+                        - generic [ref=e385]: 管道名称
+                      - columnheader "所属目录" [ref=e386]:
+                        - generic [ref=e387]: 所属目录
+                      - columnheader "同步类型" [ref=e388]:
+                        - generic [ref=e389]: 同步类型
+                      - columnheader "数据源" [ref=e390]:
+                        - generic [ref=e391]: 数据源
+                      - columnheader "创建人" [ref=e392]:
+                        - generic [ref=e393]: 创建人
+                      - columnheader "创建时间" [ref=e394]:
+                        - generic [ref=e395]: 创建时间
+                      - columnheader "最近编辑" [ref=e396]:
+                        - generic [ref=e397]: 最近编辑
+                      - columnheader "最后编辑时间" [ref=e398]:
+                        - generic [ref=e399]: 最后编辑时间
+                      - columnheader "操作" [ref=e400]:
+                        - generic [ref=e401]: 操作
+                - generic [ref=e405]:
+                  - table:
+                    - rowgroup
+                  - generic [ref=e407]: 暂无数据
+              - img [ref=e410]
+            - generic [ref=e413]: 显示最近 0 条记录

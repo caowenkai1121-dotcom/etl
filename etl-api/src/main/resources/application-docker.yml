@@ -1,0 +1,58 @@
+# Docker环境配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql-system:3306/etl_system?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&connectionCollation=utf8mb4_unicode_ci
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:root123456}
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+
+# Quartz
+spring.quartz:
+  job-store-type: jdbc
+  jdbc:
+    initialize-schema: never
+  properties:
+    org:
+      quartz:
+        scheduler:
+          instanceName: EtlScheduler
+          instanceId: AUTO
+        jobStore:
+          class: org.springframework.scheduling.quartz.LocalDataSourceJobStore
+          driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+          tablePrefix: QRTZ_
+          isClustered: true
+          clusterCheckinInterval: 10000
+          useProperties: false
+        threadPool:
+          class: org.quartz.simpl.SimpleThreadPool
+          threadCount: 10
+          threadPriority: 5
+
+# CDC - Docker环境 (容器名连接)
+cdc:
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:kafka:9092}
+    topic: ${KAFKA_TOPIC:etl-cdc}
+    default-topic: ${KAFKA_DEFAULT_TOPIC:etl-cdc}
+    consumer-group: ${KAFKA_CONSUMER_GROUP:etl-cdc-group}
+  debezium:
+    connect-url: ${DEBEZIUM_CONNECT_URL:http://debezium-connect:8083}
+
+# Logging
+logging:
+  level:
+    com.etl: INFO
+    org.quartz: WARN

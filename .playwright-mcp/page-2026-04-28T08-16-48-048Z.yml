@@ -1,0 +1,230 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e7]
+      - generic [ref=e9]: ETL Sync
+    - menubar [ref=e10]:
+      - menuitem "仪表盘" [expanded] [ref=e11]:
+        - generic [ref=e12] [cursor=pointer]:
+          - generic [ref=e13]: 仪表盘
+          - img [ref=e15]
+        - menu [ref=e17]:
+          - menuitem "监控大盘" [ref=e18] [cursor=pointer]:
+            - img [ref=e20]
+            - text: 监控大盘
+      - menuitem "数据开发" [expanded] [ref=e22]:
+        - generic [ref=e23] [cursor=pointer]:
+          - generic [ref=e24]: 数据开发
+          - img [ref=e26]
+        - menu [ref=e264]:
+          - menuitem "数据开发工作台" [ref=e265] [cursor=pointer]:
+            - img [ref=e267]
+            - text: 数据开发工作台
+          - menuitem "数据源管理" [ref=e269] [cursor=pointer]:
+            - img [ref=e271]
+            - text: 数据源管理
+          - menuitem "任务编排" [ref=e275] [cursor=pointer]:
+            - img [ref=e277]
+            - text: 任务编排
+          - menuitem "任务管理" [ref=e279] [cursor=pointer]:
+            - img [ref=e281]
+            - text: 任务管理
+          - menuitem "CDC配置" [ref=e283] [cursor=pointer]:
+            - img [ref=e285]
+            - text: CDC配置
+      - menuitem "数据服务" [ref=e28]:
+        - generic [ref=e29] [cursor=pointer]:
+          - generic [ref=e30]: 数据服务
+          - img [ref=e32]
+      - menuitem "发布管理" [ref=e34]:
+        - generic [ref=e35] [cursor=pointer]:
+          - generic [ref=e36]: 发布管理
+          - img [ref=e38]
+      - menuitem "ETL调度" [ref=e40]:
+        - generic [ref=e41] [cursor=pointer]:
+          - generic [ref=e42]: ETL调度
+          - img [ref=e44]
+      - menuitem "数据转换" [ref=e46]:
+        - generic [ref=e47] [cursor=pointer]:
+          - generic [ref=e48]: 数据转换
+          - img [ref=e50]
+      - menuitem "监控日志" [ref=e52]:
+        - generic [ref=e53] [cursor=pointer]:
+          - generic [ref=e54]: 监控日志
+          - img [ref=e56]
+      - menuitem "系统管理" [ref=e58]:
+        - generic [ref=e59] [cursor=pointer]:
+          - generic [ref=e60]: 系统管理
+          - img [ref=e62]
+  - generic [ref=e64]:
+    - generic [ref=e65]:
+      - generic [ref=e66]:
+        - img [ref=e69] [cursor=pointer]
+        - navigation "面包屑" [ref=e71]:
+          - generic [ref=e72]:
+            - link "首页" [ref=e73]
+            - text: /
+          - link "数据源管理" [ref=e288]
+      - generic [ref=e76]:
+        - img [ref=e80] [cursor=pointer]
+        - generic [ref=e84] [cursor=pointer]:
+          - img [ref=e87]
+          - generic [ref=e89]: 管理员
+    - main [ref=e90]:
+      - generic [ref=e289]:
+        - generic [ref=e290]:
+          - generic [ref=e291]:
+            - textbox "请输入数据源名称" [ref=e293]
+            - button [ref=e295] [cursor=pointer]:
+              - img [ref=e298]
+          - button "新增数据源" [ref=e300] [cursor=pointer]:
+            - generic [ref=e301]:
+              - img [ref=e303]
+              - generic [ref=e305]: 新增数据源
+        - generic [ref=e307]:
+          - generic [ref=e309]:
+            - table [ref=e311]:
+              - rowgroup [ref=e320]:
+                - row "名称 类型 主机 端口 状态 操作" [ref=e321]:
+                  - columnheader [ref=e322]
+                  - columnheader "名称" [ref=e323]:
+                    - generic [ref=e324]: 名称
+                  - columnheader "类型" [ref=e325]:
+                    - generic [ref=e326]: 类型
+                  - columnheader "主机" [ref=e327]:
+                    - generic [ref=e328]: 主机
+                  - columnheader "端口" [ref=e329]:
+                    - generic [ref=e330]: 端口
+                  - columnheader "状态" [ref=e331]:
+                    - generic [ref=e332]: 状态
+                  - columnheader "操作" [ref=e333]:
+                    - generic [ref=e334]: 操作
+            - table [ref=e339]:
+              - rowgroup [ref=e348]:
+                - row "展开当前行 本地MySQL MySQL mysql-system 3306 成功 编辑 测试 删除" [ref=e529]:
+                  - cell "展开当前行" [ref=e350]:
+                    - button "展开当前行" [ref=e352] [cursor=pointer]:
+                      - img [ref=e354]
+                  - cell "本地MySQL" [ref=e356]:
+                    - generic [ref=e357]: 本地MySQL
+                  - cell "MySQL" [ref=e358]:
+                    - generic [ref=e361]: MySQL
+                  - cell "mysql-system" [ref=e362]:
+                    - generic [ref=e363]: mysql-system
+                  - cell "3306" [ref=e364]:
+                    - generic [ref=e365]: "3306"
+                  - cell "成功" [ref=e530]:
+                    - generic [ref=e370]: 成功
+                  - cell "编辑 测试 删除" [ref=e371]:
+                    - generic [ref=e372]:
+                      - button "编辑" [ref=e373] [cursor=pointer]:
+                        - generic [ref=e374]:
+                          - img [ref=e376]
+                          - text: 编辑
+                      - button "测试" [ref=e379] [cursor=pointer]:
+                        - generic [ref=e380]:
+                          - img [ref=e382]
+                          - text: 测试
+                      - button "删除" [ref=e385] [cursor=pointer]:
+                        - generic [ref=e386]:
+                          - img [ref=e388]
+                          - text: 删除
+                - row "展开当前行 源端MySQL MySQL mysql-source 3306 成功 编辑 测试 删除" [ref=e536]:
+                  - cell "展开当前行" [ref=e391]:
+                    - button "展开当前行" [ref=e393] [cursor=pointer]:
+                      - img [ref=e395]
+                  - cell "源端MySQL" [ref=e397]:
+                    - generic [ref=e398]: 源端MySQL
+                  - cell "MySQL" [ref=e399]:
+                    - generic [ref=e402]: MySQL
+                  - cell "mysql-source" [ref=e403]:
+                    - generic [ref=e404]: mysql-source
+                  - cell "3306" [ref=e405]:
+                    - generic [ref=e406]: "3306"
+                  - cell "成功" [ref=e537]:
+                    - generic [ref=e411]: 成功
+                  - cell "编辑 测试 删除" [ref=e412]:
+                    - generic [ref=e413]:
+                      - button "编辑" [ref=e414] [cursor=pointer]:
+                        - generic [ref=e415]:
+                          - img [ref=e417]
+                          - text: 编辑
+                      - button "测试" [ref=e420] [cursor=pointer]:
+                        - generic [ref=e421]:
+                          - img [ref=e423]
+                          - text: 测试
+                      - button "删除" [ref=e426] [cursor=pointer]:
+                        - generic [ref=e427]:
+                          - img [ref=e429]
+                          - text: 删除
+                - row "展开当前行 PostgreSQL PostgreSQL postgres 5432 成功 编辑 测试 删除" [ref=e543]:
+                  - cell "展开当前行" [ref=e432]:
+                    - button "展开当前行" [ref=e434] [cursor=pointer]:
+                      - img [ref=e436]
+                  - cell "PostgreSQL" [ref=e438]:
+                    - generic [ref=e439]: PostgreSQL
+                  - cell "PostgreSQL" [ref=e440]:
+                    - generic [ref=e443]: PostgreSQL
+                  - cell "postgres" [ref=e444]:
+                    - generic [ref=e445]: postgres
+                  - cell "5432" [ref=e446]:
+                    - generic [ref=e447]: "5432"
+                  - cell "成功" [ref=e544]:
+                    - generic [ref=e452]: 成功
+                  - cell "编辑 测试 删除" [ref=e453]:
+                    - generic [ref=e454]:
+                      - button "编辑" [ref=e455] [cursor=pointer]:
+                        - generic [ref=e456]:
+                          - img [ref=e458]
+                          - text: 编辑
+                      - button "测试" [ref=e461] [cursor=pointer]:
+                        - generic [ref=e462]:
+                          - img [ref=e464]
+                          - text: 测试
+                      - button "删除" [ref=e467] [cursor=pointer]:
+                        - generic [ref=e468]:
+                          - img [ref=e470]
+                          - text: 删除
+                - row "展开当前行 Apache Doris Doris doris-fe 9030 未测试 编辑 测试 删除" [ref=e472]:
+                  - cell "展开当前行" [ref=e473]:
+                    - button "展开当前行" [ref=e475] [cursor=pointer]:
+                      - img [ref=e477]
+                  - cell "Apache Doris" [ref=e479]:
+                    - generic [ref=e480]: Apache Doris
+                  - cell "Doris" [ref=e481]:
+                    - generic [ref=e484]: Doris
+                  - cell "doris-fe" [ref=e485]:
+                    - generic [ref=e486]: doris-fe
+                  - cell "9030" [ref=e487]:
+                    - generic [ref=e488]: "9030"
+                  - cell "未测试" [ref=e489]:
+                    - generic [ref=e493]: 未测试
+                  - cell "编辑 测试 删除" [ref=e494]:
+                    - generic [ref=e495]:
+                      - button "编辑" [ref=e496] [cursor=pointer]:
+                        - generic [ref=e497]:
+                          - img [ref=e499]
+                          - text: 编辑
+                      - button "测试" [ref=e502] [cursor=pointer]:
+                        - generic [ref=e503]:
+                          - img [ref=e505]
+                          - text: 测试
+                      - button "删除" [ref=e508] [cursor=pointer]:
+                        - generic [ref=e509]:
+                          - img [ref=e511]
+                          - text: 删除
+          - generic [ref=e513]:
+            - generic [ref=e514]: 共 4 条
+            - generic [ref=e517] [cursor=pointer]:
+              - generic:
+                - combobox [ref=e519]
+                - generic [ref=e520]: 10条/页
+              - img [ref=e523]
+            - button "上一页" [disabled] [ref=e525]:
+              - generic:
+                - img
+            - list [ref=e526]:
+              - listitem "第 1 页" [ref=e527]: "1"
+            - button "下一页" [disabled] [ref=e528]:
+              - generic:
+                - img

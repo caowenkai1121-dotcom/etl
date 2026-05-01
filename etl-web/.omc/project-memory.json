@@ -1,0 +1,256 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1777565523329,
+  "projectRoot": "/opt/code/etl-sync-system/etl-web",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "vue",
+        "version": "3.4.0",
+        "category": "frontend"
+      },
+      {
+        "name": "vite",
+        "version": "5.0.10",
+        "category": "build"
+      }
+    ],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "ls /opt/code/etl-sync-system/etl-web/package.json 2>/dev/null && cd /opt/code/etl-sync-system/etl-web && npm run build 2>&1 | tail -5",
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": "npm run dev",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "preview": "vite preview"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": "ES modules",
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "src",
+      "tests"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "dist": {
+      "path": "dist",
+      "purpose": "Distribution/build output",
+      "fileCount": 1,
+      "lastAccessed": 1777565523286,
+      "keyFiles": [
+        "index.html"
+      ]
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 2,
+      "lastAccessed": 1777565523294,
+      "keyFiles": [
+        "App.vue",
+        "main.js"
+      ]
+    },
+    "test-results": {
+      "path": "test-results",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1777565523310,
+      "keyFiles": []
+    },
+    "tests": {
+      "path": "tests",
+      "purpose": "Test files",
+      "fileCount": 0,
+      "lastAccessed": 1777565523321,
+      "keyFiles": []
+    },
+    "dist/assets": {
+      "path": "dist/assets",
+      "purpose": "Static assets",
+      "fileCount": 51,
+      "lastAccessed": 1777565523323,
+      "keyFiles": [
+        "MainLayout-BGEhZ7Pk.css",
+        "MainLayout-CxGO9cSm.js",
+        "Workbench-B3eJi2U_.js"
+      ]
+    },
+    "src/api": {
+      "path": "src/api",
+      "purpose": "API routes",
+      "fileCount": 2,
+      "lastAccessed": 1777565523324,
+      "keyFiles": [
+        "dev.js",
+        "index.js"
+      ]
+    },
+    "src/views": {
+      "path": "src/views",
+      "purpose": "View templates",
+      "fileCount": 0,
+      "lastAccessed": 1777565523325,
+      "keyFiles": []
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "src/views/dev-workbench/components/DagCanvas.vue",
+      "accessCount": 47,
+      "lastAccessed": 1777617256368,
+      "type": "file"
+    },
+    {
+      "path": "src/views/dev-workbench/index.vue",
+      "accessCount": 41,
+      "lastAccessed": 1777616548776,
+      "type": "file"
+    },
+    {
+      "path": "src/views/data-pipeline/index.vue",
+      "accessCount": 22,
+      "lastAccessed": 1777591328407,
+      "type": "file"
+    },
+    {
+      "path": "src/views/dev-workbench/components/NodePanel.vue",
+      "accessCount": 18,
+      "lastAccessed": 1777609941295,
+      "type": "file"
+    },
+    {
+      "path": "src/layout/MainLayout.vue",
+      "accessCount": 16,
+      "lastAccessed": 1777609807138,
+      "type": "file"
+    },
+    {
+      "path": "src/views/dev-workbench/components/NodePropertyPanel.vue",
+      "accessCount": 16,
+      "lastAccessed": 1777610132780,
+      "type": "file"
+    },
+    {
+      "path": "src/views/demo-center/index.vue",
+      "accessCount": 11,
+      "lastAccessed": 1777591388040,
+      "type": "file"
+    },
+    {
+      "path": "src/router/index.js",
+      "accessCount": 9,
+      "lastAccessed": 1777567397295,
+      "type": "file"
+    },
+    {
+      "path": "src/views/dev-workbench/Workbench.vue",
+      "accessCount": 9,
+      "lastAccessed": 1777597615146,
+      "type": "file"
+    },
+    {
+      "path": "src/api/dev.js",
+      "accessCount": 5,
+      "lastAccessed": 1777617443418,
+      "type": "file"
+    },
+    {
+      "path": "src/stores/devWorkbench.js",
+      "accessCount": 1,
+      "lastAccessed": 1777565536009,
+      "type": "file"
+    },
+    {
+      "path": "src/views/ops-center/index.vue",
+      "accessCount": 1,
+      "lastAccessed": 1777565691483,
+      "type": "file"
+    },
+    {
+      "path": "src/views/data-management/index.vue",
+      "accessCount": 1,
+      "lastAccessed": 1777565692118,
+      "type": "file"
+    },
+    {
+      "path": "src/views/recycle-bin/index.vue",
+      "accessCount": 1,
+      "lastAccessed": 1777565692464,
+      "type": "file"
+    },
+    {
+      "path": "src/views/datasource/index.vue",
+      "accessCount": 1,
+      "lastAccessed": 1777566493752,
+      "type": "file"
+    },
+    {
+      "path": "src/views/monitor/index.vue",
+      "accessCount": 1,
+      "lastAccessed": 1777566494528,
+      "type": "file"
+    },
+    {
+      "path": "src/views/publish/index.vue",
+      "accessCount": 1,
+      "lastAccessed": 1777566495362,
+      "type": "file"
+    },
+    {
+      "path": "src/views/api-service/index.vue",
+      "accessCount": 1,
+      "lastAccessed": 1777566496225,
+      "type": "file"
+    },
+    {
+      "path": "src/views/api-service/editor.vue",
+      "accessCount": 1,
+      "lastAccessed": 1777566496984,
+      "type": "file"
+    },
+    {
+      "path": "src/views/task/index.vue",
+      "accessCount": 1,
+      "lastAccessed": 1777566823595,
+      "type": "file"
+    },
+    {
+      "path": "src/views/dev-workbench/RealtimeWorkbench.vue",
+      "accessCount": 1,
+      "lastAccessed": 1777567039018,
+      "type": "file"
+    },
+    {
+      "path": "src/views/dev-workbench/RealtimeTaskEditor.vue",
+      "accessCount": 1,
+      "lastAccessed": 1777567239574,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

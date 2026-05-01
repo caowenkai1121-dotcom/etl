@@ -1,0 +1,199 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e7]
+      - generic [ref=e9]: ETL Sync
+    - menubar [ref=e10]:
+      - menuitem "仪表盘" [expanded] [ref=e11]:
+        - generic [ref=e12] [cursor=pointer]:
+          - generic [ref=e13]: 仪表盘
+          - img [ref=e15]
+        - menu [ref=e258]:
+          - menuitem "监控大盘" [ref=e17] [cursor=pointer]:
+            - img [ref=e19]
+            - text: 监控大盘
+      - menuitem "数据开发" [expanded] [ref=e21]:
+        - generic [ref=e22] [cursor=pointer]:
+          - generic [ref=e23]: 数据开发
+          - img [ref=e25]
+        - menu [ref=e266]:
+          - menuitem "数据开发工作台" [ref=e267] [cursor=pointer]:
+            - img [ref=e269]
+            - text: 数据开发工作台
+          - menuitem "数据源管理" [ref=e271] [cursor=pointer]:
+            - img [ref=e273]
+            - text: 数据源管理
+          - menuitem "任务编排" [ref=e277] [cursor=pointer]:
+            - img [ref=e279]
+            - text: 任务编排
+          - menuitem "任务管理" [ref=e281] [cursor=pointer]:
+            - img [ref=e283]
+            - text: 任务管理
+          - menuitem "CDC配置" [ref=e285] [cursor=pointer]:
+            - img [ref=e287]
+            - text: CDC配置
+      - menuitem "数据服务" [ref=e27]:
+        - generic [ref=e28] [cursor=pointer]:
+          - generic [ref=e29]: 数据服务
+          - img [ref=e31]
+      - menuitem "发布管理" [ref=e33]:
+        - generic [ref=e34] [cursor=pointer]:
+          - generic [ref=e35]: 发布管理
+          - img [ref=e37]
+      - menuitem "ETL调度" [ref=e39]:
+        - generic [ref=e40] [cursor=pointer]:
+          - generic [ref=e41]: ETL调度
+          - img [ref=e43]
+      - menuitem "数据转换" [ref=e45]:
+        - generic [ref=e46] [cursor=pointer]:
+          - generic [ref=e47]: 数据转换
+          - img [ref=e49]
+      - menuitem "监控日志" [ref=e51]:
+        - generic [ref=e52] [cursor=pointer]:
+          - generic [ref=e53]: 监控日志
+          - img [ref=e55]
+      - menuitem "系统管理" [ref=e57]:
+        - generic [ref=e58] [cursor=pointer]:
+          - generic [ref=e59]: 系统管理
+          - img [ref=e61]
+  - generic [ref=e63]:
+    - generic [ref=e64]:
+      - generic [ref=e65]:
+        - img [ref=e68] [cursor=pointer]
+        - navigation "面包屑" [ref=e70]:
+          - generic [ref=e71]:
+            - link "首页" [ref=e72]
+            - text: /
+          - link "任务管理" [ref=e658]
+      - generic [ref=e75]:
+        - img [ref=e79] [cursor=pointer]
+        - generic [ref=e83] [cursor=pointer]:
+          - img [ref=e86]
+          - generic [ref=e88]: 管理员
+    - main [ref=e89]:
+      - generic [ref=e659]:
+        - generic [ref=e660]:
+          - generic [ref=e661]:
+            - textbox "请输入任务名称" [ref=e663]
+            - button [ref=e665] [cursor=pointer]:
+              - img [ref=e668]
+          - generic [ref=e671] [cursor=pointer]:
+            - generic:
+              - combobox [ref=e673]
+              - generic [ref=e674]: 同步模式
+            - img [ref=e677]
+          - button "新增任务" [ref=e679] [cursor=pointer]:
+            - generic [ref=e680]:
+              - img [ref=e682]
+              - generic [ref=e684]: 新增任务
+        - generic [ref=e686]:
+          - generic [ref=e688]:
+            - table [ref=e690]:
+              - rowgroup [ref=e699]:
+                - row "任务名 源→目标 模式 状态 Cron 最后执行 操作" [ref=e700]:
+                  - columnheader "任务名" [ref=e701]:
+                    - generic [ref=e702]: 任务名
+                  - columnheader "源→目标" [ref=e703]:
+                    - generic [ref=e704]: 源→目标
+                  - columnheader "模式" [ref=e705]:
+                    - generic [ref=e706]: 模式
+                  - columnheader "状态" [ref=e707]:
+                    - generic [ref=e708]: 状态
+                  - columnheader "Cron" [ref=e709]:
+                    - generic [ref=e710]: Cron
+                  - columnheader "最后执行" [ref=e711]:
+                    - generic [ref=e712]: 最后执行
+                  - columnheader "操作" [ref=e713]:
+                    - generic [ref=e714]: 操作
+            - generic [ref=e718]:
+              - table:
+                - rowgroup
+              - generic [ref=e720]: 暂无数据
+          - generic [ref=e721]:
+            - generic [ref=e722]: 共 0 条
+            - generic [ref=e725] [cursor=pointer]:
+              - generic:
+                - combobox [ref=e727]
+                - generic [ref=e728]: 10条/页
+              - img [ref=e731]
+            - button "上一页" [disabled] [ref=e733]:
+              - generic:
+                - img
+            - list [ref=e734]:
+              - listitem "第 1 页" [ref=e735]: "1"
+            - button "下一页" [disabled] [ref=e736]:
+              - generic:
+                - img
+        - dialog "新增任务" [ref=e738]:
+          - generic [active] [ref=e739]:
+            - generic [ref=e740]:
+              - heading "新增任务" [level=2] [ref=e741]
+              - button "关闭此对话框" [ref=e742] [cursor=pointer]:
+                - img [ref=e744]
+            - generic [ref=e747]:
+              - separator [ref=e748]:
+                - generic [ref=e749]: 基础信息
+              - generic [ref=e750]:
+                - generic [ref=e752]:
+                  - generic [ref=e753]: "* 任务名称"
+                  - textbox "* 任务名称" [ref=e757]:
+                    - /placeholder: 请输入任务名称
+                - generic [ref=e759]:
+                  - generic [ref=e760]: 任务描述
+                  - textbox "任务描述" [ref=e764]:
+                    - /placeholder: 请输入任务描述
+                - generic [ref=e766]:
+                  - generic [ref=e767]: Cron表达式
+                  - textbox "Cron表达式" [ref=e771]:
+                    - /placeholder: 如 0 0 2 * * ?
+              - separator [ref=e772]:
+                - generic [ref=e773]: 源目标选择
+              - generic [ref=e774]:
+                - generic [ref=e776]:
+                  - generic [ref=e777]: "* 源数据源"
+                  - generic [ref=e780] [cursor=pointer]:
+                    - generic:
+                      - combobox "* 源数据源" [ref=e782]
+                      - generic [ref=e783]: 请选择源数据源
+                    - img [ref=e786]
+                - generic [ref=e789]:
+                  - generic [ref=e790]: "* 目标数据源"
+                  - generic [ref=e793] [cursor=pointer]:
+                    - generic:
+                      - combobox "* 目标数据源" [ref=e795]
+                      - generic [ref=e796]: 请选择目标数据源
+                    - img [ref=e799]
+              - separator [ref=e801]:
+                - generic [ref=e802]: 同步配置
+              - generic [ref=e803]:
+                - generic [ref=e805]:
+                  - generic [ref=e806]: "* 同步模式"
+                  - generic [ref=e809] [cursor=pointer]:
+                    - generic:
+                      - combobox "* 同步模式" [ref=e811]
+                      - generic [ref=e812]: 全量同步
+                    - img [ref=e815]
+                - generic [ref=e818]:
+                  - generic [ref=e819]: "* 同步范围"
+                  - generic [ref=e822] [cursor=pointer]:
+                    - generic:
+                      - combobox "* 同步范围" [ref=e824]
+                      - generic [ref=e825]: 单表
+                    - img [ref=e828]
+                - generic [ref=e831]:
+                  - generic [ref=e832]: 同步策略
+                  - generic [ref=e835] [cursor=pointer]:
+                    - generic:
+                      - combobox "同步策略" [ref=e837]
+                      - generic [ref=e838]: 覆盖
+                    - img [ref=e841]
+              - separator [ref=e843]:
+                - generic [ref=e844]: 表选择
+              - group "源表列表" [ref=e845]:
+                - generic [ref=e846]: 源表列表
+                - generic [ref=e850]: 请先选择源数据源
+            - generic [ref=e851]:
+              - button "取消" [ref=e852] [cursor=pointer]:
+                - generic [ref=e853]: 取消
+              - button "确定" [ref=e854] [cursor=pointer]:
+                - generic [ref=e855]: 确定

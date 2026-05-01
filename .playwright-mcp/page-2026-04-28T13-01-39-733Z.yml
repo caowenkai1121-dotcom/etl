@@ -1,0 +1,50 @@
+- iframe [active] [ref=e2]:
+  - generic [active] [ref=f1e1]:
+    - generic [ref=f1e2]:
+      - generic [ref=f1e3]:
+        - generic [ref=f1e7]:
+          - img [ref=f1e10]
+          - generic [ref=f1e11]:
+            - generic [ref=f1e13]:
+              - generic [ref=f1e15] [cursor=pointer]: 验证码登录
+              - generic [ref=f1e17] [cursor=pointer]: 密码登录
+            - generic [ref=f1e19]:
+              - text: 
+              - generic [ref=f1e81]:
+                - generic [ref=f1e83]: 用户名/手机号码/邮箱
+                - textbox "用户名/手机号码/邮箱" [ref=f1e85]
+                - generic [ref=f1e86]:
+                  - generic [ref=f1e88]: 密码
+                  - link "忘记密码?" [ref=f1e90] [cursor=pointer]:
+                    - /url: /login/signin?forget=yes&app=frdemo&referrer=https%3A%2F%2Fdemo.finedatalink.com%2Fdecision%2Flogin%3Forigin%3D504ca19c-7a88-4622-bc0b-d685fc4e0fe0
+                    - generic [ref=f1e91]: 忘记密码?
+                - generic [ref=f1e92]:
+                  - textbox "请输入密码" [ref=f1e93]
+                  - generic [ref=f1e95] [cursor=pointer]: 
+                - generic [ref=f1e97] [cursor=pointer]: 登录
+                - generic [ref=f1e104]:
+                  - text: 我已阅读并同意
+                  - link "《帆软用户服务协议》" [ref=f1e105] [cursor=pointer]:
+                    - /url: https://bbs.fanruan.com/thread-102821-1-1.html
+                  - text: 、
+                  - link "《隐私政策》" [ref=f1e106] [cursor=pointer]:
+                    - /url: https://www.fanruan.com/privacy
+                - generic [ref=f1e109]: 社交账号登录
+        - generic [ref=f1e57]:
+          - generic [ref=f1e62] [cursor=pointer]: Language
+          - generic [ref=f1e64] [cursor=pointer]: 
+        - generic [ref=f1e65]:
+          - generic [ref=f1e67]: Copyright ©
+          - link "帆软软件有限公司" [ref=f1e68] [cursor=pointer]:
+            - /url: https://www.fanruan.com/
+          - generic [ref=f1e70]: 版权所有
+          - generic [ref=f1e72]: "|"
+          - link "苏ICP备18065767号" [ref=f1e73] [cursor=pointer]:
+            - /url: https://beian.miit.gov.cn/#/Integrated/index
+          - generic [ref=f1e75]: "|"
+          - link "页面反馈" [ref=f1e76] [cursor=pointer]:
+            - /url: https://pe9qbh7c.shuzhiniao.com/web/#/ticket/a2555f84970f418a98960adb4029aed1/form
+      - generic [ref=f1e77]:
+        - generic [ref=f1e78]: —— 登录即可享受以下权益 ——
+        - generic [ref=f1e79]: 功能demo案例 业务场景方案 链接学习资源 反馈模板需求 持续更新
+    - generic [ref=f1e116]: 密码登录

@@ -1,0 +1,158 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e7]
+      - generic [ref=e9]: ETL Sync
+    - menubar [ref=e10]:
+      - menuitem "仪表盘" [expanded] [ref=e11]:
+        - generic [ref=e12] [cursor=pointer]:
+          - generic [ref=e13]: 仪表盘
+          - img [ref=e15]
+        - menu:
+          - menuitem "监控大盘" [ref=e17] [cursor=pointer]:
+            - img [ref=e19]
+            - text: 监控大盘
+      - menuitem "数据开发" [ref=e21]:
+        - generic [ref=e22] [cursor=pointer]:
+          - generic [ref=e23]: 数据开发
+          - img [ref=e25]
+      - menuitem "数据服务" [ref=e27]:
+        - generic [ref=e28] [cursor=pointer]:
+          - generic [ref=e29]: 数据服务
+          - img [ref=e31]
+      - menuitem "发布管理" [ref=e33]:
+        - generic [ref=e34] [cursor=pointer]:
+          - generic [ref=e35]: 发布管理
+          - img [ref=e37]
+      - menuitem "ETL调度" [ref=e39]:
+        - generic [ref=e40] [cursor=pointer]:
+          - generic [ref=e41]: ETL调度
+          - img [ref=e43]
+      - menuitem "数据转换" [ref=e45]:
+        - generic [ref=e46] [cursor=pointer]:
+          - generic [ref=e47]: 数据转换
+          - img [ref=e49]
+      - menuitem "监控日志" [ref=e51]:
+        - generic [ref=e52] [cursor=pointer]:
+          - generic [ref=e53]: 监控日志
+          - img [ref=e55]
+      - menuitem "系统管理" [ref=e57]:
+        - generic [ref=e58] [cursor=pointer]:
+          - generic [ref=e59]: 系统管理
+          - img [ref=e61]
+  - generic [ref=e63]:
+    - generic [ref=e64]:
+      - generic [ref=e65]:
+        - img [ref=e68] [cursor=pointer]
+        - navigation "面包屑" [ref=e70]:
+          - generic [ref=e71]:
+            - link "首页" [ref=e72]
+            - text: /
+          - link "监控大盘" [ref=e74]
+      - generic [ref=e75]:
+        - img [ref=e79] [cursor=pointer]
+        - generic [ref=e83] [cursor=pointer]:
+          - img [ref=e86]
+          - generic [ref=e88]: 管理员
+    - main [ref=e89]:
+      - generic [ref=e90]:
+        - generic [ref=e91]:
+          - generic [ref=e93]:
+            - img [ref=e96]
+            - generic [ref=e98]:
+              - generic [ref=e99]: "0"
+              - generic [ref=e100]: 运行中任务
+              - generic [ref=e101]: 实时
+          - generic [ref=e103]:
+            - img [ref=e106]
+            - generic [ref=e109]:
+              - generic [ref=e110]: 100.0%
+              - generic [ref=e111]: 今日成功率
+              - generic [ref=e112]: +0%
+          - generic [ref=e114]:
+            - img [ref=e117]
+            - generic [ref=e119]:
+              - generic [ref=e120]: "0"
+              - generic [ref=e121]: 今日同步量
+              - generic [ref=e122]: 0条/日均
+          - generic [ref=e124]:
+            - img [ref=e127]
+            - generic [ref=e129]:
+              - generic [ref=e130]: "0"
+              - generic [ref=e131]: 活跃告警
+              - generic [ref=e132]: 正常
+        - generic [ref=e133]:
+          - generic [ref=e136]:
+            - generic [ref=e137]:
+              - generic [ref=e138]: CPU使用率
+              - generic:
+                - generic: 0%
+            - progressbar [ref=e139]:
+              - generic [ref=e143]: 0%
+          - generic [ref=e146]:
+            - generic [ref=e147]:
+              - generic [ref=e148]: 内存使用率
+              - generic:
+                - generic: 17%
+            - progressbar [ref=e149]:
+              - generic [ref=e153]: 17%
+          - generic [ref=e156]:
+            - generic [ref=e157]:
+              - generic [ref=e158]: 连接池使用率
+              - generic:
+                - generic: 0%
+            - progressbar [ref=e159]:
+              - generic [ref=e163]: 0%
+        - generic [ref=e164]:
+          - generic [ref=e169]: 执行成功率
+          - generic [ref=e177]:
+            - generic [ref=e178]: 执行趋势
+            - radiogroup "radio-group" [ref=e179]:
+              - generic [ref=e180]:
+                - radio "7天" [checked] [ref=e181]
+                - generic [ref=e182] [cursor=pointer]: 7天
+              - generic [ref=e183]:
+                - radio "14天" [ref=e184]
+                - generic [ref=e185] [cursor=pointer]: 14天
+              - generic [ref=e186]:
+                - radio "30天" [ref=e187]
+                - generic [ref=e188] [cursor=pointer]: 30天
+        - generic [ref=e192]:
+          - generic [ref=e194]:
+            - generic [ref=e196]:
+              - generic [ref=e197]:
+                - img [ref=e199]
+                - text: 实时任务状态
+              - button "查看监控" [ref=e201] [cursor=pointer]:
+                - generic [ref=e202]: 查看监控
+            - generic [ref=e205]: 暂无运行中任务
+          - generic [ref=e207]:
+            - generic [ref=e209]:
+              - generic [ref=e210]: 最近执行记录
+              - button "查看全部" [ref=e211] [cursor=pointer]:
+                - generic [ref=e212]: 查看全部
+            - generic [ref=e215]: 暂无执行记录
+        - generic [ref=e216]:
+          - generic [ref=e218]:
+            - generic [ref=e221]: 快捷操作
+            - generic [ref=e223]:
+              - button "任务编排" [ref=e224] [cursor=pointer]:
+                - generic [ref=e225]:
+                  - img [ref=e227]
+                  - generic [ref=e229]: 任务编排
+              - button "API服务" [ref=e230] [cursor=pointer]:
+                - generic [ref=e231]:
+                  - img [ref=e233]
+                  - generic [ref=e235]: API服务
+              - button "数据源管理" [ref=e236] [cursor=pointer]:
+                - generic [ref=e239]: 数据源管理
+              - button "告警中心" [ref=e240] [cursor=pointer]:
+                - generic [ref=e241]:
+                  - img [ref=e243]
+                  - generic [ref=e247]: 告警中心
+          - generic [ref=e249]:
+            - generic [ref=e251]:
+              - generic [ref=e252]: 告警摘要
+              - button "查看全部" [ref=e253] [cursor=pointer]:
+                - generic [ref=e254]: 查看全部
+            - generic [ref=e257]: 暂无告警

@@ -1,0 +1,445 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e6]:
+        - generic [ref=e7] [cursor=pointer]:
+          - generic [ref=e8]: demo中心
+          - generic [ref=e10]: 
+        - generic [ref=e12] [cursor=pointer]:
+          - generic [ref=e13]: O&M Center
+          - generic [ref=e15]: 
+        - generic [ref=e16] [cursor=pointer]:
+          - generic [ref=e17]: Data Pipeline
+          - generic [ref=e19]: 
+        - generic [ref=e20] [cursor=pointer]:
+          - generic [ref=e21]: Data Development
+          - generic [ref=e23]: 
+        - generic [ref=e24] [cursor=pointer]:
+          - generic [ref=e25]: Data Service
+          - generic [ref=e27]: 
+        - generic [ref=e28] [cursor=pointer]:
+          - generic [ref=e29]: Data Management
+          - generic [ref=e31]: 
+        - generic [ref=e32] [cursor=pointer]:
+          - generic [ref=e33]: System Management
+          - generic [ref=e35]: 
+        - generic [ref=e36] [cursor=pointer]:
+          - generic [ref=e37]: Recycle Bin
+          - generic [ref=e39]: 
+      - generic [ref=e41]:
+        - text:                               
+        - generic [ref=e259]:
+          - complementary [ref=e260]:
+            - generic [ref=e262]:
+              - menu [ref=e263]:
+                - menuitem [ref=e264] [cursor=pointer]
+                - menuitem [ref=e265] [cursor=pointer]
+              - button "double-right" [ref=e266] [cursor=pointer]:
+                - img "double-right" [ref=e268]:
+                  - img [ref=e269]
+          - main [ref=e271]:
+            - tabpanel [ref=e275]:
+              - tabpanel [ref=e279]:
+                - generic [ref=e280]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: Scheduled Task
+                                  - button:
+                                    - generic:
+                                      - img:
+                                        - generic: 
+                                - button "Create":
+                                  - generic:
+                                    - img:
+                                      - generic: 
+                                  - generic: Create
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - generic:
+                                      - generic:
+                                        - img:
+                                          - generic: 
+                                      - textbox "Task/Folder Search"
+                                - generic:
+                                  - button:
+                                    - generic:
+                                      - img:
+                                        - generic: 
+                              - generic:
+                                - generic:
+                                  - generic: All Tasks
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - generic:
+                                      - generic:
+                                        - tree:
+                                          - generic:
+                                            - textbox "for screen reader"
+                                          - generic:
+                                            - generic:
+                                              - generic:
+                                                - generic:
+                                                  - generic:
+                                                    - generic:
+                                                      - img:
+                                                        - generic: 
+                                                    - generic:
+                                                      - generic:
+                                                        - generic:
+                                                          - generic:
+                                                            - generic: 01产品功能示例
+                                                            - generic: 01产品功能示例
+                                                          - text:  
+                                                  - generic:
+                                                    - generic:
+                                                      - img:
+                                                        - generic: 
+                                                    - generic:
+                                                      - generic:
+                                                        - generic:
+                                                          - generic:
+                                                            - generic: 02业务场景示例
+                                                            - generic: 02业务场景示例
+                                                          - text:  
+                                                  - generic:
+                                                    - generic:
+                                                      - img:
+                                                        - generic: 
+                                                    - generic:
+                                                      - generic:
+                                                        - generic:
+                                                          - generic:
+                                                            - generic: 03数据开发（ERP）示例
+                                                            - generic: 03数据开发（ERP）示例
+                                                          - text:  
+                                                  - generic:
+                                                    - generic:
+                                                      - img:
+                                                        - generic: 
+                                                    - generic:
+                                                      - generic:
+                                                        - generic:
+                                                          - generic:
+                                                            - generic: 用户体验-nqWtlCYG-2269076
+                                                            - generic: 用户体验-nqWtlCYG-2269076
+                                                          - text:  
+                                                  - generic:
+                                                    - generic:
+                                                      - generic:
+                                                        - generic:
+                                                          - generic:
+                                                            - generic: DAG_Explore_Study
+                                                            - generic: DAG_Explore_Study
+                                                          - text: 
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img:
+                                  - generic: 
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: Scheduled Task
+                                  - generic:
+                                    - button "Collapse Workflow":
+                                      - generic: Collapse Workflow
+                                    - button "Help Doc":
+                                      - generic: Help Doc
+                                - generic: It enables data extraction, transformation, and loading (ETL) with various nodes and operators on visual pages and supports automatic task execution through scheduling, helping you easily build an offline data warehouse for efficient and stable data production.
+                                - generic:
+                                  - generic:
+                                    - generic: Workflow
+                                    - generic:
+                                      - img:
+                                        - generic: 
+                                  - generic:
+                                    - generic:
+                                      - generic:
+                                        - generic:
+                                          - generic: "01"
+                                          - generic:
+                                            - generic:
+                                              - generic: Data Source Connection
+                                            - generic:
+                                              - generic: ① Create a data connection.
+                                              - generic: ② Identify table data to be processed.
+                                        - generic:
+                                          - generic: "02"
+                                          - generic:
+                                            - generic:
+                                              - generic: Real-Time Task Design
+                                            - generic:
+                                              - generic: ① Create a real-time task.
+                                              - generic: ② Design the data processing workflow.
+                                        - generic:
+                                          - generic: "03"
+                                          - generic:
+                                            - generic:
+                                              - generic: Debugging and Execution
+                                            - generic:
+                                              - generic: View detailed target table data in Database Table Management.
+                                        - generic:
+                                          - generic: "04"
+                                          - generic:
+                                            - generic:
+                                              - generic: Scheduling Configuration
+                                        - generic:
+                                          - generic: "05"
+                                          - generic:
+                                            - generic:
+                                              - generic: Task O&M
+                                            - generic:
+                                              - generic: View execution logs or execution records.
+                              - generic:
+                                - generic: Overview
+                                - generic:
+                                  - generic:
+                                    - generic:
+                                      - generic:
+                                        - generic: Remaining Task Publishing Capacity
+                                        - generic:
+                                          - generic: "--"
+                                          - generic: (No Limit)
+                                      - generic:
+                                        - generic:
+                                          - generic: Created by Me
+                                          - generic: "7"
+                                  - generic:
+                                    - generic:
+                                      - generic: Published
+                                      - generic: "179"
+                                    - generic:
+                                      - img
+                                  - generic:
+                                    - generic:
+                                      - generic: To Be Published
+                                      - generic: "112"
+                                    - generic:
+                                      - img
+                                  - generic:
+                                    - generic:
+                                      - generic: To Be Updated
+                                      - generic: "44"
+                                    - generic:
+                                      - img
+                              - generic:
+                                - tablist:
+                                  - generic:
+                                    - generic:
+                                      - generic:
+                                        - tab "Recent Edits" [selected]
+                                      - generic:
+                                        - tab "My Favorites"
+                                  - generic:
+                                    - button:
+                                      - img:
+                                        - img
+                                  - generic:
+                                    - generic:
+                                      - generic:
+                                        - checkbox "Task Related to Me" [checked]
+                                      - generic: Task Related to Me
+                                - generic:
+                                  - generic:
+                                    - tabpanel "Recent Edits":
+                                      - generic:
+                                        - generic:
+                                          - generic:
+                                            - generic:
+                                              - generic:
+                                                - generic:
+                                                  - generic:
+                                                    - table:
+                                                      - rowgroup:
+                                                        - row "Task Name Directory Creator Creation Time Last Editor Last Edit Time Last Publishing Time":
+                                                          - columnheader "Task Name":
+                                                            - generic: Task Name
+                                                          - columnheader "Directory":
+                                                            - generic: Directory
+                                                          - columnheader "Creator":
+                                                            - generic: Creator
+                                                          - columnheader "Creation Time":
+                                                            - generic: Creation Time
+                                                          - columnheader "Last Editor":
+                                                            - generic: Last Editor
+                                                          - columnheader "Last Edit Time":
+                                                            - generic: Last Edit Time
+                                                          - columnheader "Last Publishing Time":
+                                                            - generic: Last Publishing Time
+                                                          - columnheader:
+                                                            - generic:
+                                                              - generic:
+                                                                - button:
+                                                                  - generic:
+                                                                    - img:
+                                                                      - generic: 
+                                                  - generic:
+                                                    - table:
+                                                      - rowgroup:
+                                                        - row "Explore_DAG_Test 任务列表/用户体验-nqWtlCYG-2269076/Explore_DAG_Test 2269076 2026-04-30 16:11:46 2269076 2026-04-30 16:11:46 --":
+                                                          - cell "Explore_DAG_Test":
+                                                            - generic:
+                                                              - generic:
+                                                                - generic:
+                                                                  - generic:
+                                                                    - generic: Explore_DAG_Test
+                                                              - text: 
+                                                          - cell "任务列表/用户体验-nqWtlCYG-2269076/Explore_DAG_Test":
+                                                            - generic:
+                                                              - generic: 任务列表/用户体验-nqWtlCYG-2269076/Explore_DAG_Test
+                                                          - cell "2269076"
+                                                          - cell "2026-04-30 16:11:46"
+                                                          - cell "2269076"
+                                                          - cell "2026-04-30 16:11:46":
+                                                            - generic:
+                                                              - generic: 2026-04-30 16:11:46
+                                                          - cell "--"
+                                                          - cell
+                                                        - row "Task169 任务列表/用户体验-nqWtlCYG-2269076/Task169 2269076 2026-04-27 08:47:33 2269076 2026-04-27 08:47:33 --":
+                                                          - cell "Task169":
+                                                            - generic:
+                                                              - generic:
+                                                                - generic:
+                                                                  - generic:
+                                                                    - generic: Task169
+                                                              - text: 
+                                                          - cell "任务列表/用户体验-nqWtlCYG-2269076/Task169":
+                                                            - generic:
+                                                              - generic: 任务列表/用户体验-nqWtlCYG-2269076/Task169
+                                                          - cell "2269076"
+                                                          - cell "2026-04-27 08:47:33"
+                                                          - cell "2269076"
+                                                          - cell "2026-04-27 08:47:33":
+                                                            - generic:
+                                                              - generic: 2026-04-27 08:47:33
+                                                          - cell "--"
+                                                          - cell
+                                                        - row "任务15856 任务列表/用户体验-nqWtlCYG-2269076/任务15856 2269076 2026-04-27 08:45:20 2269076 2026-04-27 08:45:21 --":
+                                                          - cell "任务15856":
+                                                            - generic:
+                                                              - generic:
+                                                                - generic:
+                                                                  - generic:
+                                                                    - generic: 任务15856
+                                                              - text: 
+                                                          - cell "任务列表/用户体验-nqWtlCYG-2269076/任务15856":
+                                                            - generic:
+                                                              - generic: 任务列表/用户体验-nqWtlCYG-2269076/任务15856
+                                                          - cell "2269076"
+                                                          - cell "2026-04-27 08:45:20"
+                                                          - cell "2269076"
+                                                          - cell "2026-04-27 08:45:21":
+                                                            - generic:
+                                                              - generic: 2026-04-27 08:45:21
+                                                          - cell "--"
+                                                          - cell
+                                                        - row "任务15851 任务列表/用户体验-nqWtlCYG-2269076/任务15851 2269076 2026-04-27 03:47:55 2269076 2026-04-27 03:47:55 --":
+                                                          - cell "任务15851":
+                                                            - generic:
+                                                              - generic:
+                                                                - generic:
+                                                                  - generic:
+                                                                    - generic: 任务15851
+                                                              - text: 
+                                                          - cell "任务列表/用户体验-nqWtlCYG-2269076/任务15851":
+                                                            - generic:
+                                                              - generic: 任务列表/用户体验-nqWtlCYG-2269076/任务15851
+                                                          - cell "2269076"
+                                                          - cell "2026-04-27 03:47:55"
+                                                          - cell "2269076"
+                                                          - cell "2026-04-27 03:47:55":
+                                                            - generic:
+                                                              - generic: 2026-04-27 03:47:55
+                                                          - cell "--"
+                                                          - cell
+                                                        - row "任务15841 任务列表/用户体验-nqWtlCYG-2269076/任务15841 2269076 2026-04-26 09:51:47 2269076 2026-04-26 09:51:47 --":
+                                                          - cell "任务15841":
+                                                            - generic:
+                                                              - generic:
+                                                                - generic:
+                                                                  - generic:
+                                                                    - generic: 任务15841
+                                                              - text: 
+                                                          - cell "任务列表/用户体验-nqWtlCYG-2269076/任务15841":
+                                                            - generic:
+                                                              - generic: 任务列表/用户体验-nqWtlCYG-2269076/任务15841
+                                                          - cell "2269076"
+                                                          - cell "2026-04-26 09:51:47"
+                                                          - cell "2269076"
+                                                          - cell "2026-04-26 09:51:47":
+                                                            - generic:
+                                                              - generic: 2026-04-26 09:51:47
+                                                          - cell "--"
+                                                          - cell
+                                                        - row "任务15838 任务列表/用户体验-nqWtlCYG-2269076/任务15838 2269076 2026-04-25 15:16:21 2269076 2026-04-25 15:16:21 --":
+                                                          - cell "任务15838":
+                                                            - generic:
+                                                              - generic:
+                                                                - generic:
+                                                                  - generic:
+                                                                    - generic: 任务15838
+                                                              - text: 
+                                                          - cell "任务列表/用户体验-nqWtlCYG-2269076/任务15838":
+                                                            - generic:
+                                                              - generic: 任务列表/用户体验-nqWtlCYG-2269076/任务15838
+                                                          - cell "2269076"
+                                                          - cell "2026-04-25 15:16:21"
+                                                          - cell "2269076"
+                                                          - cell "2026-04-25 15:16:21":
+                                                            - generic:
+                                                              - generic: 2026-04-25 15:16:21
+                                                          - cell "--"
+                                                          - cell
+                                                        - row "任务15837 任务列表/用户体验-nqWtlCYG-2269076/任务15837 2269076 2026-04-25 12:34:09 2269076 2026-04-25 12:34:09 --":
+                                                          - cell "任务15837":
+                                                            - generic:
+                                                              - generic:
+                                                                - generic:
+                                                                  - generic:
+                                                                    - generic: 任务15837
+                                                              - text: 
+                                                          - cell "任务列表/用户体验-nqWtlCYG-2269076/任务15837":
+                                                            - generic:
+                                                              - generic: 任务列表/用户体验-nqWtlCYG-2269076/任务15837
+                                                          - cell "2269076"
+                                                          - cell "2026-04-25 12:34:09"
+                                                          - cell "2269076"
+                                                          - cell "2026-04-25 12:34:09":
+                                                            - generic:
+                                                              - generic: 2026-04-25 12:34:09
+                                                          - cell "--"
+                                                          - cell
+                                        - generic: Show the latest 20 records.
+    - generic [ref=e212]:
+      - generic [ref=e216]: FineDataLink数据集成平台
+      - generic [ref=e217]:
+        - link "反馈Demo问题" [ref=e218] [cursor=pointer]:
+          - /url: https://sk6xa7bj2w.jiandaoyun.com/f/60f632b1190a340008177595
+          - img [ref=e220]
+          - generic [ref=e224]: 反馈Demo问题
+        - generic [ref=e226]: 4.2.16.2#persist-2026.03.12
+        - generic [ref=e228] [cursor=pointer]:
+          - generic [ref=e230]: English
+          - generic [ref=e232]: 
+        - generic [ref=e234] [cursor=pointer]: 
+        - generic [ref=e239] [cursor=pointer]: 
+        - button [ref=e242] [cursor=pointer]:
+          - img [ref=e244]:
+            - generic: 
+        - generic [ref=e246] [cursor=pointer]:
+          - generic [ref=e248]: 
+          - generic [ref=e250]: nqWtlCYG
+          - generic [ref=e252]: 
+  - log [ref=e3]
+  - generic: 

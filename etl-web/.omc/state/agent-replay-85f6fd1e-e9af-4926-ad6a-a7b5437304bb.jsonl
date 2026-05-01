@@ -1,0 +1,6 @@
+{"t":0,"agent":"a86a78b","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"abee52b","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"system","event":"keyword_detected","keyword":"ralph"}
+{"t":0,"agent":"system","event":"mode_change","mode_from":"none","mode_to":"ralph"}
+{"t":0,"agent":"a06f12c","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"ab974e5","agent_type":"unknown","event":"agent_stop","success":true}

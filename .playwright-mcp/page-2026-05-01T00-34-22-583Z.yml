@@ -1,0 +1,199 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e7] [cursor=pointer]
+      - generic [ref=e10]:
+        - generic [ref=e11] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e13] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e15] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e18] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e20] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e22] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e26] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e28] [cursor=pointer]:
+          - generic:
+            - img
+      - img [ref=e34] [cursor=pointer]
+    - generic [ref=e36]:
+      - generic [ref=e38]: Demo中心
+      - generic [ref=e42]:
+        - generic [ref=e43]: Demo中心
+        - generic [ref=e44] [cursor=pointer]:
+          - img [ref=e46]
+          - generic [ref=e50]: 监控大盘
+        - generic [ref=e51] [cursor=pointer]:
+          - img [ref=e53]
+          - generic [ref=e56]: 快速入门
+        - generic [ref=e57] [cursor=pointer]:
+          - img [ref=e59]
+          - generic [ref=e61]: 任务模板
+  - generic [ref=e62]:
+    - banner [ref=e63]:
+      - generic [ref=e65]:
+        - img [ref=e67]
+        - textbox "搜索任务、数据源、API..." [ref=e69]
+      - generic [ref=e70]:
+        - img [ref=e73] [cursor=pointer]
+        - img [ref=e77] [cursor=pointer]
+        - generic [ref=e80] [cursor=pointer]:
+          - img [ref=e82]
+          - superscript [ref=e86]: "3"
+        - button "管理员" [ref=e88] [cursor=pointer]:
+          - img [ref=e91]
+          - generic [ref=e93]: 管理员
+          - img [ref=e95]
+    - navigation "面包屑" [ref=e98]:
+      - link "Demo中心" [ref=e100]
+    - main [ref=e101]:
+      - generic [ref=e102]:
+        - generic [ref=e104]:
+          - heading "欢迎来到，FineDataLink" [level=1] [ref=e105]
+          - paragraph [ref=e106]: 在线 Demo 平台
+          - generic [ref=e107]:
+            - button "Demo更新日志" [ref=e108] [cursor=pointer]:
+              - generic [ref=e109]:
+                - img [ref=e111]
+                - text: Demo更新日志
+            - button "方案咨询" [ref=e115] [cursor=pointer]:
+              - generic [ref=e116]:
+                - img [ref=e118]
+                - text: 方案咨询
+        - generic [ref=e127]:
+          - generic [ref=e128] [cursor=pointer]:
+            - img [ref=e131]
+            - generic [ref=e133]: 产品介绍视频
+          - button "了解 FineDataLink" [ref=e135] [cursor=pointer]:
+            - generic [ref=e136]:
+              - text: 了解 FineDataLink
+              - img [ref=e138]
+        - generic [ref=e140]:
+          - heading "资源" [level=3] [ref=e141]
+          - generic [ref=e142]:
+            - generic [ref=e144] [cursor=pointer]:
+              - img [ref=e147]
+              - generic [ref=e151]: 产品更新动态
+            - generic [ref=e153] [cursor=pointer]:
+              - img [ref=e156]
+              - generic [ref=e158]: 联系技术支持
+            - generic [ref=e160] [cursor=pointer]:
+              - img [ref=e163]
+              - generic [ref=e165]: 加入社区
+            - generic [ref=e167] [cursor=pointer]:
+              - img [ref=e170]
+              - generic [ref=e173]: 最佳实践
+            - generic [ref=e175] [cursor=pointer]:
+              - img [ref=e178]
+              - generic [ref=e180]: 帮助文档
+            - generic [ref=e182] [cursor=pointer]:
+              - img [ref=e185]
+              - generic [ref=e187]: 文档AI小助手
+        - generic [ref=e188]:
+          - heading "功能介绍" [level=3] [ref=e189]
+          - generic [ref=e190]:
+            - generic [ref=e192] [cursor=pointer]:
+              - img [ref=e195]
+              - generic [ref=e197]: 数据开发功能介绍
+            - generic [ref=e199] [cursor=pointer]:
+              - img [ref=e202]
+              - generic [ref=e206]: 设备监控看板
+            - generic [ref=e208] [cursor=pointer]:
+              - img [ref=e211]
+              - generic [ref=e213]: 电商经营场景方案
+            - generic [ref=e215] [cursor=pointer]:
+              - img [ref=e218]
+              - generic [ref=e220]: 数据血缘功能介绍
+            - generic [ref=e222] [cursor=pointer]:
+              - img [ref=e225]
+              - generic [ref=e227]: 写入FineBI公共数据
+            - generic [ref=e229] [cursor=pointer]:
+              - img [ref=e232]
+              - generic [ref=e234]: 数据下云
+            - generic [ref=e236] [cursor=pointer]:
+              - img [ref=e239]
+              - generic [ref=e242]: 数据管道功能介绍
+            - generic [ref=e244] [cursor=pointer]:
+              - img [ref=e247]
+              - generic [ref=e249]: 设备数据采集与应用
+            - generic [ref=e251] [cursor=pointer]:
+              - img [ref=e254]
+              - generic [ref=e256]: 零售业务场景
+            - generic [ref=e258] [cursor=pointer]:
+              - img [ref=e261]
+              - generic [ref=e263]: 数据服务功能介绍
+            - generic [ref=e265] [cursor=pointer]:
+              - img [ref=e268]
+              - generic [ref=e270]: 生产实时看板
+            - generic [ref=e272] [cursor=pointer]:
+              - img [ref=e275]
+              - generic [ref=e279]: 财务收入核算
+        - generic [ref=e280]:
+          - heading "更多资源" [level=3] [ref=e281]
+          - generic [ref=e282]:
+            - generic [ref=e284] [cursor=pointer]:
+              - img [ref=e287]
+              - generic [ref=e291]:
+                - heading "产品更新动态" [level=4] [ref=e292]
+                - paragraph [ref=e293]: 了解最新版本功能和改进
+            - generic [ref=e295] [cursor=pointer]:
+              - img [ref=e298]
+              - generic [ref=e300]:
+                - heading "联系技术支持" [level=4] [ref=e301]
+                - paragraph [ref=e302]: 获取专业技术支持和帮助
+            - generic [ref=e304] [cursor=pointer]:
+              - img [ref=e307]
+              - generic [ref=e309]:
+                - heading "加入社区" [level=4] [ref=e310]
+                - paragraph [ref=e311]: 与开发者交流分享经验
+            - generic [ref=e313] [cursor=pointer]:
+              - img [ref=e316]
+              - generic [ref=e319]:
+                - heading "最佳实践" [level=4] [ref=e320]
+                - paragraph [ref=e321]: 行业解决方案和案例
+            - generic [ref=e323] [cursor=pointer]:
+              - img [ref=e326]
+              - generic [ref=e328]:
+                - heading "帮助文档" [level=4] [ref=e329]
+                - paragraph [ref=e330]: 完整的产品使用文档
+            - generic [ref=e332] [cursor=pointer]:
+              - img [ref=e335]
+              - generic [ref=e337]:
+                - heading "文档AI小助手" [level=4] [ref=e338]
+                - paragraph [ref=e339]: 智能搜索和推荐
+        - generic [ref=e341]:
+          - tablist [ref=e345]:
+            - tab "热门推荐" [selected] [ref=e347]
+            - tab "客户案例" [ref=e348]
+            - tab "功能应用" [ref=e349]
+            - tab "价值场景" [ref=e350]
+          - tabpanel "热门推荐" [ref=e352]:
+            - generic [ref=e353]:
+              - generic [ref=e355] [cursor=pointer]:
+                - generic [ref=e357]: "1"
+                - generic [ref=e358]: 数据开发入门
+                - generic [ref=e359]: 快速上手ETL任务开发
+              - generic [ref=e361] [cursor=pointer]:
+                - generic [ref=e363]: "2"
+                - generic [ref=e364]: ETL最佳实践
+                - generic [ref=e365]: 高效数据处理方案
+              - generic [ref=e367] [cursor=pointer]:
+                - generic [ref=e369]: "3"
+                - generic [ref=e370]: 实时同步方案
+                - generic [ref=e371]: CDC实时数据管道
+              - generic [ref=e373] [cursor=pointer]:
+                - generic [ref=e375]: "4"
+                - generic [ref=e376]: API服务构建
+                - generic [ref=e377]: 快速构建数据API

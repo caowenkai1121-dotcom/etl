@@ -1,0 +1,182 @@
+- iframe [ref=e2]:
+  - generic [active] [ref=f1e1]:
+    - generic [ref=f1e2]:
+      - generic [ref=f1e4]:
+        - generic [ref=f1e6]:
+          - generic [ref=f1e7] [cursor=pointer]:
+            - generic [ref=f1e8]: demo中心
+            - generic [ref=f1e10]: 
+          - generic [ref=f1e12] [cursor=pointer]:
+            - generic [ref=f1e13]: O&M Center
+            - generic [ref=f1e15]: 
+          - generic [ref=f1e16] [cursor=pointer]:
+            - generic [ref=f1e17]: Data Pipeline
+            - generic [ref=f1e19]: 
+          - generic [ref=f1e20] [cursor=pointer]:
+            - generic [ref=f1e21]: Data Development
+            - generic [ref=f1e23]: 
+          - generic [ref=f1e24] [cursor=pointer]:
+            - generic [ref=f1e25]: Data Service
+            - generic [ref=f1e27]: 
+          - generic [ref=f1e28] [cursor=pointer]:
+            - generic [ref=f1e29]: Data Management
+            - generic [ref=f1e31]: 
+          - generic [ref=f1e32] [cursor=pointer]:
+            - generic [ref=f1e33]: System Management
+            - generic [ref=f1e35]: 
+          - generic [ref=f1e36] [cursor=pointer]:
+            - generic [ref=f1e37]: Recycle Bin
+            - generic [ref=f1e39]: 
+        - generic [ref=f1e42]:
+          - generic [ref=f1e43]:
+            - generic [ref=f1e44]:
+              - iframe [ref=f1e46]:
+                - generic [ref=f3e2]:
+                  - generic [ref=f3e7]:
+                    - generic [ref=f3e29]: 欢迎来到，FineDataLink
+                    - generic [ref=f3e40]: 在线 Demo 平台
+                    - generic [ref=f3e51]: Demo更新日志
+                    - generic [ref=f3e62]: 方案咨询
+                    - region "Video Player" [ref=f3e134]:
+                      - button "Play Video" [ref=f3e136] [cursor=pointer]:
+                        - text: 
+                        - generic [ref=f3e137]: Play Video
+                      - text:      
+                    - generic [ref=f3e148]: 了解FineDataLink
+                    - generic [ref=f3e159]: 了解FineDataLink
+                    - generic [ref=f3e180]: 更多资源
+                    - generic [ref=f3e191]: 其他参考
+                    - generic [ref=f3e262]: 产品更新动态
+                    - generic [ref=f3e273]: 联系技术支持
+                    - generic [ref=f3e284]: 加入社区
+                    - generic [ref=f3e295]: 最佳实践
+                    - generic [ref=f3e306]: 帮助文档
+                    - generic [ref=f3e317]: 文档AI小助手
+                    - generic [ref=f3e399]:
+                      - generic:
+                        - generic [ref=f3e697]: 数据开发功能介绍
+                        - generic [ref=f3e707]: 设备监控看板（MQTT）
+                        - generic [ref=f3e717]: 电商经营场景方案
+                        - generic [ref=f3e727]: 数据血缘功能介绍
+                        - generic [ref=f3e737]: 写入FineBI公共数据
+                        - generic [ref=f3e747]: 数据下云
+                        - generic [ref=f3e757]: 数据管道功能介绍
+                        - generic [ref=f3e767]: 设备数据采集与应用
+                        - generic [ref=f3e777]: 零售业务场景
+                        - generic [ref=f3e787]: 数据服务功能介绍
+                        - generic [ref=f3e797]: 生产实时看板
+                        - generic [ref=f3e807]: 财务收入核算
+                    - generic [ref=f3e962]: 标题1
+                    - generic [ref=f3e973]: 热门推荐
+                    - generic [ref=f3e984]: 客户案例
+                    - generic [ref=f3e995]: 功能应用
+                    - generic [ref=f3e1006]: 价值场景
+                  - generic [ref=f3e1211]:
+                    - img [ref=f3e1213] [cursor=pointer]
+                    - img [ref=f3e1216] [cursor=pointer]
+                    - img [ref=f3e1219] [cursor=pointer]
+              - generic [ref=f1e49]: 
+            - generic [ref=f1e50]:
+              - generic [ref=f1e56] [cursor=pointer]: 
+              - generic [ref=f1e62] [cursor=pointer]: 
+          - generic [ref=f1e63]:
+            - generic [ref=f1e66] [cursor=pointer]: 
+            - generic [ref=f1e67]:
+              - generic [ref=f1e68]:
+                - generic [ref=f1e69]:
+                  - generic [ref=f1e71] [cursor=pointer]: 
+                  - generic [ref=f1e73] [cursor=pointer]: 
+                - generic [ref=f1e75] [cursor=pointer]: 
+                - generic [ref=f1e77] [cursor=pointer]: 
+                - generic [ref=f1e85]:
+                  - generic [ref=f1e89] [cursor=pointer]: "--------价值场景演示--------"
+                  - generic [ref=f1e93] [cursor=pointer]: "--------数仓构建--------"
+                  - generic [ref=f1e94]:
+                    - generic [ref=f1e95] [cursor=pointer]:
+                      - generic [ref=f1e98]: 
+                      - generic [ref=f1e101]: "--------功能示例--------"
+                    - generic [ref=f1e103]:
+                      - generic [ref=f1e104] [cursor=pointer]:
+                        - generic [ref=f1e107]: 
+                        - generic [ref=f1e108]: 连接器功能介绍
+                      - generic [ref=f1e109] [cursor=pointer]:
+                        - generic [ref=f1e112]: 
+                        - generic [ref=f1e113]: 数据开发功能介绍
+                      - generic [ref=f1e114] [cursor=pointer]:
+                        - generic [ref=f1e117]: 
+                        - generic [ref=f1e118]: 实时管道功能介绍
+                      - generic [ref=f1e119] [cursor=pointer]:
+                        - generic [ref=f1e122]: 
+                        - generic [ref=f1e123]: 数据服务功能介绍
+                      - generic [ref=f1e124] [cursor=pointer]:
+                        - generic [ref=f1e127]: 
+                        - generic [ref=f1e128]: 数据血缘功能介绍
+                      - generic [ref=f1e129] [cursor=pointer]:
+                        - generic [ref=f1e132]: 
+                        - generic [ref=f1e133]: 任务运维功能介绍
+                      - generic [ref=f1e134]:
+                        - generic [ref=f1e135] [cursor=pointer]:
+                          - generic [ref=f1e139]: 
+                          - generic [ref=f1e141]: 
+                          - generic [ref=f1e142]: 数据开发示例
+                        - generic [ref=f1e144]:
+                          - generic [ref=f1e145] [cursor=pointer]:
+                            - generic [ref=f1e148]: 
+                            - generic [ref=f1e149]: 帆软产品组合应用
+                          - generic [ref=f1e150] [cursor=pointer]:
+                            - generic [ref=f1e153]: 
+                            - generic [ref=f1e154]: 数据开发最佳实践
+                          - generic [ref=f1e155] [cursor=pointer]:
+                            - generic [ref=f1e158]: 
+                            - generic [ref=f1e159]: 功能示例
+                          - generic [ref=f1e160] [cursor=pointer]:
+                            - generic [ref=f1e163]: 
+                            - generic [ref=f1e164]: 全域数据对接
+                          - generic [ref=f1e165] [cursor=pointer]:
+                            - generic [ref=f1e168]: 
+                            - generic [ref=f1e169]: 数仓搭建与数据更新
+                  - generic [ref=f1e170]:
+                    - generic [ref=f1e171] [cursor=pointer]:
+                      - generic [ref=f1e174]: 
+                      - generic [ref=f1e176]: 
+                      - generic [ref=f1e177]: 业务场景应用
+                    - generic [ref=f1e179]:
+                      - generic [ref=f1e180] [cursor=pointer]:
+                        - generic [ref=f1e183]: 
+                        - generic [ref=f1e184]: 电商经营场景方案
+                      - generic [ref=f1e185] [cursor=pointer]:
+                        - generic [ref=f1e188]: 
+                        - generic [ref=f1e189]: 财务收入核算方案
+                      - generic [ref=f1e190] [cursor=pointer]:
+                        - generic [ref=f1e193]: 
+                        - generic [ref=f1e194]: 零售业务场景方案
+                  - generic [ref=f1e195]:
+                    - generic [ref=f1e196] [cursor=pointer]:
+                      - generic [ref=f1e199]: 
+                      - generic [ref=f1e201]: 
+                      - generic [ref=f1e202]: 临时目录
+                    - generic [ref=f1e205] [cursor=pointer]:
+                      - generic [ref=f1e208]: 
+                      - generic [ref=f1e209]: "-------新手入门-------"
+              - generic [ref=f1e211]: 
+      - generic [ref=f1e212]:
+        - generic [ref=f1e216]: FineDataLink数据集成平台
+        - generic [ref=f1e217]:
+          - link "反馈Demo问题" [ref=f1e218] [cursor=pointer]:
+            - /url: https://sk6xa7bj2w.jiandaoyun.com/f/60f632b1190a340008177595
+            - img [ref=f1e220]
+            - generic [ref=f1e224]: 反馈Demo问题
+          - generic [ref=f1e226]: 4.2.16.2#persist-2026.03.12
+          - generic [ref=f1e228] [cursor=pointer]:
+            - generic [ref=f1e230]: English
+            - generic [ref=f1e232]: 
+          - generic [ref=f1e234] [cursor=pointer]: 
+          - generic [ref=f1e239] [cursor=pointer]: 
+          - button [ref=f1e242] [cursor=pointer]:
+            - img [ref=f1e244]:
+              - generic: 
+          - generic [ref=f1e246] [cursor=pointer]:
+            - generic [ref=f1e248]: 
+            - generic [ref=f1e250]: nqWtlCYG
+            - generic [ref=f1e252]: 
+    - log [ref=f1e3]

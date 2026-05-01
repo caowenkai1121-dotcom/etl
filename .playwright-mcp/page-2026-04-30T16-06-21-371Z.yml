@@ -1,0 +1,214 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e6]:
+        - generic [ref=e7] [cursor=pointer]:
+          - generic [ref=e8]: demo中心
+          - generic [ref=e10]: 
+        - generic [ref=e11] [cursor=pointer]:
+          - generic [ref=e12]: O&M Center
+          - generic [ref=e14]: 
+        - generic [ref=e15] [cursor=pointer]:
+          - generic [ref=e16]: Data Pipeline
+          - generic [ref=e18]: 
+        - generic [ref=e19] [cursor=pointer]:
+          - generic [ref=e20]: Data Development
+          - generic [ref=e22]: 
+        - generic [ref=e24] [cursor=pointer]:
+          - generic [ref=e25]: Data Service
+          - generic [ref=e27]: 
+        - generic [ref=e28] [cursor=pointer]:
+          - generic [ref=e29]: Data Management
+          - generic [ref=e31]: 
+        - generic [ref=e32] [cursor=pointer]:
+          - generic [ref=e33]: System Management
+          - generic [ref=e35]: 
+        - generic [ref=e36] [cursor=pointer]:
+          - generic [ref=e37]: Recycle Bin
+          - generic [ref=e39]: 
+      - generic [ref=e77]:
+        - complementary [ref=e78]:
+          - generic [ref=e80]:
+            - menu [ref=e81]:
+              - menuitem [ref=e82] [cursor=pointer]
+              - menuitem [ref=e83] [cursor=pointer]
+            - button "double-right" [ref=e84] [cursor=pointer]:
+              - img "double-right" [ref=e86]:
+                - img [ref=e87]
+        - main [ref=e89]:
+          - tabpanel [ref=e93]:
+            - tabpanel [ref=e97]:
+              - generic [ref=e111]:
+                - generic [ref=e113]:
+                  - generic [ref=e115]:
+                    - generic [ref=e116]:
+                      - generic [ref=e117]:
+                        - generic [ref=e118]: Scheduled Task
+                        - button [ref=e119] [cursor=pointer]:
+                          - img [ref=e121]:
+                            - generic: 
+                      - button "Create" [ref=e122] [cursor=pointer]:
+                        - img [ref=e124]:
+                          - generic: 
+                        - generic [ref=e125]: Create
+                    - generic [ref=e126]:
+                      - generic [ref=e129] [cursor=pointer]:
+                        - img [ref=e131]:
+                          - generic: 
+                        - textbox "Task/Folder Search" [ref=e132]
+                      - button [ref=e135] [cursor=pointer]:
+                        - img [ref=e137]:
+                          - generic: 
+                    - generic [ref=e141] [cursor=pointer]: All Tasks
+                    - tree [ref=e147]:
+                      - generic:
+                        - textbox "for screen reader"
+                      - generic [ref=e151]:
+                        - generic [ref=e152]:
+                          - img [ref=e154] [cursor=pointer]:
+                            - generic: 
+                          - generic [ref=e158] [cursor=pointer]:
+                            - generic [ref=e159]:
+                              - generic [ref=e160]: 01产品功能示例
+                              - generic [ref=e161]: 01产品功能示例
+                            - text:  
+                        - generic [ref=e162]:
+                          - img [ref=e164] [cursor=pointer]:
+                            - generic: 
+                          - generic [ref=e168] [cursor=pointer]:
+                            - generic [ref=e169]:
+                              - generic [ref=e170]: 02业务场景示例
+                              - generic [ref=e171]: 02业务场景示例
+                            - text:  
+                  - img [ref=e176]:
+                    - generic: 
+                - generic [ref=e180]:
+                  - generic [ref=e181]:
+                    - generic [ref=e182]:
+                      - generic [ref=e183]: Scheduled Task
+                      - generic [ref=e184]:
+                        - button "Collapse Workflow" [ref=e185] [cursor=pointer]:
+                          - generic [ref=e186]: Collapse Workflow
+                        - button "Help Doc" [ref=e187] [cursor=pointer]:
+                          - generic [ref=e189]: Help Doc
+                    - generic [ref=e190]: It enables data extraction, transformation, and loading (ETL) with various nodes and operators on visual pages and supports automatic task execution through scheduling, helping you easily build an offline data warehouse for efficient and stable data production.
+                    - generic [ref=e191]:
+                      - generic [ref=e192]:
+                        - generic [ref=e193]: Workflow
+                        - img [ref=e195] [cursor=pointer]:
+                          - generic: 
+                      - generic [ref=e198]:
+                        - generic [ref=e199]:
+                          - generic [ref=e200]: "01"
+                          - generic [ref=e201]:
+                            - generic [ref=e203]: Data Source Connection
+                            - generic [ref=e205]:
+                              - generic [ref=e206]: ① Create a data connection.
+                              - generic [ref=e207]: ② Identify table data to be processed.
+                        - generic [ref=e208]:
+                          - generic [ref=e209]: "02"
+                          - generic [ref=e210]:
+                            - generic [ref=e212]: Real-Time Task Design
+                            - generic [ref=e214]:
+                              - generic [ref=e215]: ① Create a real-time task.
+                              - generic [ref=e216]: ② Design the data processing workflow.
+                        - generic [ref=e217]:
+                          - generic [ref=e218]: "03"
+                          - generic [ref=e219]:
+                            - generic [ref=e221]: Debugging and Execution
+                            - generic [ref=e224]: View detailed target table data in Database Table Management.
+                        - generic [ref=e225]:
+                          - generic [ref=e226]: "04"
+                          - generic [ref=e229]: Scheduling Configuration
+                        - generic [ref=e231]:
+                          - generic [ref=e232]: "05"
+                          - generic [ref=e233]:
+                            - generic [ref=e235]: Task O&M
+                            - generic [ref=e237]: View execution logs or execution records.
+                  - generic [ref=e238]:
+                    - generic [ref=e239]: Overview
+                    - generic [ref=e240]:
+                      - generic [ref=e244]:
+                        - generic [ref=e245]:
+                          - generic [ref=e246]: Remaining Task Publishing Capacity
+                          - generic [ref=e248]: "0"
+                        - generic [ref=e250]:
+                          - generic [ref=e251]: Created by Me
+                          - generic [ref=e252]: "0"
+                      - generic [ref=e253]:
+                        - generic [ref=e254]:
+                          - generic [ref=e255]: Published
+                          - generic [ref=e256]: "0"
+                        - img [ref=e258]
+                      - generic [ref=e261]:
+                        - generic [ref=e262]:
+                          - generic [ref=e263]: To Be Published
+                          - generic [ref=e264]: "0"
+                        - img [ref=e266]
+                      - generic [ref=e269]:
+                        - generic [ref=e270]:
+                          - generic [ref=e271]: To Be Updated
+                          - generic [ref=e272]: "0"
+                        - img [ref=e274]
+                  - generic [ref=e277]:
+                    - tablist [ref=e278]:
+                      - generic [ref=e280]:
+                        - tab "Recent Edits" [selected] [ref=e282] [cursor=pointer]
+                        - tab "My Favorites" [ref=e284] [cursor=pointer]
+                      - button [ref=e286] [cursor=pointer]:
+                        - img [ref=e287]:
+                          - img [ref=e288]
+                      - generic [ref=e291] [cursor=pointer]:
+                        - checkbox "Task Related to Me" [checked] [ref=e293]
+                        - generic [ref=e295]: Task Related to Me
+                    - tabpanel "Recent Edits" [ref=e298]:
+                      - generic [ref=e299]:
+                        - generic [ref=e303]:
+                          - table [ref=e305]:
+                            - rowgroup [ref=e315]:
+                              - row "Task Name Directory Creator Creation Time Last Editor Last Edit Time Last Publishing Time" [ref=e316]:
+                                - columnheader "Task Name" [ref=e317]:
+                                  - generic [ref=e318]: Task Name
+                                - columnheader "Directory" [ref=e319]:
+                                  - generic [ref=e320]: Directory
+                                - columnheader "Creator" [ref=e321]:
+                                  - generic [ref=e322]: Creator
+                                - columnheader "Creation Time" [ref=e323]:
+                                  - generic [ref=e324]: Creation Time
+                                - columnheader "Last Editor" [ref=e325]:
+                                  - generic [ref=e326]: Last Editor
+                                - columnheader "Last Edit Time" [ref=e327]:
+                                  - generic [ref=e328]: Last Edit Time
+                                - columnheader "Last Publishing Time" [ref=e329]:
+                                  - generic [ref=e330]: Last Publishing Time
+                                - columnheader [ref=e331]:
+                                  - button [ref=e334] [cursor=pointer]:
+                                    - img [ref=e336]:
+                                      - generic: 
+                          - table [ref=e339]:
+                            - rowgroup [ref=e349]:
+                              - row "Loading…" [ref=e350]:
+                                - cell "Loading…" [ref=e351]:
+                                  - generic [ref=e357]: Loading…
+                        - generic [ref=e358]: Show the latest 20 records.
+    - generic [ref=e44]:
+      - generic [ref=e48]: FineDataLink数据集成平台
+      - generic [ref=e49]:
+        - link "反馈Demo问题" [ref=e50] [cursor=pointer]:
+          - /url: https://sk6xa7bj2w.jiandaoyun.com/f/60f632b1190a340008177595
+          - img [ref=e52]
+          - generic [ref=e56]: 反馈Demo问题
+        - generic [ref=e58]: 4.2.16.2#persist-2026.03.12
+        - generic [ref=e99] [cursor=pointer]:
+          - generic [ref=e101]: English
+          - generic [ref=e103]: 
+        - generic [ref=e60] [cursor=pointer]: 
+        - generic [ref=e65] [cursor=pointer]: 
+        - button [ref=e106] [cursor=pointer]:
+          - img [ref=e108]:
+            - generic: 
+        - generic [ref=e67] [cursor=pointer]:
+          - generic [ref=e69]: 
+          - generic [ref=e71]: nqWtlCYG
+          - generic [ref=e73]: 
+  - log [ref=e3]

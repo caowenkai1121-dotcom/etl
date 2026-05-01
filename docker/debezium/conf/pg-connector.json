@@ -1,0 +1,30 @@
+{
+  "name": "etl-pg-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "postgres",
+    "database.password": "postgres123456",
+    "database.dbname": "etl_db",
+    "topic.prefix": "etl-pg",
+    "plugin.name": "pgoutput",
+    "publication.name": "etl_publication",
+    "slot.name": "etl_slot",
+    "database.server.name": "etl-pg-server",
+    "schema.include.list": "public",
+    "table.include.list": "public.users,public.orders,public.products",
+    "decimal.handling.mode": "string",
+    "time.precision.mode": "connect",
+    "transforms": "unwrap",
+    "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState",
+    "transforms.unwrap.drop.tombstones": "false",
+    "transforms.unwrap.delete.handling.mode": "rewrite",
+    "transforms.unwrap.add.fields": "op,ts_ms",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "false",
+    "snapshot.mode": "initial",
+    "snapshot.locking.mode": "minimal"
+  }
+}

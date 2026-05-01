@@ -1,0 +1,367 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e7] [cursor=pointer]
+      - generic [ref=e10]:
+        - generic [ref=e11] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e13] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e15] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e18] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e20] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e22] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e26] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e28] [cursor=pointer]:
+          - generic:
+            - img
+      - img [ref=e34] [cursor=pointer]
+    - generic [ref=e36]:
+      - generic [ref=e38]: Data Development
+      - generic [ref=e39]:
+        - generic [ref=e40] [cursor=pointer]: 离线任务
+        - generic [ref=e41] [cursor=pointer]: 实时任务
+      - generic [ref=e45]:
+        - generic [ref=e46]: 离线任务开发
+        - generic [ref=e47] [cursor=pointer]:
+          - img [ref=e49]
+          - generic [ref=e51]: 工作台首页
+        - generic [ref=e52] [cursor=pointer]:
+          - img [ref=e54]
+          - generic [ref=e58]: 数据源管理
+        - generic [ref=e59] [cursor=pointer]:
+          - img [ref=e61]
+          - generic [ref=e64]: 转换规则
+        - generic [ref=e65] [cursor=pointer]:
+          - img [ref=e67]
+          - generic [ref=e69]: 调试预览
+        - generic [ref=e70]: 离线任务管理
+        - generic [ref=e71] [cursor=pointer]:
+          - img [ref=e73]
+          - generic [ref=e75]: 任务列表
+        - generic [ref=e76] [cursor=pointer]:
+          - img [ref=e78]
+          - generic [ref=e80]: 工作流
+  - generic [ref=e81]:
+    - banner [ref=e82]:
+      - generic [ref=e84]:
+        - img [ref=e86]
+        - textbox "搜索任务、数据源、API..." [ref=e88]
+      - generic [ref=e89]:
+        - img [ref=e92] [cursor=pointer]
+        - img [ref=e96] [cursor=pointer]
+        - generic [ref=e99] [cursor=pointer]:
+          - img [ref=e101]
+          - superscript [ref=e105]: "3"
+        - button "管理员" [ref=e107] [cursor=pointer]:
+          - img [ref=e110]
+          - generic [ref=e112]: 管理员
+          - img [ref=e114]
+    - navigation "面包屑" [ref=e117]:
+      - link "实时任务首页" [ref=e567]
+    - main [ref=e120]:
+      - generic [ref=e568]:
+        - generic [ref=e570]:
+          - heading "实时任务开发" [level=1] [ref=e571]
+          - paragraph [ref=e572]: 基于CDC的实时数据同步管道，支持MySQL Binlog、Kafka等实时数据源的低延迟同步
+          - generic [ref=e573]:
+            - button "新建实时管道" [ref=e574] [cursor=pointer]:
+              - generic [ref=e575]:
+                - img [ref=e577]
+                - text: 新建实时管道
+            - button "CDC配置" [ref=e579] [cursor=pointer]:
+              - generic [ref=e580]:
+                - img [ref=e582]
+                - text: CDC配置
+            - button "实时监控" [ref=e584] [cursor=pointer]:
+              - generic [ref=e585]:
+                - img [ref=e587]
+                - text: 实时监控
+        - generic [ref=e593]:
+          - generic [ref=e595] [cursor=pointer]:
+            - generic [ref=e596]:
+              - img [ref=e599]
+              - generic [ref=e602]:
+                - text: "+3"
+                - img [ref=e604]
+            - generic [ref=e606]: "42"
+            - generic [ref=e607]: 管道总数
+          - generic [ref=e609] [cursor=pointer]:
+            - generic [ref=e610]:
+              - img [ref=e613]
+              - generic [ref=e615]: 运行中
+            - generic [ref=e616]: "28"
+            - generic [ref=e617]: 运行中管道
+          - generic [ref=e619] [cursor=pointer]:
+            - generic [ref=e620]:
+              - img [ref=e623]
+              - generic [ref=e625]: +12%
+            - generic [ref=e626]: 1,850
+            - generic [ref=e627]: 平均TPS
+          - generic [ref=e629] [cursor=pointer]:
+            - generic [ref=e630]:
+              - img [ref=e633]
+              - generic [ref=e637]: "-8ms"
+            - generic [ref=e638]: 65ms
+            - generic [ref=e639]: 平均延迟
+        - generic [ref=e640]:
+          - generic [ref=e642] [cursor=pointer]:
+            - img [ref=e645]
+            - generic [ref=e648]:
+              - generic [ref=e649]: MySQL Binlog管道
+              - generic [ref=e650]: 基于MySQL Binlog的CDC实时同步通道
+          - generic [ref=e652] [cursor=pointer]:
+            - img [ref=e655]
+            - generic [ref=e657]:
+              - generic [ref=e658]: Kafka消息管道
+              - generic [ref=e659]: Kafka Topic到目标库的实时流处理
+          - generic [ref=e661] [cursor=pointer]:
+            - img [ref=e664]
+            - generic [ref=e668]:
+              - generic [ref=e669]: Oracle LogMiner管道
+              - generic [ref=e670]: Oracle数据库的增量日志挖掘同步
+        - generic [ref=e671]:
+          - generic [ref=e672]:
+            - generic [ref=e673]:
+              - generic [ref=e674] [cursor=pointer]: 全部管道
+              - generic [ref=e675] [cursor=pointer]: 运行中
+              - generic [ref=e676] [cursor=pointer]: 已停止
+              - generic [ref=e677] [cursor=pointer]: 异常
+            - generic [ref=e680]:
+              - img [ref=e683]
+              - textbox "搜索管道..." [ref=e685]
+          - generic [ref=e687]:
+            - table [ref=e689]:
+              - rowgroup [ref=e699]:
+                - row "管道名称 源→目标 同步模式 当前TPS 按 当前TPS 排序 同步延迟 按 同步延迟 排序 运行时长 创建时间 操作" [ref=e700]:
+                  - columnheader "管道名称" [ref=e701]:
+                    - generic [ref=e702]: 管道名称
+                  - columnheader "源→目标" [ref=e703]:
+                    - generic [ref=e704]: 源→目标
+                  - columnheader "同步模式" [ref=e705]:
+                    - generic [ref=e706]: 同步模式
+                  - columnheader "当前TPS 按 当前TPS 排序" [ref=e707] [cursor=pointer]:
+                    - generic [ref=e708]:
+                      - text: 当前TPS
+                      - button "按 当前TPS 排序" [ref=e709]
+                  - columnheader "同步延迟 按 同步延迟 排序" [ref=e712] [cursor=pointer]:
+                    - generic [ref=e713]:
+                      - text: 同步延迟
+                      - button "按 同步延迟 排序" [ref=e714]
+                  - columnheader "运行时长" [ref=e717]:
+                    - generic [ref=e718]: 运行时长
+                  - columnheader "创建时间" [ref=e719]:
+                    - generic [ref=e720]: 创建时间
+                  - columnheader "操作" [ref=e721]:
+                    - generic [ref=e722]: 操作
+            - table [ref=e727]:
+              - rowgroup [ref=e737]:
+                - row "订单数据实时同步 CDC MySQL生产库 Doris分析库 CDC 850 45ms 15天 8小时 2024-12-01 10:00 停止 重启" [ref=e738] [cursor=pointer]:
+                  - cell "订单数据实时同步 CDC" [ref=e739]:
+                    - generic [ref=e741]:
+                      - generic [ref=e743]: 订单数据实时同步
+                      - generic [ref=e745]: CDC
+                  - cell "MySQL生产库 Doris分析库" [ref=e746]:
+                    - generic [ref=e748]:
+                      - generic [ref=e750]: MySQL生产库
+                      - img [ref=e752]
+                      - generic [ref=e755]: Doris分析库
+                  - cell "CDC" [ref=e756]:
+                    - generic [ref=e759]: CDC
+                  - cell "850" [ref=e760]:
+                    - generic [ref=e761]: "850"
+                  - cell "45ms" [ref=e762]:
+                    - generic [ref=e763]: 45ms
+                  - cell "15天 8小时" [ref=e764]:
+                    - generic [ref=e765]: 15天 8小时
+                  - cell "2024-12-01 10:00" [ref=e766]:
+                    - generic [ref=e767]: 2024-12-01 10:00
+                  - cell "停止 重启" [ref=e768]:
+                    - generic [ref=e770]:
+                      - button "停止" [ref=e771]:
+                        - generic [ref=e772]:
+                          - img [ref=e774]
+                          - text: 停止
+                      - button "重启" [ref=e776]:
+                        - generic [ref=e777]:
+                          - img [ref=e779]
+                          - text: 重启
+                      - button [ref=e781]:
+                        - img [ref=e784]
+                      - button [ref=e788]:
+                        - img [ref=e791]
+                - row "用户行为流处理 STREAM Kafka-Topic ClickHouse STREAM 3200 12ms 30天 2小时 2024-11-15 14:30 停止 重启" [ref=e793] [cursor=pointer]:
+                  - cell "用户行为流处理 STREAM" [ref=e794]:
+                    - generic [ref=e796]:
+                      - generic [ref=e798]: 用户行为流处理
+                      - generic [ref=e800]: STREAM
+                  - cell "Kafka-Topic ClickHouse" [ref=e801]:
+                    - generic [ref=e803]:
+                      - generic [ref=e805]: Kafka-Topic
+                      - img [ref=e807]
+                      - generic [ref=e810]: ClickHouse
+                  - cell "STREAM" [ref=e811]:
+                    - generic [ref=e814]: STREAM
+                  - cell "3200" [ref=e815]:
+                    - generic [ref=e816]: "3200"
+                  - cell "12ms" [ref=e817]:
+                    - generic [ref=e818]: 12ms
+                  - cell "30天 2小时" [ref=e819]:
+                    - generic [ref=e820]: 30天 2小时
+                  - cell "2024-11-15 14:30" [ref=e821]:
+                    - generic [ref=e822]: 2024-11-15 14:30
+                  - cell "停止 重启" [ref=e823]:
+                    - generic [ref=e825]:
+                      - button "停止" [ref=e826]:
+                        - generic [ref=e827]:
+                          - img [ref=e829]
+                          - text: 停止
+                      - button "重启" [ref=e831]:
+                        - generic [ref=e832]:
+                          - img [ref=e834]
+                          - text: 重启
+                      - button [ref=e836]:
+                        - img [ref=e839]
+                      - button [ref=e843]:
+                        - img [ref=e846]
+                - row "商品库存CDC同步 CDC MySQL商品库 Redis缓存 CDC 420 85ms 7天 16小时 2024-12-18 09:00 停止 重启" [ref=e848] [cursor=pointer]:
+                  - cell "商品库存CDC同步 CDC" [ref=e849]:
+                    - generic [ref=e851]:
+                      - generic [ref=e853]: 商品库存CDC同步
+                      - generic [ref=e855]: CDC
+                  - cell "MySQL商品库 Redis缓存" [ref=e856]:
+                    - generic [ref=e858]:
+                      - generic [ref=e860]: MySQL商品库
+                      - img [ref=e862]
+                      - generic [ref=e865]: Redis缓存
+                  - cell "CDC" [ref=e866]:
+                    - generic [ref=e869]: CDC
+                  - cell "420" [ref=e870]:
+                    - generic [ref=e871]: "420"
+                  - cell "85ms" [ref=e872]:
+                    - generic [ref=e873]: 85ms
+                  - cell "7天 16小时" [ref=e874]:
+                    - generic [ref=e875]: 7天 16小时
+                  - cell "2024-12-18 09:00" [ref=e876]:
+                    - generic [ref=e877]: 2024-12-18 09:00
+                  - cell "停止 重启" [ref=e878]:
+                    - generic [ref=e880]:
+                      - button "停止" [ref=e881]:
+                        - generic [ref=e882]:
+                          - img [ref=e884]
+                          - text: 停止
+                      - button "重启" [ref=e886]:
+                        - generic [ref=e887]:
+                          - img [ref=e889]
+                          - text: 重启
+                      - button [ref=e891]:
+                        - img [ref=e894]
+                      - button [ref=e898]:
+                        - img [ref=e901]
+                - row "日志数据管道 STREAM Kafka-Log Elasticsearch STREAM 0 0ms - 2024-12-10 11:00 启动" [ref=e903] [cursor=pointer]:
+                  - cell "日志数据管道 STREAM" [ref=e904]:
+                    - generic [ref=e906]:
+                      - generic [ref=e908]: 日志数据管道
+                      - generic [ref=e910]: STREAM
+                  - cell "Kafka-Log Elasticsearch" [ref=e911]:
+                    - generic [ref=e913]:
+                      - generic [ref=e915]: Kafka-Log
+                      - img [ref=e917]
+                      - generic [ref=e920]: Elasticsearch
+                  - cell "STREAM" [ref=e921]:
+                    - generic [ref=e924]: STREAM
+                  - cell "0" [ref=e925]:
+                    - generic [ref=e926]: "0"
+                  - cell "0ms" [ref=e927]:
+                    - generic [ref=e928]: 0ms
+                  - cell "-" [ref=e929]:
+                    - generic [ref=e930]: "-"
+                  - cell "2024-12-10 11:00" [ref=e931]:
+                    - generic [ref=e932]: 2024-12-10 11:00
+                  - cell "启动" [ref=e933]:
+                    - generic [ref=e935]:
+                      - button "启动" [ref=e936]:
+                        - generic [ref=e937]:
+                          - img [ref=e939]
+                          - text: 启动
+                      - button [ref=e941]:
+                        - img [ref=e944]
+                      - button [ref=e948]:
+                        - img [ref=e951]
+                - row "Oracle财务同步 CDC Oracle ERP Doris财务库 CDC 0 999ms 2天 5小时 2024-12-05 08:30 启动" [ref=e953] [cursor=pointer]:
+                  - cell "Oracle财务同步 CDC" [ref=e954]:
+                    - generic [ref=e956]:
+                      - generic [ref=e958]: Oracle财务同步
+                      - generic [ref=e960]: CDC
+                  - cell "Oracle ERP Doris财务库" [ref=e961]:
+                    - generic [ref=e963]:
+                      - generic [ref=e965]: Oracle ERP
+                      - img [ref=e967]
+                      - generic [ref=e970]: Doris财务库
+                  - cell "CDC" [ref=e971]:
+                    - generic [ref=e974]: CDC
+                  - cell "0" [ref=e975]:
+                    - generic [ref=e976]: "0"
+                  - cell "999ms" [ref=e977]:
+                    - generic [ref=e978]: 999ms
+                  - cell "2天 5小时" [ref=e979]:
+                    - generic [ref=e980]: 2天 5小时
+                  - cell "2024-12-05 08:30" [ref=e981]:
+                    - generic [ref=e982]: 2024-12-05 08:30
+                  - cell "启动" [ref=e983]:
+                    - generic [ref=e985]:
+                      - button "启动" [ref=e986]:
+                        - generic [ref=e987]:
+                          - img [ref=e989]
+                          - text: 启动
+                      - button [ref=e991]:
+                        - img [ref=e994]
+                      - button [ref=e998]:
+                        - img [ref=e1001]
+                - row "会员数据管道 CDC MySQL会员库 HBase CDC 180 120ms 45天 12小时 2024-10-15 16:00 停止 重启" [ref=e1003] [cursor=pointer]:
+                  - cell "会员数据管道 CDC" [ref=e1004]:
+                    - generic [ref=e1006]:
+                      - generic [ref=e1008]: 会员数据管道
+                      - generic [ref=e1010]: CDC
+                  - cell "MySQL会员库 HBase" [ref=e1011]:
+                    - generic [ref=e1013]:
+                      - generic [ref=e1015]: MySQL会员库
+                      - img [ref=e1017]
+                      - generic [ref=e1020]: HBase
+                  - cell "CDC" [ref=e1021]:
+                    - generic [ref=e1024]: CDC
+                  - cell "180" [ref=e1025]:
+                    - generic [ref=e1026]: "180"
+                  - cell "120ms" [ref=e1027]:
+                    - generic [ref=e1028]: 120ms
+                  - cell "45天 12小时" [ref=e1029]:
+                    - generic [ref=e1030]: 45天 12小时
+                  - cell "2024-10-15 16:00" [ref=e1031]:
+                    - generic [ref=e1032]: 2024-10-15 16:00
+                  - cell "停止 重启" [ref=e1033]:
+                    - generic [ref=e1035]:
+                      - button "停止" [ref=e1036]:
+                        - generic [ref=e1037]:
+                          - img [ref=e1039]
+                          - text: 停止
+                      - button "重启" [ref=e1041]:
+                        - generic [ref=e1042]:
+                          - img [ref=e1044]
+                          - text: 重启
+                      - button [ref=e1046]:
+                        - img [ref=e1049]
+                      - button [ref=e1053]:
+                        - img [ref=e1056]
+          - generic [ref=e1059]: 共 6 条记录

@@ -1,0 +1,363 @@
+- iframe [active] [ref=e2]:
+  - generic [ref=f1e1]:
+    - generic [ref=f1e2]:
+      - generic [ref=f1e4]:
+        - generic [ref=f1e6]:
+          - generic [ref=f1e7] [cursor=pointer]:
+            - generic [ref=f1e8]: demo中心
+            - generic [ref=f1e10]: 
+          - generic [ref=f1e12] [cursor=pointer]:
+            - generic [ref=f1e13]: O&M Center
+            - generic [ref=f1e15]: 
+          - generic [ref=f1e16] [cursor=pointer]:
+            - generic [ref=f1e17]: Data Pipeline
+            - generic [ref=f1e19]: 
+          - generic [ref=f1e20] [cursor=pointer]:
+            - generic [ref=f1e21]: Data Development
+            - generic [ref=f1e23]: 
+          - generic [ref=f1e24] [cursor=pointer]:
+            - generic [ref=f1e25]: Data Service
+            - generic [ref=f1e27]: 
+          - generic [ref=f1e28] [cursor=pointer]:
+            - generic [ref=f1e29]: Data Management
+            - generic [ref=f1e31]: 
+          - generic [ref=f1e32] [cursor=pointer]:
+            - generic [ref=f1e33]: System Management
+            - generic [ref=f1e35]: 
+          - generic [ref=f1e36] [cursor=pointer]:
+            - generic [ref=f1e37]: Recycle Bin
+            - generic [ref=f1e39]: 
+        - generic [ref=f1e41]:
+          - text:                               
+          - generic [ref=f1e259]:
+            - complementary [ref=f1e260]:
+              - generic [ref=f1e262]:
+                - menu [ref=f1e263]:
+                  - menuitem [ref=f1e264] [cursor=pointer]
+                  - menuitem [ref=f1e265] [cursor=pointer]
+                - button "double-right" [ref=f1e266] [cursor=pointer]:
+                  - img "double-right" [ref=f1e268]:
+                    - img [ref=f1e269]
+            - main [ref=f1e271]:
+              - tabpanel [ref=f1e275]:
+                - tabpanel [active] [ref=f1e279]:
+                  - generic [ref=f1e282]:
+                    - generic [ref=f1e284]:
+                      - generic [ref=f1e286]:
+                        - generic [ref=f1e287]:
+                          - generic [ref=f1e288]:
+                            - generic [ref=f1e289]: Scheduled Task
+                            - button [ref=f1e290] [cursor=pointer]:
+                              - img [ref=f1e292]:
+                                - generic: 
+                          - button "Create" [ref=f1e293] [cursor=pointer]:
+                            - img [ref=f1e295]:
+                              - generic: 
+                            - generic [ref=f1e296]: Create
+                        - generic [ref=f1e297]:
+                          - generic [ref=f1e300] [cursor=pointer]:
+                            - img [ref=f1e302]:
+                              - generic: 
+                            - textbox "Task/Folder Search" [ref=f1e303]
+                          - button [ref=f1e306] [cursor=pointer]:
+                            - img [ref=f1e308]:
+                              - generic: 
+                        - generic [ref=f1e312] [cursor=pointer]: All Tasks
+                        - tree [ref=f1e318]:
+                          - generic:
+                            - textbox "for screen reader"
+                          - generic [ref=f1e322]:
+                            - generic [ref=f1e323]:
+                              - img [ref=f1e664] [cursor=pointer]:
+                                - generic: 
+                              - generic [ref=f1e329] [cursor=pointer]:
+                                - generic [ref=f1e330]:
+                                  - generic [ref=f1e331]: 01产品功能示例
+                                  - generic [ref=f1e332]: 01产品功能示例
+                                - text:  
+                            - generic [ref=f1e674]:
+                              - img [ref=f1e677] [cursor=pointer]:
+                                - generic: 
+                              - generic [ref=f1e681] [cursor=pointer]:
+                                - generic [ref=f1e682]:
+                                  - generic [ref=f1e683]: 01.快速入门
+                                  - generic [ref=f1e684]: 01.快速入门
+                                - text:  
+                            - generic [ref=f1e685]:
+                              - img [ref=f1e729] [cursor=pointer]:
+                                - generic: 
+                              - generic [ref=f1e692] [cursor=pointer]:
+                                - generic [ref=f1e693]:
+                                  - generic [ref=f1e694]: 02.基础功能
+                                  - generic [ref=f1e695]: 02.基础功能
+                                - text:  
+                            - generic [ref=f1e739]:
+                              - img [ref=f1e796] [cursor=pointer]:
+                                - generic: 
+                              - generic [ref=f1e746] [cursor=pointer]:
+                                - generic [ref=f1e747]:
+                                  - generic [ref=f1e748]: 01.数据同步
+                                  - generic [ref=f1e749]: 01.数据同步
+                                - text:  
+                            - generic [ref=f1e812] [cursor=pointer]:
+                              - generic [ref=f1e813]:
+                                - generic [ref=f1e814]: 数据同步-API示例
+                                - generic [ref=f1e815]: 数据同步-API示例
+                              - text: 
+                              - generic [ref=f1e816]: Published
+                            - generic [ref=f1e823] [cursor=pointer]:
+                              - generic [ref=f1e824]:
+                                - generic [ref=f1e825]: 数据同步-服务器数据集
+                                - generic [ref=f1e826]: 数据同步-服务器数据集
+                              - text: 
+                              - generic [ref=f1e827]: To Be Updated
+                            - generic [ref=f1e834] [cursor=pointer]:
+                              - generic [ref=f1e835]:
+                                - generic [ref=f1e836]: 数据同步-简道云数据
+                                - generic [ref=f1e837]: 数据同步-简道云数据
+                              - text: 
+                              - generic [ref=f1e838]: To Be Updated
+                            - generic [ref=f1e750]:
+                              - img [ref=f1e753] [cursor=pointer]:
+                                - generic: 
+                              - generic [ref=f1e757] [cursor=pointer]:
+                                - generic [ref=f1e758]:
+                                  - generic [ref=f1e759]: 02.数据转换
+                                  - generic [ref=f1e760]: 02.数据转换
+                                - text:  
+                            - generic [ref=f1e761]:
+                              - img [ref=f1e764] [cursor=pointer]:
+                                - generic: 
+                              - generic [ref=f1e768] [cursor=pointer]:
+                                - generic [ref=f1e769]:
+                                  - generic [ref=f1e770]: 03.脚本
+                                  - generic [ref=f1e771]: 03.脚本
+                                - text:  
+                            - generic [ref=f1e772]:
+                              - img [ref=f1e775] [cursor=pointer]:
+                                - generic: 
+                              - generic [ref=f1e779] [cursor=pointer]:
+                                - generic [ref=f1e780]:
+                                  - generic [ref=f1e781]: 04.流程
+                                  - generic [ref=f1e782]: 04.流程
+                                - text:  
+                            - generic [ref=f1e783]:
+                              - img [ref=f1e786] [cursor=pointer]:
+                                - generic: 
+                              - generic [ref=f1e790] [cursor=pointer]:
+                                - generic [ref=f1e791]:
+                                  - generic [ref=f1e792]: 文件传输
+                                  - generic [ref=f1e793]: 文件传输
+                                - text:  
+                            - generic [ref=f1e696]:
+                              - img [ref=f1e699] [cursor=pointer]:
+                                - generic: 
+                              - generic [ref=f1e703] [cursor=pointer]:
+                                - generic [ref=f1e704]:
+                                  - generic [ref=f1e705]: 03.管道&服务demo辅助
+                                  - generic [ref=f1e706]: 03.管道&服务demo辅助
+                                - text:  
+                      - img [ref=f1e365]:
+                        - generic: 
+                    - generic [ref=f1e840]:
+                      - generic [ref=f1e841]:
+                        - generic [ref=f1e843] [cursor=pointer]:
+                          - generic [ref=f1e844]: Scheduled Task
+                          - button [ref=f1e846]:
+                            - img [ref=f1e848]:
+                              - generic: 
+                        - generic [ref=f1e849]:
+                          - generic [ref=f1e850]:
+                            - button "数据同步-API示例" [ref=f1e851] [cursor=pointer]:
+                              - generic [ref=f1e853]:
+                                - generic [ref=f1e858]: 数据同步-API示例
+                                - button [ref=f1e860]:
+                                  - img [ref=f1e862]:
+                                    - generic: 
+                            - status [ref=f1e863] [cursor=pointer]
+                          - button [ref=f1e865] [cursor=pointer]:
+                            - img [ref=f1e867]:
+                              - generic: 
+                        - button [ref=f1e869] [cursor=pointer]:
+                          - img [ref=f1e871]:
+                            - generic: 
+                      - generic [ref=f1e873]:
+                        - generic [ref=f1e876]:
+                          - generic [ref=f1e877] [cursor=pointer]:
+                            - radio "Development Mode"
+                            - generic "Development Mode" [ref=f1e878]
+                          - generic [ref=f1e879] [cursor=pointer]:
+                            - radio "Production Mode" [checked]
+                            - generic "Production Mode" [ref=f1e880]
+                        - tabpanel [ref=f1e884]:
+                          - generic [ref=f1e885]:
+                            - generic [ref=f1e889]:
+                              - button "Run" [ref=f1e892] [cursor=pointer]:
+                                - img [ref=f1e894]:
+                                  - generic: 
+                                - generic [ref=f1e895]: Run
+                                - img [ref=f1e896]:
+                                  - generic: 
+                              - button [ref=f1e901] [cursor=pointer]:
+                                - img [ref=f1e903]:
+                                  - generic: 
+                              - button [ref=f1e906] [cursor=pointer]:
+                                - img [ref=f1e908]:
+                                  - generic: 
+                              - button [ref=f1e911] [cursor=pointer]:
+                                - img [ref=f1e913]:
+                                  - generic: 
+                              - button [ref=f1e916] [cursor=pointer]:
+                                - img [ref=f1e918]:
+                                  - generic: 
+                              - button [ref=f1e921] [cursor=pointer]:
+                                - img [ref=f1e923]:
+                                  - generic: 
+                              - button [ref=f1e926] [cursor=pointer]:
+                                - img [ref=f1e928]:
+                                  - generic: 
+                            - generic [ref=f1e932]:
+                              - generic [ref=f1e933]:
+                                - img [ref=f1e941]:
+                                  - generic [ref=f1e943]:
+                                    - generic [ref=f1e949]:
+                                      - heading "更多信息：" [level=3] [ref=f1e950]
+                                      - paragraph [ref=f1e951]:
+                                        - text: 任务对应操作文档详情参见：
+                                        - link "数据同步-API" [ref=f1e952] [cursor=pointer]:
+                                          - /url: https://help.fanruan.com/finedatalink/doc-view-8.htmll?source=0&from=fdldemo
+                                    - generic [ref=f1e958]:
+                                      - heading "应用场景：" [level=3] [ref=f1e959]
+                                      - paragraph [ref=f1e960]: 出于安全考虑，有时不允许直接访问数据库，而是以 API 的形式对外提供数据。
+                                      - paragraph [ref=f1e961]: 此时用户需要通过 API 接口将数据取出并将其存放至对应的数据库中。
+                                      - paragraph [ref=f1e962]
+                                      - heading "功能说明：" [level=3] [ref=f1e963]
+                                      - paragraph [ref=f1e964]: FineDataLink 支持从 API 接口中取数，本文将介绍如何在「数据同步」节点中通过 API 接口取数。
+                                    - generic [ref=f1e965]:
+                                      - generic "数据同步-API" [ref=f1e967]:
+                                        - generic [ref=f1e968]: 数据同步-API
+                                      - generic "-"
+                                - generic [ref=f1e983]:
+                                  - button [disabled] [ref=f1e984]:
+                                    - generic:
+                                      - img:
+                                        - generic: 
+                                  - button [disabled] [ref=f1e985]:
+                                    - generic:
+                                      - img:
+                                        - generic: 
+                                  - button [ref=f1e988] [cursor=pointer]:
+                                    - img [ref=f1e990]:
+                                      - generic: 
+                                  - button [ref=f1e993] [cursor=pointer]:
+                                    - img [ref=f1e995]:
+                                      - generic: 
+                                  - button [ref=f1e998] [cursor=pointer]:
+                                    - img [ref=f1e1000]:
+                                      - generic: 
+                                    - img [ref=f1e1001]:
+                                      - generic: 
+                                  - generic [ref=f1e1003]:
+                                    - button [ref=f1e1004] [cursor=pointer]:
+                                      - img [ref=f1e1006]:
+                                        - generic: 
+                                    - generic [ref=f1e1007]: 100%
+                                    - button [ref=f1e1008] [cursor=pointer]:
+                                      - img [ref=f1e1010]:
+                                        - generic: 
+                                  - button [ref=f1e1012] [cursor=pointer]:
+                                    - img [ref=f1e1014]:
+                                      - generic: 
+                                  - button [ref=f1e1018] [cursor=pointer]:
+                                    - img [ref=f1e1020]:
+                                      - generic: 
+                                  - button [ref=f1e1024] [cursor=pointer]:
+                                    - img [ref=f1e1026]:
+                                      - generic: 
+                                - text: 
+                              - generic [ref=f1e1028]:
+                                - generic [ref=f1e1029]:
+                                  - tablist [ref=f1e1030]:
+                                    - generic [ref=f1e1032]:
+                                      - tab "Log" [selected] [ref=f1e1034] [cursor=pointer]
+                                      - tab "Statistics" [ref=f1e1036] [cursor=pointer]
+                                    - button [ref=f1e1038] [cursor=pointer]:
+                                      - img [ref=f1e1040]:
+                                        - generic: 
+                                  - tabpanel "Log" [ref=f1e1062]:
+                                    - generic [ref=f1e1064]:
+                                      - generic [ref=f1e1066]:
+                                        - generic [ref=f1e1069]:
+                                          - generic [ref=f1e1071]: 2026-04-27 01:52:30
+                                          - generic [ref=f1e1073]: Start creating the instance.
+                                          - generic [ref=f1e1075]: "Cluster Node: 86e8b983c9e5"
+                                        - generic [ref=f1e1078]:
+                                          - generic [ref=f1e1080]: 2026-04-27 01:52:30
+                                          - generic [ref=f1e1082]: The instance is created successfully.
+                                        - generic [ref=f1e1085]:
+                                          - generic [ref=f1e1087]: 2026-04-27 01:52:30
+                                          - generic [ref=f1e1089]: The instance is queuing.
+                                        - generic [ref=f1e1092]:
+                                          - generic [ref=f1e1094]: 2026-04-27 01:52:30
+                                          - generic [ref=f1e1096]: The instance starts to run.
+                                        - generic [ref=f1e1099]:
+                                          - generic [ref=f1e1101]: 2026-04-27 01:52:30
+                                          - generic [ref=f1e1103]: Start executing【数据同步-API】
+                                          - generic [ref=f1e1105]: "Cluster Node: 86e8b983c9e5"
+                                        - generic [ref=f1e1108]:
+                                          - generic [ref=f1e1110]: ERROR
+                                          - generic [ref=f1e1112]: "[数据来源]:"
+                                        - generic [ref=f1e1115]: "com.fr.dp.exception.FineDPException: Http request error.-error message: 400 Bad Request"
+                                        - generic [ref=f1e1118]: "responseBody: {\"code\":8302,\"msg\":\"Do not have permission for the API calls.\"}"
+                                        - generic [ref=f1e1121]:
+                                          - generic [ref=f1e1123]: 2026-04-27 01:52:30
+                                          - generic [ref=f1e1125]: Failed【数据同步-API】
+                                        - generic [ref=f1e1128]:
+                                          - generic [ref=f1e1130]: 2026-04-27 01:58:32
+                                          - generic [ref=f1e1132]: The instance fails to run.
+                                        - generic [ref=f1e1136]:
+                                          - generic [ref=f1e1139]:
+                                            - generic [ref=f1e1141]: "Overview:"
+                                            - generic [ref=f1e1142]:
+                                              - generic [ref=f1e1143]:
+                                                - generic [ref=f1e1145]: Successful
+                                                - generic [ref=f1e1147]: "0"
+                                              - generic [ref=f1e1148]:
+                                                - generic [ref=f1e1150]: Failed
+                                                - generic [ref=f1e1152]: "1"
+                                              - generic [ref=f1e1153]:
+                                                - generic [ref=f1e1155]: Terminated
+                                                - generic [ref=f1e1157]: "0"
+                                              - generic [ref=f1e1158]:
+                                                - generic [ref=f1e1160]: Skipped
+                                                - generic [ref=f1e1162]: "0"
+                                          - generic [ref=f1e1165]: "The execution is completed. Total elapsed time: 6min1s"
+                                      - button [ref=f1e1050] [cursor=pointer]:
+                                        - img [ref=f1e1052]:
+                                          - generic: 
+                                      - button [ref=f1e1171] [cursor=pointer]:
+                                        - img [ref=f1e1173]:
+                                          - generic: 
+                                - img [ref=f1e1055]:
+                                  - generic: 
+      - generic [ref=f1e212]:
+        - generic [ref=f1e216]: FineDataLink数据集成平台
+        - generic [ref=f1e217]:
+          - link "反馈Demo问题" [ref=f1e218] [cursor=pointer]:
+            - /url: https://sk6xa7bj2w.jiandaoyun.com/f/60f632b1190a340008177595
+            - img [ref=f1e220]
+            - generic [ref=f1e224]: 反馈Demo问题
+          - generic [ref=f1e226]: 4.2.16.2#persist-2026.03.12
+          - generic [ref=f1e228] [cursor=pointer]:
+            - generic [ref=f1e230]: English
+            - generic [ref=f1e232]: 
+          - generic [ref=f1e234] [cursor=pointer]: 
+          - generic [ref=f1e239] [cursor=pointer]: 
+          - button [ref=f1e242] [cursor=pointer]:
+            - img [ref=f1e244]:
+              - generic: 
+          - generic [ref=f1e246] [cursor=pointer]:
+            - generic [ref=f1e248]: 
+            - generic [ref=f1e250]: nqWtlCYG
+            - generic [ref=f1e252]: 
+    - log [ref=f1e3]

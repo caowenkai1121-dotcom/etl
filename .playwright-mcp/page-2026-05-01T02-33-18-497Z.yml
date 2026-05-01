@@ -1,0 +1,297 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - img [ref=e7] [cursor=pointer]
+        - generic [ref=e10]:
+          - generic [ref=e11] [cursor=pointer]:
+            - generic:
+              - img
+          - generic [ref=e13] [cursor=pointer]:
+            - generic:
+              - img
+          - generic [ref=e15] [cursor=pointer]:
+            - generic:
+              - img
+          - generic [ref=e18] [cursor=pointer]:
+            - generic:
+              - img
+          - generic [ref=e20] [cursor=pointer]:
+            - generic:
+              - img
+          - generic [ref=e22] [cursor=pointer]:
+            - generic:
+              - img
+          - generic [ref=e26] [cursor=pointer]:
+            - generic:
+              - img
+          - generic [ref=e28] [cursor=pointer]:
+            - generic:
+              - img
+        - img [ref=e34] [cursor=pointer]
+      - generic [ref=e36]:
+        - generic [ref=e38]: Data Development
+        - generic [ref=e39]:
+          - generic [ref=e40] [cursor=pointer]: 离线任务
+          - generic [ref=e41] [cursor=pointer]: 实时任务
+        - generic [ref=e45]:
+          - generic [ref=e46]: 离线任务开发
+          - generic [ref=e47] [cursor=pointer]:
+            - img [ref=e49]
+            - generic [ref=e51]: 工作台首页
+          - generic [ref=e52] [cursor=pointer]:
+            - img [ref=e54]
+            - generic [ref=e58]: 数据源管理
+          - generic [ref=e59] [cursor=pointer]:
+            - img [ref=e61]
+            - generic [ref=e64]: 转换规则
+          - generic [ref=e65] [cursor=pointer]:
+            - img [ref=e67]
+            - generic [ref=e69]: 调试预览
+          - generic [ref=e70]: 离线任务管理
+          - generic [ref=e71] [cursor=pointer]:
+            - img [ref=e73]
+            - generic [ref=e75]: 任务列表
+          - generic [ref=e76] [cursor=pointer]:
+            - img [ref=e78]
+            - generic [ref=e80]: 工作流
+    - generic [ref=e81]:
+      - banner [ref=e82]:
+        - generic [ref=e84]:
+          - img [ref=e86]
+          - textbox "搜索任务、数据源、API..." [ref=e88]
+        - generic [ref=e89]:
+          - img [ref=e92] [cursor=pointer]
+          - img [ref=e96] [cursor=pointer]
+          - generic [ref=e99] [cursor=pointer]:
+            - img [ref=e101]
+            - superscript [ref=e105]: "3"
+          - button "管理员" [ref=e107] [cursor=pointer]:
+            - img [ref=e110]
+            - generic [ref=e112]: 管理员
+            - img [ref=e114]
+      - navigation "面包屑" [ref=e117]:
+        - link "新建任务" [ref=e119]
+      - main [ref=e120]:
+        - generic [ref=e121]:
+          - generic [ref=e122]:
+            - generic:
+              - button "返回" [ref=e123] [cursor=pointer]:
+                - generic [ref=e124]:
+                  - img [ref=e126]
+                  - text: 返回
+              - separator [ref=e128]
+              - generic:
+                - img [ref=e130]
+                - generic "未命名任务"
+              - separator [ref=e132]
+              - radiogroup "radio-group" [ref=e133]:
+                - generic [ref=e134]:
+                  - radio "开发" [checked] [ref=e135]
+                  - generic [ref=e136] [cursor=pointer]: 开发
+                - generic [ref=e137]:
+                  - radio "生产" [ref=e138]
+                  - generic [ref=e139] [cursor=pointer]: 生产
+              - separator [ref=e140]
+              - radiogroup "radio-group" [ref=e141]:
+                - generic [ref=e142]:
+                  - radio "定时任务" [checked] [ref=e143]
+                  - generic [ref=e144] [cursor=pointer]: 定时任务
+                - generic [ref=e145]:
+                  - radio "实时任务" [ref=e146]
+                  - generic [ref=e147] [cursor=pointer]: 实时任务
+            - generic [ref=e148]:
+              - generic [ref=e149]:
+                - button [disabled] [ref=e150]:
+                  - img [ref=e153]
+                - button [disabled] [ref=e155]:
+                  - img [ref=e158]
+              - separator [ref=e160]
+              - generic [ref=e161]:
+                - button [disabled] [ref=e162]:
+                  - img [ref=e165]
+                - button [disabled] [ref=e168]:
+                  - img [ref=e171]
+                - button [disabled] [ref=e173]:
+                  - img [ref=e176]
+              - separator [ref=e178]
+              - generic [ref=e179]:
+                - button [ref=e180] [cursor=pointer]:
+                  - img [ref=e183]
+                - button [ref=e185] [cursor=pointer]:
+                  - img [ref=e188]
+                - button [ref=e190] [cursor=pointer]:
+                  - img [ref=e193]
+                - button [ref=e195] [cursor=pointer]:
+                  - img [ref=e198]
+            - generic [ref=e200]:
+              - generic [ref=e202]:
+                - button "运行" [ref=e203] [cursor=pointer]:
+                  - generic [ref=e204]:
+                    - img [ref=e206]
+                    - text: 运行
+                - button "切换下拉选项" [ref=e208] [cursor=pointer]:
+                  - img [ref=e211]
+              - button "保存" [disabled] [ref=e213]:
+                - generic [ref=e214]:
+                  - img [ref=e216]
+                  - text: 保存
+              - button "还原" [disabled] [ref=e218]:
+                - generic [ref=e219]:
+                  - img [ref=e221]
+                  - text: 还原
+              - button "发布" [disabled] [ref=e223]:
+                - generic [ref=e224]:
+                  - img [ref=e226]
+                  - text: 发布
+              - button "调度" [disabled] [ref=e228]:
+                - generic [ref=e229]:
+                  - img [ref=e231]
+                  - text: 调度
+              - button [ref=e236] [cursor=pointer]:
+                - img [ref=e239]
+          - generic [ref=e241]:
+            - generic [ref=e242]:
+              - generic [ref=e243]:
+                - generic [ref=e244] [cursor=pointer]:
+                  - img [ref=e246]
+                  - generic [ref=e249]: 节点
+                - generic [ref=e250] [cursor=pointer]:
+                  - img [ref=e252]
+                  - generic [ref=e254]: 目录
+              - generic [ref=e256]:
+                - generic [ref=e259]:
+                  - img [ref=e262]
+                  - textbox "搜索节点..." [ref=e264]
+                - generic [ref=e266]:
+                  - generic [ref=e267]:
+                    - button "General 3" [expanded] [ref=e268] [cursor=pointer]:
+                      - generic [ref=e270]:
+                        - img [ref=e272]
+                        - generic [ref=e275]: General
+                        - generic [ref=e276]: "3"
+                      - img [ref=e278]
+                    - region "General 3" [ref=e280]:
+                      - generic [ref=e282]:
+                        - generic [ref=e283]:
+                          - img [ref=e287]
+                          - generic [ref=e290]:
+                            - generic [ref=e291]: Data Synchronization
+                            - generic [ref=e292]: 在输入和输出之间执行数据同步
+                        - generic [ref=e293]:
+                          - img [ref=e297]
+                          - generic [ref=e299]:
+                            - generic [ref=e300]: Data Transformation
+                            - generic [ref=e301]: 基于内存计算引擎的复杂数据处理和转换
+                        - generic [ref=e302]:
+                          - img [ref=e306]
+                          - generic [ref=e308]:
+                            - generic [ref=e309]: File Transfer
+                            - generic [ref=e310]: 文件传输
+                  - generic [ref=e311]:
+                    - button "Script 4" [expanded] [ref=e312] [cursor=pointer]:
+                      - generic [ref=e314]:
+                        - img [ref=e316]
+                        - generic [ref=e318]: Script
+                        - generic [ref=e319]: "4"
+                      - img [ref=e321]
+                    - region "Script 4" [ref=e323]:
+                      - generic [ref=e325]:
+                        - generic [ref=e326]:
+                          - img [ref=e330]
+                          - generic [ref=e332]:
+                            - generic [ref=e333]: SQL Script
+                            - generic [ref=e334]: SQL脚本
+                        - generic [ref=e335]:
+                          - img [ref=e339]
+                          - generic [ref=e341]:
+                            - generic [ref=e342]: Shell Script
+                            - generic [ref=e343]: Shell脚本
+                        - generic [ref=e344]:
+                          - img [ref=e348]
+                          - generic [ref=e350]:
+                            - generic [ref=e351]: Bat Script
+                            - generic [ref=e352]: Bat脚本（Windows批处理）
+                        - generic [ref=e353]:
+                          - img [ref=e357]
+                          - generic [ref=e359]:
+                            - generic [ref=e360]: Python Script
+                            - generic [ref=e361]: Python脚本
+                  - generic [ref=e362]:
+                    - button "Process 6" [expanded] [ref=e363] [cursor=pointer]:
+                      - generic [ref=e365]:
+                        - img [ref=e367]
+                        - generic [ref=e369]: Process
+                        - generic [ref=e370]: "6"
+                      - img [ref=e372]
+                    - region "Process 6" [ref=e374]:
+                      - generic [ref=e376]:
+                        - generic [ref=e377]:
+                          - img [ref=e381]
+                          - generic [ref=e383]:
+                            - generic [ref=e384]: Parameter Assignment
+                            - generic [ref=e385]: 参数赋值
+                        - generic [ref=e386]:
+                          - img [ref=e390]
+                          - generic [ref=e392]:
+                            - generic [ref=e393]: Conditional Branch
+                            - generic [ref=e394]: 条件分支
+                        - generic [ref=e395]:
+                          - img [ref=e399]
+                          - generic [ref=e402]:
+                            - generic [ref=e403]: Scheduled Task Invocation
+                            - generic [ref=e404]: 定时任务调用（子任务调用）
+                        - generic [ref=e405]:
+                          - img [ref=e409]
+                          - generic [ref=e411]:
+                            - generic [ref=e412]: Loop Container
+                            - generic [ref=e413]: 循环容器
+                        - generic [ref=e414]:
+                          - img [ref=e418]
+                          - generic [ref=e422]:
+                            - generic [ref=e423]: Notification
+                            - generic [ref=e424]: 通知
+                        - generic [ref=e425]:
+                          - img [ref=e429]
+                          - generic [ref=e432]:
+                            - generic [ref=e433]: Virtual Node
+                            - generic [ref=e434]: 虚拟节点
+                  - generic [ref=e435]:
+                    - button "Others 1" [expanded] [ref=e436] [cursor=pointer]:
+                      - generic [ref=e438]:
+                        - img [ref=e440]
+                        - generic [ref=e442]: Others
+                        - generic [ref=e443]: "1"
+                      - img [ref=e445]
+                    - region "Others 1" [ref=e447]:
+                      - generic [ref=e450]:
+                        - img [ref=e454]
+                        - generic [ref=e457]:
+                          - generic [ref=e458]: Remark
+                          - generic [ref=e459]: 备注/注释
+              - img [ref=e462] [cursor=pointer]
+            - generic [ref=e464]:
+              - img [ref=e467]
+              - generic [ref=e468]:
+                - generic [ref=e471]:
+                  - generic [ref=e472]:
+                    - generic [ref=e473] [cursor=pointer]: Log
+                    - generic [ref=e474] [cursor=pointer]: Statistics
+                  - button [ref=e475] [cursor=pointer]:
+                    - img [ref=e478]
+                - generic [ref=e483]: 暂无运行日志
+  - dialog "新建任务" [ref=e486]:
+    - generic [ref=e487]:
+      - generic [ref=e488]:
+        - generic [ref=e489]: 新建任务
+        - button "关闭此对话框" [ref=e490] [cursor=pointer]:
+          - img [ref=e492]
+      - generic [ref=e494]:
+        - generic [ref=e496]: 任务名称
+        - textbox "任务名称" [active] [ref=e500]:
+          - /placeholder: ""
+      - generic [ref=e501]:
+        - button "取消" [ref=e502] [cursor=pointer]:
+          - generic [ref=e503]: 取消
+        - button "确定" [ref=e504] [cursor=pointer]:
+          - generic [ref=e505]: 确定

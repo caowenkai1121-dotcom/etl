@@ -1,0 +1,172 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e7]
+      - generic [ref=e9]: ETL Sync
+    - menubar [ref=e10]:
+      - menuitem "仪表盘" [expanded] [ref=e11]:
+        - generic [ref=e12] [cursor=pointer]:
+          - generic [ref=e13]: 仪表盘
+          - img [ref=e15]
+        - menu [ref=e258]:
+          - menuitem "监控大盘" [ref=e17] [cursor=pointer]:
+            - img [ref=e19]
+            - text: 监控大盘
+      - menuitem "数据开发" [expanded] [ref=e21]:
+        - generic [ref=e22] [cursor=pointer]:
+          - generic [ref=e23]: 数据开发
+          - img [ref=e25]
+        - menu [ref=e266]:
+          - menuitem "数据开发工作台" [ref=e267] [cursor=pointer]:
+            - img [ref=e269]
+            - text: 数据开发工作台
+          - menuitem "数据源管理" [ref=e271] [cursor=pointer]:
+            - img [ref=e273]
+            - text: 数据源管理
+          - menuitem "任务编排" [ref=e277] [cursor=pointer]:
+            - img [ref=e279]
+            - text: 任务编排
+          - menuitem "任务管理" [ref=e281] [cursor=pointer]:
+            - img [ref=e283]
+            - text: 任务管理
+          - menuitem "CDC配置" [ref=e285] [cursor=pointer]:
+            - img [ref=e287]
+            - text: CDC配置
+      - menuitem "数据服务" [ref=e27]:
+        - generic [ref=e28] [cursor=pointer]:
+          - generic [ref=e29]: 数据服务
+          - img [ref=e31]
+      - menuitem "发布管理" [ref=e33]:
+        - generic [ref=e34] [cursor=pointer]:
+          - generic [ref=e35]: 发布管理
+          - img [ref=e37]
+      - menuitem "ETL调度" [ref=e39]:
+        - generic [ref=e40] [cursor=pointer]:
+          - generic [ref=e41]: ETL调度
+          - img [ref=e43]
+      - menuitem "数据转换" [ref=e45]:
+        - generic [ref=e46] [cursor=pointer]:
+          - generic [ref=e47]: 数据转换
+          - img [ref=e49]
+      - menuitem "监控日志" [ref=e51]:
+        - generic [ref=e52] [cursor=pointer]:
+          - generic [ref=e53]: 监控日志
+          - img [ref=e55]
+      - menuitem "系统管理" [ref=e57]:
+        - generic [ref=e58] [cursor=pointer]:
+          - generic [ref=e59]: 系统管理
+          - img [ref=e61]
+  - generic [ref=e63]:
+    - generic [ref=e64]:
+      - generic [ref=e65]:
+        - img [ref=e68] [cursor=pointer]
+        - navigation "面包屑" [ref=e70]:
+          - generic [ref=e71]:
+            - link "首页" [ref=e72]
+            - text: /
+          - link "数据源管理" [ref=e290]
+      - generic [ref=e75]:
+        - img [ref=e79] [cursor=pointer]
+        - generic [ref=e83] [cursor=pointer]:
+          - img [ref=e86]
+          - generic [ref=e88]: 管理员
+    - main [ref=e89]:
+      - generic [ref=e291]:
+        - generic [ref=e292]:
+          - generic [ref=e293]:
+            - textbox "请输入数据源名称" [ref=e295]
+            - button [ref=e297] [cursor=pointer]:
+              - img [ref=e300]
+          - button "新增数据源" [ref=e302] [cursor=pointer]:
+            - generic [ref=e303]:
+              - img [ref=e305]
+              - generic [ref=e307]: 新增数据源
+        - generic [ref=e309]:
+          - generic [ref=e311]:
+            - table [ref=e313]:
+              - rowgroup [ref=e322]:
+                - row "名称 类型 主机 端口 状态 操作" [ref=e323]:
+                  - columnheader [ref=e324]
+                  - columnheader "名称" [ref=e325]:
+                    - generic [ref=e326]: 名称
+                  - columnheader "类型" [ref=e327]:
+                    - generic [ref=e328]: 类型
+                  - columnheader "主机" [ref=e329]:
+                    - generic [ref=e330]: 主机
+                  - columnheader "端口" [ref=e331]:
+                    - generic [ref=e332]: 端口
+                  - columnheader "状态" [ref=e333]:
+                    - generic [ref=e334]: 状态
+                  - columnheader "操作" [ref=e335]:
+                    - generic [ref=e336]: 操作
+            - generic [ref=e340]:
+              - table:
+                - rowgroup
+              - generic [ref=e342]: 暂无数据
+          - generic [ref=e343]:
+            - generic [ref=e344]: 共 0 条
+            - generic [ref=e347] [cursor=pointer]:
+              - generic:
+                - combobox [ref=e349]
+                - generic [ref=e350]: 10条/页
+              - img [ref=e353]
+            - button "上一页" [disabled] [ref=e355]:
+              - generic:
+                - img
+            - list [ref=e356]:
+              - listitem "第 1 页" [ref=e357]: "1"
+            - button "下一页" [disabled] [ref=e358]:
+              - generic:
+                - img
+        - dialog "新增数据源" [ref=e360]:
+          - generic [active] [ref=e361]:
+            - generic [ref=e362]:
+              - heading "新增数据源" [level=2] [ref=e363]
+              - button "关闭此对话框" [ref=e364] [cursor=pointer]:
+                - img [ref=e366]
+            - generic [ref=e369]:
+              - generic [ref=e370]:
+                - generic [ref=e371]: "* 名称"
+                - textbox "* 名称" [ref=e375]:
+                  - /placeholder: 请输入名称
+              - generic [ref=e376]:
+                - generic [ref=e377]: "* 类型"
+                - generic [ref=e380] [cursor=pointer]:
+                  - generic:
+                    - combobox "* 类型" [ref=e382]
+                    - generic [ref=e383]: MySQL
+                  - img [ref=e386]
+              - generic [ref=e388]:
+                - generic [ref=e389]: "* 主机"
+                - textbox "* 主机" [ref=e393]:
+                  - /placeholder: 请输入主机地址
+              - generic [ref=e394]:
+                - generic [ref=e395]: "* 端口"
+                - generic [ref=e397]:
+                  - button "减少数值" [ref=e398] [cursor=pointer]:
+                    - img [ref=e400]
+                  - button "增加数值" [ref=e402] [cursor=pointer]:
+                    - img [ref=e404]
+                  - spinbutton "* 端口" [ref=e408]: "3306"
+              - generic [ref=e409]:
+                - generic [ref=e410]: "* 数据库"
+                - textbox "* 数据库" [ref=e414]:
+                  - /placeholder: 请输入数据库名称
+              - generic [ref=e415]:
+                - generic [ref=e416]: "* 用户名"
+                - textbox "* 用户名" [ref=e420]:
+                  - /placeholder: 请输入用户名
+              - generic [ref=e421]:
+                - generic [ref=e422]: 密码
+                - textbox "密码" [ref=e426]:
+                  - /placeholder: 请输入密码
+              - generic [ref=e427]:
+                - generic [ref=e428]: 字符集
+                - textbox "字符集" [ref=e432]:
+                  - /placeholder: 默认utf8mb4
+                  - text: utf8mb4
+            - generic [ref=e433]:
+              - button "取消" [ref=e434] [cursor=pointer]:
+                - generic [ref=e435]: 取消
+              - button "确定" [ref=e436] [cursor=pointer]:
+                - generic [ref=e437]: 确定

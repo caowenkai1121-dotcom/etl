@@ -1,0 +1,98 @@
+{
+  "title": "ETL系统完整部署、测试、验证与修复",
+  "version": "1.0.0",
+  "created": "2026-05-01",
+  "stories": [
+    {
+      "id": "US-001",
+      "title": "前端构建与 Docker 镜像重建",
+      "priority": 1,
+      "passes": true,
+      "acceptanceCriteria": [
+        "npm run build 在 etl-web 目录零错误通过",
+        "Docker etl-web 镜像使用最新 dist 重新构建成功",
+        "Docker etl-server 镜像重新构建成功",
+        "所有容器 docker-compose up -d 启动成功"
+      ]
+    },
+    {
+      "id": "US-002",
+      "title": "Docker 服务健康检查验证",
+      "priority": 2,
+      "passes": true,
+      "acceptanceCriteria": [
+        "etl-mysql-system 容器 healthy",
+        "etl-mysql-source 容器 healthy",
+        "etl-postgres 容器 healthy",
+        "etl-zookeeper 容器 healthy",
+        "etl-kafka 容器 healthy",
+        "etl-redis 容器 healthy",
+        "etl-server 容器 healthy (Spring Boot 启动成功)",
+        "etl-web 容器 healthy (Nginx 返回 200)"
+      ]
+    },
+    {
+      "id": "US-003",
+      "title": "前端页面功能验证",
+      "priority": 3,
+      "passes": true,
+      "acceptanceCriteria": [
+        "Demo 中心页面 (/demo-center) 完整渲染：横幅、资源区、功能卡片、展示Tabs",
+        "数据管道页面 (/data-pipeline) 完整渲染：统计卡片、5步指引、文件夹树、任务表格",
+        "数据开发工作台 (/dev/workbench) 完整渲染：离线/实时子导航、统计卡片、任务列表",
+        "所有页面无 JS 控制台错误（401 除外——后端未登录）",
+        "导航菜单点击可正常跳转到各页面"
+      ]
+    },
+    {
+      "id": "US-004",
+      "title": "后端 API 端点测试",
+      "priority": 4,
+      "passes": true,
+      "acceptanceCriteria": [
+        "GET /api/health 返回 200",
+        "数据源 API (CRUD) 响应正常",
+        "任务 API (CRUD) 响应正常",
+        "管道 API 响应正常",
+        "API 返回错误时有统一错误格式"
+      ]
+    },
+    {
+      "id": "US-005",
+      "title": "与 FineDataLink 参考系统对比验证",
+      "priority": 5,
+      "passes": true,
+      "acceptanceCriteria": [
+        "Demo 中心页面布局与 FDL 原系统一致",
+        "数据管道页面结构与 FDL 原系统一致（实时管道列表、创建流程）",
+        "数据开发工作台节点系统 1:1 匹配 FDL（14 节点、4 分组）",
+        "定时任务/实时任务双模式切换正确",
+        "面包屑导航和侧边栏与 FDL 对应"
+      ]
+    },
+    {
+      "id": "US-006",
+      "title": "BUG 修复与回归测试",
+      "priority": 6,
+      "passes": true,
+      "acceptanceCriteria": [
+        "所有发现的 BUG 均已修复",
+        "npm run build 修复后仍通过",
+        "所有之前通过的页面验证在修复后仍通过",
+        "Docker 容器在修复后全部 healthy"
+      ]
+    },
+    {
+      "id": "US-007",
+      "title": "最终端到端验证与调整",
+      "priority": 7,
+      "passes": true,
+      "acceptanceCriteria": [
+        "从 Docker 部署的前端页面完整可用",
+        "后端 API 前端联调正常（数据源列表、任务列表等）",
+        "所有关键用户路径可走通（浏览 Demo 中心 → 进入数据开发 → 查看管道）",
+        "构建报告确认零错误"
+      ]
+    }
+  ]
+}

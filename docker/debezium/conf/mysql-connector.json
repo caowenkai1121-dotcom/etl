@@ -1,0 +1,27 @@
+{
+  "name": "etl-mysql-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.mysql.MySqlConnector",
+    "database.hostname": "mysql-source",
+    "database.port": "3306",
+    "database.user": "root",
+    "database.password": "root123456",
+    "database.include.list": "source_db",
+    "topic.prefix": "etl-mysql",
+    "database.server.id": "5400",
+    "schema.history.internal.kafka.bootstrap.servers": "kafka:9092",
+    "schema.history.internal.kafka.topic": "schema-changes.mysql",
+    "snapshot.mode": "initial",
+    "snapshot.locking.mode": "minimal",
+    "decimal.handling.mode": "string",
+    "time.precision.mode": "connect",
+    "transforms": "unwrap",
+    "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState",
+    "transforms.unwrap.drop.tombstones": "false",
+    "transforms.unwrap.delete.handling.mode": "rewrite",
+    "transforms.unwrap.add.fields": "op,ts_ms",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "false"
+  }
+}

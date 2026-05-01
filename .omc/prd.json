@@ -1,0 +1,222 @@
+{
+  "title": "ETL系统1:1还原FineDataLink数据开发平台",
+  "version": "1.0.0",
+  "targetSystem": "https://demo.finedatalink.com",
+  "stories": [
+    {
+      "id": "US-001",
+      "name": "节点面板重构 - 完全匹配FineDataLink节点分类和样式",
+      "priority": 1,
+      "passes": true,
+      "description": "重构左侧节点面板，按照目标系统分类：General(数据同步、数据转换、文件传输)、Script(SQL脚本、Shell脚本、Bat脚本、Python脚本)、Process(参数赋值、条件分支、调用任务、循环容器、消息通知、虚拟节点)、Others(备注)。节点图标、颜色、样式必须与目标系统一致。",
+      "acceptanceCriteria": [
+        "节点面板分为4个分组：General, Script, Process, Others",
+        "General分组包含：Data Synchronization, Data Transformation, File Transfer",
+        "Script分组包含：SQL Script, Shell Script, Bat Script, Python Script",
+        "Process分组包含：Parameter Assignment, Conditional Branch, Scheduled Task Invocation, Loop Container, Notification, Virtual Node",
+        "Others分组包含：Remark",
+        "每个节点项显示图标和文字标签",
+        "节点可拖拽到画布添加"
+      ]
+    },
+    {
+      "id": "US-002",
+      "name": "DAG画布连线系统重构 - 完全copy目标系统连线实现",
+      "priority": 2,
+      "passes": true,
+      "description": "重构节点之间的连线机制。目标系统使用从节点端口拖拽连线的方式，而非Shift+Click。连线路径算法、箭头样式、选中态都需要匹配。",
+      "acceptanceCriteria": [
+        "节点有明确的输入输出端口(上下左右四个端口)",
+        "从输出端口可拖拽连线到目标节点的输入端口",
+        "连线使用贝塞尔曲线，路径平滑",
+        "连线有箭头指示方向",
+        "连线可选中(点击连线)",
+        "选中连线可删除",
+        "连线随节点移动自动更新路径",
+        "端口hover时高亮显示，表示可连线"
+      ]
+    },
+    {
+      "id": "US-003",
+      "name": "节点配置面板 - 1:1还原Data Synchronization节点配置",
+      "priority": 3,
+      "passes": true,
+      "description": "双击节点打开右侧配置面板，包含：Node Information、Data Source、Data Destination and Mapping、Write Method四个标签页。Data Source标签页包含：数据源类型下拉、数据连接下拉、测试连接按钮、数据预览按钮。",
+      "acceptanceCriteria": [
+        "双击节点打开右侧属性面板",
+        "属性面板有Node Information标签页",
+        "属性面板有Data Source标签页(含数据源类型、数据连接、测试连接、数据预览)",
+        "属性面板有Data Destination and Mapping标签页",
+        "属性面板有Write Method标签页",
+        "面板顶部显示节点名称和Generate Data Transformation按钮",
+        "面板可关闭"
+      ]
+    },
+    {
+      "id": "US-004",
+      "name": "任务编辑器整体布局重构 - 开发模式/生产模式切换",
+      "priority": 4,
+      "passes": true,
+      "description": "重构任务编辑器布局，包含：顶部标签栏(任务名称、关闭按钮)、工具栏(Run、Save、Restore、Publish等按钮)、Development Mode/Production Mode切换、左侧节点面板、中央DAG画布、底部Log/Statistics面板。",
+      "acceptanceCriteria": [
+        "顶部有任务标签栏，显示任务名称",
+        "工具栏包含Run、Save、Restore、Publish按钮",
+        "有Development Mode和Production Mode切换radio",
+        "左边是收缩的节点面板",
+        "中央是DAG画布",
+        "底部有Log和Statistics两个tab",
+        "整体布局与目标系统一致"
+      ]
+    },
+    {
+      "id": "US-005",
+      "name": "任务文件夹树 - 左侧目录结构",
+      "priority": 5,
+      "passes": true,
+      "description": "实现左侧任务文件夹树，包含搜索框、展开/收起按钮、文件夹树结构。支持创建文件夹、重命名、移动任务等操作。",
+      "acceptanceCriteria": [
+        "左侧面板有搜索框",
+        "文件夹树显示All Tasks根节点",
+        "文件夹可展开/收起",
+        "任务可在树中显示",
+        "支持右键菜单操作"
+      ]
+    },
+    {
+      "id": "US-006",
+      "name": "任务列表页 - 最近编辑/收藏/全部任务",
+      "priority": 6,
+      "passes": true,
+      "description": "重构任务列表页，包含：概览统计(剩余发布容量、我的创建、已发布、待发布、待更新)、Recent Edits/My Favorites标签切换、任务表格(任务名称、目录、创建人、创建时间、最后编辑人、最后编辑时间、发布时间)、只看我相关的checkbox。",
+      "acceptanceCriteria": [
+        "概览统计区域显示5项统计数据",
+        "Recent Edits和My Favorites标签可切换",
+        "任务表格包含所有列(任务名称、目录、创建人、创建时间等)",
+        "有Task Related to Me checkbox筛选",
+        "表格数据分页显示",
+        "显示最近20条记录"
+      ]
+    },
+    {
+      "id": "US-007",
+      "name": "后端API完善 - 支持完整的数据开发流程",
+      "priority": 7,
+      "passes": true,
+      "description": "完善后端API以支持：任务CRUD、文件夹管理、DAG配置保存/加载、节点配置保存、连线配置保存、任务运行/停止、发布管理、版本历史、调度配置等。",
+      "acceptanceCriteria": [
+        "POST /dev/tasks 创建任务",
+        "GET /dev/tasks 获取任务列表(带分页和过滤)",
+        "PUT /dev/tasks/{id} 保存任务(含节点和连线配置)",
+        "POST /dev/tasks/{id}/run 运行任务",
+        "POST /dev/tasks/{id}/stop 停止任务",
+        "POST /dev/tasks/{id}/publish 发布任务",
+        "GET /dev/folders 获取文件夹树",
+        "POST /dev/folders 创建文件夹",
+        "GET /dev/tasks/{id}/logs 获取运行日志",
+        "GET /dev/stats 获取统计概览"
+      ]
+    },
+    {
+      "id": "US-008",
+      "name": "Docker服务启动和基础验证",
+      "priority": 8,
+      "passes": true,
+      "description": "启动所有Docker服务(MySQL、PostgreSQL、Kafka、Debezium、Redis等)，验证后端API和前端页面可正常访问。",
+      "acceptanceCriteria": [
+        "docker-compose up -d 启动所有服务",
+        "MySQL系统数据库可连接(3306)",
+        "MySQL源端数据库可连接(3307)",
+        "PostgreSQL可连接(5433)",
+        "Kafka可连接(9092)",
+        "Redis可连接(6379)",
+        "后端API健康检查通过(http://localhost:8080/api/health)",
+        "前端页面可访问(http://localhost)"
+      ]
+    },
+    {
+      "id": "US-009",
+      "name": "与目标系统对比验证 - UI和功能一致性检查",
+      "priority": 9,
+      "passes": true,
+      "description": "将开发完的系统与demo.finedatalink.com进行逐项对比，检查UI布局、节点功能、连线机制、配置面板等是否一致。发现问题立即修复，循环迭代。",
+      "acceptanceCriteria": [
+        "节点面板分类和节点列表与目标系统一致",
+        "DAG画布连线交互与目标系统一致",
+        "节点配置面板标签页与目标系统一致",
+        "任务列表页面布局与目标系统一致",
+        "整体UI风格与目标系统一致",
+        "核心功能流程(创建任务→添加节点→连线→配置→运行)完整可用"
+      ]
+    },
+    {
+      "id": "US-010",
+      "name": "修复节点名称/类型/样式与目标系统一致",
+      "priority": 10,
+      "passes": true,
+      "description": "用户反馈：节点名称类型、样式、功能与目标系统不一样。修复：1) NodePanel标签从英文改为中文(数据同步/数据转换/文件传输等14种)；2) 分组标题改为中文(通用/脚本/流程/其他)；3) NodePropertyPanel标签映射统一；4) DagCanvas节点颜色条从顶部改为左侧(FineDataLink风格)；5) 节点文字截断从16字扩展到22字+悬浮完整显示。",
+      "acceptanceCriteria": [
+        "NodePanel所有14种节点使用中文标签",
+        "4个分组使用中文标题(通用/脚本/流程/其他)",
+        "NodePropertyPanel typeLabel映射与NodePanel一致",
+        "DAG画布节点左侧颜色条(非顶部)匹配FineDataLink风格",
+        "节点文本超过22字符时截断并显示'..'后缀",
+        "节点hover时SVG title元素显示完整名称"
+      ]
+    },
+    {
+      "id": "US-011",
+      "name": "修复节点拖动残影",
+      "priority": 11,
+      "passes": true,
+      "description": "用户反馈：节点拖动时在画布上有残影。根因：CSS filter:drop-shadow()在快速transform更新时GPU渲染延迟。修复：拖拽开始时添加.dragging CSS类(移除filter和transition)，拖拽结束时移除该类。",
+      "acceptanceCriteria": [
+        "startNodeDrag添加nodeEl.classList.add('dragging')",
+        "finishNodeDrag和globalMouseUpHandler移除dragging类",
+        ".dragging CSS类设置filter:none!important和transition:none!important",
+        "构建输出包含.dragging类样式"
+      ]
+    },
+    {
+      "id": "US-012",
+      "name": "修复节点无法删除",
+      "priority": 12,
+      "passes": true,
+      "description": "用户反馈：节点无法删除。根因：index.vue deleteSelected()只更新Pinia store不操作canvas DOM。修复：删除方法改为委托dagCanvasRef.doDeleteSelected()，该函数同时清理DOM和通过事件emit触发store更新。",
+      "acceptanceCriteria": [
+        "工具栏Delete按钮可删除选中节点",
+        "键盘Delete键可删除选中节点",
+        "删除节点后相关连线也一并删除",
+        "dagCanvasRef.deleteSelected在defineExpose中暴露",
+        "canvas doDeleteSelected同时清理DOM和发出node-remove/edge-remove事件"
+      ]
+    },
+    {
+      "id": "US-013",
+      "name": "修复左侧菜单栏图标和文字不显示",
+      "priority": 13,
+      "passes": true,
+      "description": "用户反馈：最左边的菜单栏图标或者文字没有显示出来。修复：1) 图标包裹在el-icon组件中确保正确渲染；2) 在每个图标下方添加文字标签(.icon-nav-label)，显示模块名称(9px字体/白色半透明)。",
+      "acceptanceCriteria": [
+        "MainLayout.vue图标nav项使用el-icon包裹图标组件",
+        "每个icon-nav-item下方显示文字标签(icon-nav-label)",
+        "CSS支持竖向布局(flex-direction:column)适配图标+文字",
+        "构建输出包含icon-nav-label类定义"
+      ]
+    },
+    {
+      "id": "US-014",
+      "name": "持续对比目标系统并迭代修复差异",
+      "priority": 14,
+      "passes": false,
+      "description": "与demo.finedatalink.com持续对比，发现差异立即修复。Playwright浏览器当前不可用，无法进行视觉对比验证。待浏览器恢复后继续对比。已知可能的差异方向：1) 折线连接器(目标系统支持曲线和折线两种)；2) 连接器吸附功能；3) 节点运行状态可视化；4) 画布缩略图导航器。",
+      "acceptanceCriteria": [
+        "Playwright浏览器可正常访问目标系统和本地系统",
+        "截图对比两侧UI布局一致",
+        "节点面板外观(图标/颜色/文字/间距)与目标系统一致",
+        "DAG画布节点渲染(形状/端口/颜色条/文字)与目标系统一致",
+        "连线样式(路径/箭头/标签)与目标系统一致",
+        "左侧菜单栏图标和文字与目标系统一致"
+      ]
+    }
+  ]
+}

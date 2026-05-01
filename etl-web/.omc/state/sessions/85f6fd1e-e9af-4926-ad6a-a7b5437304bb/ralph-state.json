@@ -1,0 +1,13 @@
+{
+  "active": true,
+  "iteration": 3,
+  "max_iterations": 100,
+  "started_at": "2026-05-01T05:39:49.222Z",
+  "prompt": "/ralph 全功能测试，你要验证功能的可用性。 不只是功能是否不报错，还要看功能是否可用，是否符合业务流程,功能之间如果有关联，需要测试是否能联动。有问题有及时修改，修改完后继续测试。",
+  "session_id": "85f6fd1e-e9af-4926-ad6a-a7b5437304bb",
+  "project_path": "/opt/code/etl-sync-system/etl-web",
+  "linked_ultrawork": true,
+  "awaiting_confirmation": true,
+  "awaiting_confirmation_set_at": "2026-05-01T05:39:49.222Z",
+  "last_checked_at": "2026-05-01T06:28:20.339Z"
+}

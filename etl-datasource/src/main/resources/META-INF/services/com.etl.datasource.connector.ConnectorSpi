@@ -1,0 +1,3 @@
+com.etl.datasource.connector.spi.MySQLConnectorSpi
+com.etl.datasource.connector.spi.PostgreSQLConnectorSpi
+com.etl.datasource.connector.spi.DorisConnectorSpi

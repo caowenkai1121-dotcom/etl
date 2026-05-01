@@ -1,0 +1,350 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e7] [cursor=pointer]
+      - generic [ref=e10]:
+        - generic [ref=e11] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e13] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e15] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e18] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e20] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e22] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e26] [cursor=pointer]:
+          - generic:
+            - img
+        - generic [ref=e28] [cursor=pointer]:
+          - generic:
+            - img
+      - img [ref=e34] [cursor=pointer]
+    - generic [ref=e36]:
+      - generic [ref=e38]: Data Development
+      - generic [ref=e39]:
+        - generic [ref=e40] [cursor=pointer]: 离线任务
+        - generic [ref=e41] [cursor=pointer]: 实时任务
+      - generic [ref=e45]:
+        - generic [ref=e46]: 离线任务开发
+        - generic [ref=e47] [cursor=pointer]:
+          - img [ref=e49]
+          - generic [ref=e51]: 工作台首页
+        - generic [ref=e52] [cursor=pointer]:
+          - img [ref=e54]
+          - generic [ref=e58]: 数据源管理
+        - generic [ref=e59] [cursor=pointer]:
+          - img [ref=e61]
+          - generic [ref=e64]: 转换规则
+        - generic [ref=e65] [cursor=pointer]:
+          - img [ref=e67]
+          - generic [ref=e69]: 调试预览
+        - generic [ref=e70]: 离线任务管理
+        - generic [ref=e71] [cursor=pointer]:
+          - img [ref=e73]
+          - generic [ref=e75]: 任务列表
+        - generic [ref=e76] [cursor=pointer]:
+          - img [ref=e78]
+          - generic [ref=e80]: 工作流
+  - generic [ref=e81]:
+    - banner [ref=e82]:
+      - generic [ref=e84]:
+        - img [ref=e86]
+        - textbox "搜索任务、数据源、API..." [ref=e88]
+      - generic [ref=e89]:
+        - img [ref=e92] [cursor=pointer]
+        - img [ref=e96] [cursor=pointer]
+        - generic [ref=e99] [cursor=pointer]:
+          - img [ref=e101]
+          - superscript [ref=e105]: "3"
+        - button "管理员" [ref=e107] [cursor=pointer]:
+          - img [ref=e110]
+          - generic [ref=e112]: 管理员
+          - img [ref=e114]
+    - navigation "面包屑" [ref=e117]:
+      - link "工作台首页" [ref=e119]
+    - main [ref=e120]:
+      - generic [ref=e121]:
+        - generic [ref=e123]:
+          - heading "数据开发工作台" [level=1] [ref=e124]
+          - paragraph [ref=e125]: 一站式数据集成开发环境，支持可视化ETL任务设计、调度配置与运维监控
+          - generic [ref=e126]:
+            - button "新建任务" [ref=e127] [cursor=pointer]:
+              - generic [ref=e128]:
+                - img [ref=e130]
+                - text: 新建任务
+            - button "新建数据源" [ref=e132] [cursor=pointer]:
+              - generic [ref=e133]:
+                - img [ref=e135]
+                - text: 新建数据源
+            - button "查看调度" [ref=e139] [cursor=pointer]:
+              - generic [ref=e140]:
+                - img [ref=e142]
+                - text: 查看调度
+        - generic [ref=e152]:
+          - generic [ref=e154] [cursor=pointer]:
+            - generic [ref=e155]:
+              - img [ref=e158]
+              - generic [ref=e160]:
+                - text: "+12"
+                - img [ref=e162]
+            - generic [ref=e164]: "0"
+            - generic [ref=e165]: 已发布任务
+          - generic [ref=e167] [cursor=pointer]:
+            - generic [ref=e168]:
+              - img [ref=e171]
+              - generic [ref=e175]:
+                - text: "+5"
+                - img [ref=e177]
+            - generic [ref=e179]: "0"
+            - generic [ref=e180]: 待发布任务
+          - generic [ref=e182] [cursor=pointer]:
+            - generic [ref=e183]:
+              - img [ref=e186]
+              - generic [ref=e188]:
+                - text: "-3"
+                - img [ref=e190]
+            - generic [ref=e192]: "0"
+            - generic [ref=e193]: 待更新任务
+          - generic [ref=e195] [cursor=pointer]:
+            - generic [ref=e196]:
+              - img [ref=e199]
+              - generic [ref=e201]: 本周
+            - generic [ref=e202]: "3"
+            - generic [ref=e203]: 我创建的任务
+        - generic [ref=e204]:
+          - generic [ref=e205]:
+            - heading "操作流程指引" [level=3] [ref=e206]
+            - button "收起" [ref=e207] [cursor=pointer]:
+              - generic [ref=e208]:
+                - text: 收起
+                - img [ref=e210]
+          - generic [ref=e212]:
+            - generic [ref=e213] [cursor=pointer]:
+              - generic [ref=e214]: "01"
+              - generic [ref=e215]:
+                - generic [ref=e216]: 连接数据源
+                - generic [ref=e217]:
+                  - generic [ref=e218]: 创建数据源连接
+                  - generic [ref=e219]: 验证表和字段
+              - img [ref=e221]
+            - generic [ref=e223] [cursor=pointer]:
+              - generic [ref=e224]: "02"
+              - generic [ref=e225]:
+                - generic [ref=e226]: 设计任务
+                - generic [ref=e227]:
+                  - generic [ref=e228]: 新建ETL任务
+                  - generic [ref=e229]: 拖拽设计流程
+              - img [ref=e231]
+            - generic [ref=e233] [cursor=pointer]:
+              - generic [ref=e234]: "03"
+              - generic [ref=e235]:
+                - generic [ref=e236]: 试运行调试
+                - generic [ref=e237]:
+                  - generic [ref=e238]: 试运行任务
+                  - generic [ref=e239]: 查看输出数据
+              - img [ref=e241]
+            - generic [ref=e243] [cursor=pointer]:
+              - generic [ref=e244]: "04"
+              - generic [ref=e245]:
+                - generic [ref=e246]: 调度配置
+                - generic [ref=e247]:
+                  - generic [ref=e248]: 设置定时周期
+                  - generic [ref=e249]: 配置依赖关系
+              - img [ref=e251]
+            - generic [ref=e253] [cursor=pointer]:
+              - generic [ref=e254]: "05"
+              - generic [ref=e255]:
+                - generic [ref=e256]: 运维监控
+                - generic [ref=e257]:
+                  - generic [ref=e258]: 查看执行记录
+                  - generic [ref=e259]: 日志分析
+              - img [ref=e261]
+        - generic [ref=e263]:
+          - generic [ref=e265] [cursor=pointer]:
+            - img [ref=e268]
+            - generic [ref=e270]:
+              - generic [ref=e271]: SQL脚本任务
+              - generic [ref=e272]: 编写和执行SQL数据处理脚本
+          - generic [ref=e274] [cursor=pointer]:
+            - img [ref=e277]
+            - generic [ref=e280]:
+              - generic [ref=e281]: DAG任务编排
+              - generic [ref=e282]: 可视化拖拽设计数据流程
+          - generic [ref=e284] [cursor=pointer]:
+            - img [ref=e287]
+            - generic [ref=e289]:
+              - generic [ref=e290]: API数据服务
+              - generic [ref=e291]: 快速构建数据API接口
+        - generic [ref=e292]:
+          - generic [ref=e293]:
+            - generic [ref=e294]:
+              - generic [ref=e295] [cursor=pointer]: 最近编辑
+              - generic [ref=e296] [cursor=pointer]: 我的收藏
+              - generic [ref=e297] [cursor=pointer]: 全部任务
+            - generic [ref=e298]:
+              - generic [ref=e299] [cursor=pointer]:
+                - generic [ref=e300]:
+                  - checkbox "只看我相关"
+                - generic [ref=e302]: 只看我相关
+              - generic [ref=e304]:
+                - img [ref=e307]
+                - textbox "搜索任务..." [ref=e309]
+          - generic [ref=e310]:
+            - generic [ref=e311]:
+              - table [ref=e313]:
+                - rowgroup [ref=e324]:
+                  - row "任务名称 所属目录 任务类型 创建人 创建时间 最近编辑 最后编辑时间 发布时间 操作" [ref=e325]:
+                    - columnheader "任务名称" [ref=e326]:
+                      - generic [ref=e327]: 任务名称
+                    - columnheader "所属目录" [ref=e328]:
+                      - generic [ref=e329]: 所属目录
+                    - columnheader "任务类型" [ref=e330]:
+                      - generic [ref=e331]: 任务类型
+                    - columnheader "创建人" [ref=e332]:
+                      - generic [ref=e333]: 创建人
+                    - columnheader "创建时间" [ref=e334]:
+                      - generic [ref=e335]: 创建时间
+                    - columnheader "最近编辑" [ref=e336]:
+                      - generic [ref=e337]: 最近编辑
+                    - columnheader "最后编辑时间" [ref=e338]:
+                      - generic [ref=e339]: 最后编辑时间
+                    - columnheader "发布时间" [ref=e340]:
+                      - generic [ref=e341]: 发布时间
+                    - columnheader "操作" [ref=e342]:
+                      - generic [ref=e343]: 操作
+              - table [ref=e348]:
+                - rowgroup [ref=e359]:
+                  - row "1 草稿 根目录 ETL任务 admin 2026-04-29T19:18:48 admin 2026-04-29T19:18:48" [ref=e360] [cursor=pointer]:
+                    - cell "1 草稿" [ref=e361]:
+                      - generic [ref=e363]:
+                        - img [ref=e365]
+                        - generic [ref=e367]: "1"
+                        - generic:
+                          - generic: 草稿
+                    - cell "根目录" [ref=e368]:
+                      - generic [ref=e370]:
+                        - img [ref=e372]
+                        - text: 根目录
+                    - cell "ETL任务" [ref=e374]:
+                      - generic [ref=e375]:
+                        - generic:
+                          - generic: ETL任务
+                    - cell "admin" [ref=e376]:
+                      - generic [ref=e377]: admin
+                    - cell "2026-04-29T19:18:48" [ref=e378]:
+                      - generic [ref=e379]: 2026-04-29T19:18:48
+                    - cell "admin" [ref=e380]:
+                      - generic [ref=e381]: admin
+                    - cell "2026-04-29T19:18:48" [ref=e382]:
+                      - generic [ref=e383]: 2026-04-29T19:18:48
+                    - cell [ref=e384]
+                    - cell [ref=e385]:
+                      - generic [ref=e387]:
+                        - button [ref=e388]:
+                          - img [ref=e391]
+                        - button [ref=e394]:
+                          - img [ref=e397]
+                        - button [ref=e400]:
+                          - img [ref=e403]
+                  - row "1 草稿 根目录 ETL任务 admin 2026-04-29T07:19:15 admin 2026-04-29T07:19:15" [ref=e405] [cursor=pointer]:
+                    - cell "1 草稿" [ref=e406]:
+                      - generic [ref=e408]:
+                        - img [ref=e410]
+                        - generic [ref=e412]: "1"
+                        - generic:
+                          - generic: 草稿
+                    - cell "根目录" [ref=e413]:
+                      - generic [ref=e415]:
+                        - img [ref=e417]
+                        - text: 根目录
+                    - cell "ETL任务" [ref=e419]:
+                      - generic [ref=e420]:
+                        - generic:
+                          - generic: ETL任务
+                    - cell "admin" [ref=e421]:
+                      - generic [ref=e422]: admin
+                    - cell "2026-04-29T07:19:15" [ref=e423]:
+                      - generic [ref=e424]: 2026-04-29T07:19:15
+                    - cell "admin" [ref=e425]:
+                      - generic [ref=e426]: admin
+                    - cell "2026-04-29T07:19:15" [ref=e427]:
+                      - generic [ref=e428]: 2026-04-29T07:19:15
+                    - cell [ref=e429]
+                    - cell [ref=e430]:
+                      - generic [ref=e432]:
+                        - button [ref=e433]:
+                          - img [ref=e436]
+                        - button [ref=e439]:
+                          - img [ref=e442]
+                        - button [ref=e445]:
+                          - img [ref=e448]
+                  - row "自动化测试任务_1777380843528 草稿 根目录 ETL任务 admin 2026-04-28T20:54:04 admin 2026-04-28T20:54:04" [ref=e450] [cursor=pointer]:
+                    - cell "自动化测试任务_1777380843528 草稿" [ref=e451]:
+                      - generic [ref=e453]:
+                        - img [ref=e455]
+                        - generic [ref=e457]: 自动化测试任务_1777380843528
+                        - generic:
+                          - generic: 草稿
+                    - cell "根目录" [ref=e458]:
+                      - generic [ref=e460]:
+                        - img [ref=e462]
+                        - text: 根目录
+                    - cell "ETL任务" [ref=e464]:
+                      - generic [ref=e465]:
+                        - generic:
+                          - generic: ETL任务
+                    - cell "admin" [ref=e466]:
+                      - generic [ref=e467]: admin
+                    - cell "2026-04-28T20:54:04" [ref=e468]:
+                      - generic [ref=e469]: 2026-04-28T20:54:04
+                    - cell "admin" [ref=e470]:
+                      - generic [ref=e471]: admin
+                    - cell "2026-04-28T20:54:04" [ref=e472]:
+                      - generic [ref=e473]: 2026-04-28T20:54:04
+                    - cell [ref=e474]
+                    - cell [ref=e475]:
+                      - generic [ref=e477]:
+                        - button [ref=e478]:
+                          - img [ref=e481]
+                        - button [ref=e484]:
+                          - img [ref=e487]
+                        - button [ref=e490]:
+                          - img [ref=e493]
+                  - row "草稿 根目录 ETL任务" [ref=e495] [cursor=pointer]:
+                    - cell "草稿" [ref=e496]:
+                      - generic [ref=e498]:
+                        - img [ref=e500]
+                        - generic:
+                          - generic: 草稿
+                    - cell "根目录" [ref=e502]:
+                      - generic [ref=e504]:
+                        - img [ref=e506]
+                        - text: 根目录
+                    - cell "ETL任务" [ref=e508]:
+                      - generic [ref=e509]:
+                        - generic:
+                          - generic: ETL任务
+                    - cell [ref=e510]
+                    - cell [ref=e511]
+                    - cell [ref=e512]
+                    - cell [ref=e513]
+                    - cell [ref=e514]
+                    - cell [ref=e515]:
+                      - generic [ref=e517]:
+                        - button [ref=e518]:
+                          - img [ref=e521]
+                        - button [ref=e524]:
+                          - img [ref=e527]
+                        - button [ref=e530]:
+                          - img [ref=e533]
+            - img [ref=e537]
+          - generic [ref=e540]: 显示最近 4 条记录

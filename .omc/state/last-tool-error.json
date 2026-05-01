@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"cd /opt/code/srm && git rm -r --cached . 2>/dev/null; git add .gitignore && git add -A && echo \\\"SRM staged: $(git status --short | wc -l)\\\" && echo \\\"=== Top dirs ===\\\" && git status --sh...",
+  "error": "Exit code 128\nrm '.claude/settings.local.json'\nrm '.omc/autopilot/spec.md'\nrm '.omc/handoffs/stage2-springboot3-complete.md'\nrm '.omc/handoffs/stage3-typescript-complete.md'\nrm '.omc/handoffs/team-exec.md'\nrm '.omc/handoffs/team-fix.md'\nrm '.omc/handoffs/team-plan.md'\nrm '.omc/handoffs/team-verify-R2.md'\nrm '.omc/plans/autopilot-impl.md'\nrm '.omc/plans/srm-refactor-master-plan.md'\nrm '.omc/prd.json'\nrm '.omc/sessions/201eb1a1-04ca-4b47-b746-a90820c8ea0e.json'\nrm '.omc/sessions/231f3ed7-9b97-40a9...",
+  "timestamp": "2026-05-01T08:43:19.356Z",
+  "retry_count": 2
+}
