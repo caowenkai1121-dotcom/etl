@@ -54,6 +54,14 @@
         <path d="M3 9h18M9 3v18"/>
       </svg>
     </button>
+    <button class="connector-toggle" :class="{ active: connectorType === 'step' }" :title="connectorType === 'bezier' ? '切换为折线连接器' : '切换为曲线连接器'" @click="toggleConnectorType">
+      <svg v-if="connectorType === 'bezier'" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 20 Q12 4, 20 20"/>
+      </svg>
+      <svg v-else width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 20 L12 20 L12 4 L20 4"/>
+      </svg>
+    </button>
   </div>
 </template>
 
@@ -939,6 +947,24 @@ const doDeleteSelected = () => {
 // 缩放操作
 const zoomIn = () => { currentZoom.value = Math.min(2, +(currentZoom.value + 0.1).toFixed(1)); applyZoom() }
 const zoomOut = () => { currentZoom.value = Math.max(0.25, +(currentZoom.value - 0.1).toFixed(1)); applyZoom() }
+const toggleConnectorType = () => {
+  connectorType.value = connectorType.value === 'bezier' ? 'step' : 'bezier'
+  // 重绘所有连线
+  const stage = containerRef.value?.querySelector('.x6-graph-svg-stage')
+  if (!stage) return
+  stage.querySelectorAll('.dag-edge-group').forEach(group => {
+    const sid = group.getAttribute('data-source')
+    const tid = group.getAttribute('data-target')
+    const sn = stage.querySelector(`.dag-node[data-cell-id="${sid}"]`)
+    const tn = stage.querySelector(`.dag-node[data-cell-id="${tid}"]`)
+    if (sn && tn) {
+      const s = getPortCenter(sn, 'output-right')
+      const t = getPortCenter(tn, 'input-left')
+      const pathEl = group.querySelector('.dag-edge')
+      if (pathEl) pathEl.setAttribute('d', computeEdgePath(s.x, s.y, t.x, t.y, connectorType.value))
+    }
+  })
+}
 const fitContent = () => {
   if (nodeDataMap.size === 0) return
   const rect = containerRef.value?.getBoundingClientRect()
@@ -1099,9 +1125,7 @@ defineExpose({
     return r
   },
   connectorType,
-  toggleConnectorType: () => {
-    connectorType.value = connectorType.value === 'bezier' ? 'step' : 'bezier'
-  }
+  toggleConnectorType
 })
 
 const applyZoom = () => {
@@ -1247,6 +1271,31 @@ onUnmounted(() => {
   &:hover, &.active {
     color: #1890ff;
     border-color: #1890ff;
+  }
+}
+
+.connector-toggle {
+  position: absolute;
+  bottom: 12px;
+  right: 122px;
+  z-index: 25;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  color: #999;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: all 0.15s;
+
+  &:hover, &.active {
+    color: #1890ff;
+    border-color: #1890ff;
+    background: #e6f7ff;
   }
 }
 
