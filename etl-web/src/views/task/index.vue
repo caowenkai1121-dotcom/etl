@@ -260,6 +260,7 @@ const dialogTitle = ref('新增任务')
 const formRef = ref(null)
 const datasourceList = ref([])
 const progressVisible = ref(false)
+const executingTaskId = ref(null)
 const submitLoading = ref(false)
 
 // 表选择相关
@@ -554,6 +555,7 @@ const handleDelete = async (row) => {
 const handleExecute = async (row) => {
   try {
     await taskAPI.execute(row.id)
+    executingTaskId.value = row.id
     ElMessage.success('任务已开始执行')
     fetchData()
     progressVisible.value = true
@@ -577,20 +579,21 @@ const handleStop = async (row) => {
 }
 
 const simulateProgress = () => {
-  let percent = 0
-  const interval = setInterval(() => {
-    percent += Math.floor(Math.random() * 10) + 1
-    if (percent >= 100) {
-      percent = 100
+  let interval = setInterval(async () => {
+    try {
+      const res = await taskAPI.getProgress(executingTaskId.value)
+      const p = res.data?.percentage ?? res.data?.progress ?? 0
+      progress.value.percentage = Math.min(100, Math.max(0, p))
+      if (progress.value.percentage >= 100) {
+        clearInterval(interval)
+        progress.value.status = 'success'
+        progress.value.statusText = '完成'
+        setTimeout(() => { progressVisible.value = false }, 1500)
+      }
+    } catch (e) {
       clearInterval(interval)
-      progress.value.status = 'success'
-      progress.value.statusText = '完成'
-      setTimeout(() => {
-        progressVisible.value = false
-      }, 1500)
     }
-    progress.value.percentage = percent
-  }, 500)
+  }, 1500)
 }
 
 const handleSubmit = async () => {
