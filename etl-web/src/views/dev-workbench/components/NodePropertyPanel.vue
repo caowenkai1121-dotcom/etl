@@ -718,7 +718,50 @@ const handleOperatorUpdate = (config) => {
   emitUpdate()
 }
 
-const formatScript = () => ElMessage.info('格式化功能待实现')
+const formatScript = () => {
+  const script = nodeData.value.config.sqlStatement || nodeData.value.config.scriptContent
+  if (!script || !script.trim()) {
+    ElMessage.warning('没有可格式化的内容')
+    return
+  }
+  const formatted = formatSQL(script)
+  if (nodeData.value.config.sqlStatement) {
+    nodeData.value.config.sqlStatement = formatted
+  } else {
+    nodeData.value.config.scriptContent = formatted
+  }
+  emitUpdate()
+  ElMessage.success('格式化完成')
+}
+
+const formatSQL = (sql) => {
+  const keywords = ['SELECT', 'FROM', 'WHERE', 'AND', 'OR', 'JOIN', 'LEFT JOIN', 'RIGHT JOIN',
+    'INNER JOIN', 'OUTER JOIN', 'FULL JOIN', 'CROSS JOIN', 'ON', 'GROUP BY', 'ORDER BY',
+    'HAVING', 'LIMIT', 'OFFSET', 'UNION', 'UNION ALL', 'INSERT INTO', 'VALUES', 'UPDATE',
+    'SET', 'DELETE FROM', 'CREATE TABLE', 'ALTER TABLE', 'DROP TABLE', 'AS', 'IN', 'NOT IN',
+    'BETWEEN', 'LIKE', 'IS NULL', 'IS NOT NULL', 'CASE', 'WHEN', 'THEN', 'ELSE', 'END',
+    'DISTINCT', 'COUNT', 'SUM', 'AVG', 'MAX', 'MIN', 'COALESCE', 'CAST']
+  const breakBefore = ['FROM', 'WHERE', 'JOIN', 'LEFT JOIN', 'RIGHT JOIN', 'INNER JOIN',
+    'OUTER JOIN', 'FULL JOIN', 'CROSS JOIN', 'GROUP BY', 'ORDER BY', 'HAVING', 'LIMIT',
+    'UNION', 'UNION ALL']
+
+  let result = sql.trim().replace(/\s+/g, ' ')
+  // Capitalize keywords
+  keywords.forEach(kw => {
+    const regex = new RegExp('\\b' + kw.replace(/ /g, '\\s+') + '\\b', 'gi')
+    result = result.replace(regex, kw)
+  })
+  // Add line breaks before major clauses
+  breakBefore.forEach(kw => {
+    result = result.replace(new RegExp('\\s*\\b' + kw.replace(/ /g, '\\s+') + '\\b', 'gi'), '\n' + kw + ' ')
+  })
+  // Indent after first line
+  const lines = result.split('\n')
+  if (lines.length > 1) {
+    result = lines[0].trim() + '\n' + lines.slice(1).map(l => '  ' + l.trim()).join('\n')
+  }
+  return result.trim()
+}
 
 // 字段映射操作
 const handleAutoMapping = () => {
