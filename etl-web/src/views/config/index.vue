@@ -215,8 +215,24 @@ const clearCache = async () => {
 }
 
 const saveScheduleConfig = () => {
-  ElMessage.success('调度配置已保存')
+  try {
+    localStorage.setItem('etl-schedule-config', JSON.stringify(scheduleConfig))
+    localStorage.setItem('etl-maintenance-config', JSON.stringify(maintenanceConfig))
+    ElMessage.success('配置已保存')
+  } catch (e) {
+    ElMessage.error('保存失败: ' + e.message)
+  }
 }
+
+function loadSavedConfig() {
+  try {
+    const savedSchedule = localStorage.getItem('etl-schedule-config')
+    if (savedSchedule) Object.assign(scheduleConfig, JSON.parse(savedSchedule))
+    const savedMaintenance = localStorage.getItem('etl-maintenance-config')
+    if (savedMaintenance) Object.assign(maintenanceConfig, JSON.parse(savedMaintenance))
+  } catch (e) { /* ignore corrupt localStorage */ }
+}
+loadSavedConfig()
 
 const archiveLogs = async () => {
   try {
