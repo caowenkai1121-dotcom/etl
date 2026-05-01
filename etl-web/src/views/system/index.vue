@@ -63,7 +63,7 @@
             </el-button>
           </div>
         </div>
-        <el-table :data="filteredUsers" stripe border style="width: 100%">
+        <el-table :data="paginatedUsers" stripe border style="width: 100%">
           <el-table-column prop="username" label="用户名" min-width="120" />
           <el-table-column prop="email" label="邮箱" min-width="180" />
           <el-table-column prop="role" label="角色" width="120">
@@ -275,6 +275,11 @@ const filteredUsers = computed(() => {
     result = result.filter(u => u.status === userStatusFilter.value)
   }
   return result
+})
+
+const paginatedUsers = computed(() => {
+  const start = (userPage.value - 1) * userPageSize.value
+  return filteredUsers.value.slice(start, start + userPageSize.value)
 })
 
 const lastLoginTime = computed(() => {
