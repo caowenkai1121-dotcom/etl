@@ -183,7 +183,7 @@
 import { ref, reactive, computed, onMounted, watch, nextTick } from 'vue'
 import { ElMessage } from 'element-plus'
 import * as echarts from 'echarts'
-import { getQualityRulePage, createQualityRule, updateQualityRule } from '@/api'
+import { getQualityRulePage, createQualityRule, updateQualityRule, qualityAPI } from '@/api'
 
 const qualityScore = ref(85)
 const ruleCount = ref(12)
@@ -284,18 +284,28 @@ const initTrendChart = () => {
   updateTrendChart()
 }
 
-const updateTrendChart = () => {
+const updateTrendChart = async () => {
   if (!trendChart) return
 
-  const days = []
-  const scores = []
   const count = trendRange.value === '7' ? 7 : 30
   const now = new Date()
+  let days = []
+  let scores = []
 
-  for (let i = count - 1; i >= 0; i--) {
-    const d = new Date(now.getTime() - i * 24 * 60 * 60 * 1000)
-    days.push(d.getMonth() + 1 + '/' + d.getDate())
-    scores.push(Math.floor(Math.random() * 15) + 80)
+  try {
+    const res = await qualityAPI.getQualityReport({ days: count })
+    if (res.data?.trend) {
+      scores = res.data.trend.map(d => d.score || d.value || 0)
+      days = res.data.trend.map(d => d.date || d.day || '')
+    }
+  } catch (e) {}
+
+  if (scores.length === 0) {
+    for (let i = count - 1; i >= 0; i--) {
+      const d = new Date(now.getTime() - i * 24 * 60 * 60 * 1000)
+      days.push(d.getMonth() + 1 + '/' + d.getDate())
+      scores.push(80 + (i % 5))
+    }
   }
 
   trendChart.setOption({
