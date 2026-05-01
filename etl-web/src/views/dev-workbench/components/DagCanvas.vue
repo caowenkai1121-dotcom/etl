@@ -21,6 +21,39 @@
     <svg class="drag-line-overlay" v-if="connecting" ref="overlaySvgRef">
       <path :d="connectingPath" fill="none" stroke="#1890ff" stroke-width="2" stroke-dasharray="6,3" />
     </svg>
+
+    <!-- 缩放控件 -->
+    <div class="zoom-controls">
+      <button class="zoom-btn" title="放大" @click="zoomIn">+</button>
+      <span class="zoom-value">{{ Math.round(currentZoom * 100) }}%</span>
+      <button class="zoom-btn" title="缩小" @click="zoomOut">−</button>
+      <button class="zoom-btn zoom-fit" title="适应画布" @click="fitContent">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- 缩略图导航器 -->
+    <div class="minimap-container" v-if="showMinimap" @mousedown.prevent="onMinimapMouseDown">
+      <svg class="minimap-svg" ref="minimapSvgRef" :width="minimapWidth" :height="minimapHeight">
+        <rect width="100%" height="100%" fill="#fafafa" stroke="#e0e0e0" rx="2" />
+        <!-- 节点缩略 -->
+        <rect v-for="n in minimapNodes" :key="n.id"
+          :x="n.mx" :y="n.my" :width="n.mw" :height="n.mh"
+          :fill="n.color" opacity="0.7" rx="1" />
+        <!-- 视口矩形 -->
+        <rect :x="viewportRect.x" :y="viewportRect.y"
+          :width="viewportRect.w" :height="viewportRect.h"
+          fill="none" stroke="#1890ff" stroke-width="1.5" rx="1" />
+      </svg>
+    </div>
+    <button class="minimap-toggle" :class="{ active: showMinimap }" title="缩略图" @click="showMinimap = !showMinimap">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="3" width="18" height="18" rx="2"/>
+        <path d="M3 9h18M9 3v18"/>
+      </svg>
+    </button>
   </div>
 </template>
 
@@ -59,6 +92,7 @@ let connectSource = null  // { nodeId, portType, nodeEl, x, y }
 let connectSnapTarget = null  // 当前吸附高亮的端口
 
 const SNAP_DISTANCE = 30  // 吸附距离(px)
+const GRID_SIZE = 20      // 网格大小(px)，用于节点吸附
 
 // 节点拖拽状态
 let dragState = null
@@ -80,6 +114,86 @@ const nextNodeId = () => `node-${Date.now()}-${++nodeIdCounter}`
 
 // 连线类型: bezier | step
 const connectorType = ref('bezier')
+
+// 缩略图导航器
+const showMinimap = ref(false)
+const minimapSvgRef = ref(null)
+const minimapWidth = 160
+const minimapHeight = 110
+const MAP_MARGIN = 40
+
+const minimapNodes = computed(() => {
+  const nodes = []
+  nodeDataMap.forEach((nd, id) => {
+    nodes.push({ id, x: nd.x, y: nd.y, color: nodeTypeColors[nd.type] || '#1890ff' })
+  })
+  if (nodes.length === 0) return []
+  let mnx = Infinity, mny = Infinity, mxx = -Infinity, mxy = -Infinity
+  nodes.forEach(n => { if (n.x < mnx) mnx = n.x; if (n.y < mny) mny = n.y; if (n.x + 200 > mxx) mxx = n.x + 200; if (n.y + 56 > mxy) mxy = n.y + 56 })
+  const tw = mxx - mnx + MAP_MARGIN * 2, th = mxy - mny + MAP_MARGIN * 2
+  const sx = (minimapWidth - 8) / Math.max(tw, 1), sy = (minimapHeight - 8) / Math.max(th, 1)
+  const scale = Math.min(sx, sy)
+  const ox = 4, oy = 4
+  return nodes.map(n => ({
+    id: n.id,
+    mx: ox + (n.x - mnx + MAP_MARGIN) * scale,
+    my: oy + (n.y - mny + MAP_MARGIN) * scale,
+    mw: Math.max(200 * scale, 2),
+    mh: Math.max(56 * scale, 1),
+    color: n.color
+  }))
+})
+
+const viewportRect = computed(() => {
+  const rect = containerRef.value?.getBoundingClientRect()
+  if (!rect || minimapNodes.value.length === 0) return { x: 0, y: 0, w: 0, h: 0 }
+  const stage = containerRef.value?.querySelector('.x6-graph-svg-stage')
+  const z = currentZoom.value
+  // viewport in canvas coordinates
+  const vx = -parseFloat(stage?.getAttribute('data-pan-x') || '0') / z || 0
+  const vy = -parseFloat(stage?.getAttribute('data-pan-y') || '0') / z || 0
+  const vw = rect.width / z
+  const vh = rect.height / z
+  // same scale calculation as minimapNodes
+  let mnx = Infinity, mny = Infinity, mxx = -Infinity, mxy = -Infinity
+  nodeDataMap.forEach(nd => { if (nd.x < mnx) mnx = nd.x; if (nd.y < mny) mny = nd.y; if (nd.x + 200 > mxx) mxx = nd.x + 200; if (nd.y + 56 > mxy) mxy = nd.y + 56 })
+  if (!isFinite(mnx)) return { x: 0, y: 0, w: 0, h: 0 }
+  const tw = mxx - mnx + MAP_MARGIN * 2, th = mxy - mny + MAP_MARGIN * 2
+  const sx = (minimapWidth - 8) / Math.max(tw, 1), sy = (minimapHeight - 8) / Math.max(th, 1)
+  const scale = Math.min(sx, sy)
+  return {
+    x: 4 + (vx - mnx + MAP_MARGIN) * scale,
+    y: 4 + (vy - mny + MAP_MARGIN) * scale,
+    w: Math.max(vw * scale, 8),
+    h: Math.max(vh * scale, 6)
+  }
+})
+
+const onMinimapMouseDown = (e) => {
+  if (!containerRef.value || minimapNodes.value.length === 0) return
+  const svgRect = minimapSvgRef.value?.getBoundingClientRect()
+  if (!svgRect) return
+  const mx = e.clientX - svgRect.left
+  const my = e.clientY - svgRect.top
+  // reverse calculate target canvas position
+  let mnx = Infinity, mny = Infinity, mxx = -Infinity, mxy = -Infinity
+  nodeDataMap.forEach(nd => { if (nd.x < mnx) mnx = nd.x; if (nd.y < mny) mny = nd.y; if (nd.x + 200 > mxx) mxx = nd.x + 200; if (nd.y + 56 > mxy) mxy = nd.y + 56 })
+  const tw = mxx - mnx + MAP_MARGIN * 2, th = mxy - mny + MAP_MARGIN * 2
+  const sx = (minimapWidth - 8) / Math.max(tw, 1), sy = (minimapHeight - 8) / Math.max(th, 1)
+  const scale = Math.min(sx, sy)
+  const cx = (mx - 4) / scale + mnx - MAP_MARGIN
+  const cy = (my - 4) / scale + mny - MAP_MARGIN
+  // scroll canvas to center on this point
+  const rect = containerRef.value.getBoundingClientRect()
+  const targetX = cx - rect.width / (2 * currentZoom.value)
+  const targetY = cy - rect.height / (2 * currentZoom.value)
+  const stage = containerRef.value.querySelector('.x6-graph-svg-stage')
+  if (stage) {
+    stage.setAttribute('data-pan-x', String(-targetX * currentZoom.value))
+    stage.setAttribute('data-pan-y', String(-targetY * currentZoom.value))
+    stage.style.transform = `translate(${-targetX * currentZoom.value}px,${-targetY * currentZoom.value}px) scale(${currentZoom.value})`
+  }
+}
 
 const computeEdgePath = (sx, sy, tx, ty, type = 'bezier') => {
   if (type === 'step') {
@@ -354,6 +468,8 @@ const startNodeDrag = (e, nodeEl) => {
   }
 }
 
+const snapToGrid = (val) => Math.round(val / GRID_SIZE) * GRID_SIZE
+
 const updateNodeDrag = (e) => {
   if (!dragState) return
   const dx = e.clientX - dragState.sx
@@ -361,7 +477,9 @@ const updateNodeDrag = (e) => {
   if (Math.abs(dx) < DTH && Math.abs(dy) < DTH) return
 
   dragState.moved = true
-  dragState.node.setAttribute('transform', `translate(${dragState.ox + dx},${dragState.oy + dy})`)
+  const nx = snapToGrid(dragState.ox + dx)
+  const ny = snapToGrid(dragState.oy + dy)
+  dragState.node.setAttribute('transform', `translate(${nx},${ny})`)
   updateEdgesForNode(dragState.id)
 
   // 更新连接线
@@ -380,9 +498,12 @@ const finishNodeDrag = (e) => {
     const tr = node.getAttribute('transform') || ''
     const m = tr.match(/translate\((-?\d+(?:\.\d+)?),\s*(-?\d+(?:\.\d+)?)\)/)
     if (m) {
+      const sx = snapToGrid(+m[1]), sy = snapToGrid(+m[2])
+      node.setAttribute('transform', `translate(${sx},${sy})`)
       const nd = nodeDataMap.get(id)
-      if (nd) { nd.x = +m[1]; nd.y = +m[2] }
-      emit('node-move', id, { x: +m[1], y: +m[2] })
+      if (nd) { nd.x = sx; nd.y = sy }
+      emit('node-move', id, { x: sx, y: sy })
+      nextTick(() => updateEdgesForNode(id))
     }
   } else {
     // 单击选中节点
@@ -815,26 +936,32 @@ const doDeleteSelected = () => {
   clearSelection()
 }
 
+// 缩放操作
+const zoomIn = () => { currentZoom.value = Math.min(2, +(currentZoom.value + 0.1).toFixed(1)); applyZoom() }
+const zoomOut = () => { currentZoom.value = Math.max(0.25, +(currentZoom.value - 0.1).toFixed(1)); applyZoom() }
+const fitContent = () => {
+  if (nodeDataMap.size === 0) return
+  const rect = containerRef.value?.getBoundingClientRect()
+  if (!rect) return
+  let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity
+  nodeDataMap.forEach(v => {
+    if (v.x < minX) minX = v.x
+    if (v.y < minY) minY = v.y
+    if (v.x + 220 > maxX) maxX = v.x + 220
+    if (v.y + 80 > maxY) maxY = v.y + 80
+  })
+  if (!isFinite(minX)) return
+  const cw = maxX - minX + 80, ch = maxY - minY + 80
+  const zx = (rect.width - 80) / cw, zy = (rect.height - 80) / ch
+  currentZoom.value = Math.min(1.5, Math.max(0.25, Math.min(zx, zy)))
+  applyZoom()
+}
+
 // 暴露给父组件
 defineExpose({
-  zoomIn: () => { currentZoom.value = Math.min(2, currentZoom.value + 0.1); applyZoom() },
-  zoomOut: () => { currentZoom.value = Math.max(0.25, currentZoom.value - 0.1); applyZoom() },
-  fitContent: () => {
-    if (nodeDataMap.size === 0) return
-    const rect = containerRef.value?.getBoundingClientRect()
-    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity
-    nodeDataMap.forEach(v => {
-      if (v.x < minX) minX = v.x
-      if (v.y < minY) minY = v.y
-      if (v.x + 220 > maxX) maxX = v.x + 220
-      if (v.y + 80 > maxY) maxY = v.y + 80
-    })
-    if (!isFinite(minX)) return
-    const cw = maxX - minX + 80, ch = maxY - minY + 80
-    const zx = (rect.width - 80) / cw, zy = (rect.height - 80) / ch
-    currentZoom.value = Math.min(1.5, Math.max(0.25, Math.min(zx, zy)))
-    applyZoom()
-  },
+  zoomIn,
+  zoomOut,
+  fitContent,
   autoLayout: () => {
     if (nodeDataMap.size === 0) return
     const nodeIds = new Set()
@@ -1028,6 +1155,99 @@ onUnmounted(() => {
   width: 100%;
   height: 100%;
   pointer-events: none;
+}
+
+.zoom-controls {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 2px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  user-select: none;
+}
+
+.zoom-btn {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  color: #666;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+  transition: all 0.15s;
+
+  &:hover {
+    background: #f0f0f0;
+    color: #1890ff;
+  }
+}
+
+.zoom-value {
+  font-size: 11px;
+  color: #999;
+  min-width: 36px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.zoom-fit {
+  border-left: 1px solid #eee;
+  border-radius: 0 4px 4px 0;
+  padding-left: 1px;
+}
+
+.minimap-container {
+  position: absolute;
+  bottom: 48px;
+  right: 12px;
+  z-index: 25;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.minimap-svg {
+  display: block;
+}
+
+.minimap-toggle {
+  position: absolute;
+  bottom: 12px;
+  right: 88px;
+  z-index: 25;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  color: #999;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: all 0.15s;
+
+  &:hover, &.active {
+    color: #1890ff;
+    border-color: #1890ff;
+  }
 }
 
 :deep(.dag-node) {

@@ -977,7 +977,12 @@ const createTask = async () => {
   transition: width 0.25s;
   flex-shrink: 0;
 
-  &.collapsed { width: 42px; }
+  &.collapsed {
+    width: 42px;
+    overflow: hidden;
+    pointer-events: none;
+    .panel-header.mini { pointer-events: auto; }
+  }
 
   .panel-header {
     height: 42px;
