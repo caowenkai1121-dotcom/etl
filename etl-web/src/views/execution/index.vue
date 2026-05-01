@@ -381,7 +381,21 @@ const showFullLog = (row) => {
 
 // 导出日志
 const exportLogs = () => {
-  ElMessage.success('日志导出功能')
+  if (!fullLogs.value || fullLogs.value.length === 0) {
+    ElMessage.warning('没有可导出的日志')
+    return
+  }
+  const content = fullLogs.value.map(l =>
+    `[${l.timestamp || ''}] [${l.level || 'INFO'}] ${l.message || ''}`
+  ).join('\n')
+  const blob = new Blob([content], { type: 'text/plain;charset=utf-8' })
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = `execution-${currentExecutionNo.value || 'log'}.txt`
+  a.click()
+  URL.revokeObjectURL(url)
+  ElMessage.success('日志已导出')
 }
 </script>
 

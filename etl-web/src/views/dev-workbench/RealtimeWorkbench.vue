@@ -286,7 +286,7 @@ const handleCommand = (cmd, row) => {
     case 'monitor': router.push(`/monitor`); break
     case 'log': router.push(`/log`); break
     case 'copy': ElMessage.success('已复制管道'); break
-    case 'alarm': ElMessage.info('告警配置'); break
+    case 'alarm': router.push('/alert'); break
     case 'delete':
       ElMessageBox.confirm(`确定删除管道 "${row.name}"？`, '警告', { type: 'warning' }).then(() => {
         ElMessage.success('已删除')
