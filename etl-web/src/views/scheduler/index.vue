@@ -156,24 +156,7 @@
 import { ref, reactive, onMounted } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { Clock, Plus } from '@element-plus/icons-vue'
-import { getTaskPage } from '@/api'
-
-// 模拟调度API - 实际项目中应该在api/index.js中定义
-const schedulerAPI = {
-  getPage: (params) => Promise.resolve({ data: { list: mockData, total: mockData.length } }),
-  create: (data) => Promise.resolve({ data: { id: Date.now(), ...data } }),
-  update: (id, data) => Promise.resolve({ data: { id, ...data } }),
-  delete: (id) => Promise.resolve({}),
-  trigger: (id) => Promise.resolve({}),
-  pause: (id) => Promise.resolve({}),
-  resume: (id) => Promise.resolve({}),
-}
-
-const mockData = [
-  { id: 1, name: '每日数据同步', cronExpression: '0 0 2 * * ?', taskCount: 5, status: 'RUNNING', nextExecutionTime: '2024-04-25 02:00:00', lastExecutionTime: '2024-04-24 02:00:00' },
-  { id: 2, name: '每小时统计', cronExpression: '0 0 * * * ?', taskCount: 3, status: 'RUNNING', nextExecutionTime: '2024-04-24 18:00:00', lastExecutionTime: '2024-04-24 17:00:00' },
-  { id: 3, name: '每周数据备份', cronExpression: '0 0 3 ? * MON', taskCount: 8, status: 'PAUSED', nextExecutionTime: '2024-04-29 03:00:00', lastExecutionTime: '2024-04-22 03:00:00' },
-]
+import { getTaskPage, schedulerAPI } from '@/api'
 
 const loading = ref(false)
 const tableData = ref([])
@@ -287,7 +270,7 @@ const handleEdit = (row) => {
 const handleDelete = async (row) => {
   try {
     await ElMessageBox.confirm('确定删除该调度？', '提示', { type: 'warning' })
-    await schedulerAPI.delete(row.id)
+    await schedulerAPI.deleteTask(row.id)
     ElMessage.success('删除成功')
     fetchData()
   } catch (e) {}
@@ -296,14 +279,14 @@ const handleDelete = async (row) => {
 const handleTrigger = async (row) => {
   try {
     await ElMessageBox.confirm('确定手动触发该调度？', '提示', { type: 'info' })
-    await schedulerAPI.trigger(row.id)
+    await schedulerAPI.triggerTask(row.id)
     ElMessage.success('已触发')
   } catch (e) {}
 }
 
 const handlePause = async (row) => {
   try {
-    await schedulerAPI.pause(row.id)
+    await schedulerAPI.pauseTask(row.id)
     row.status = 'PAUSED'
     ElMessage.success('已暂停')
   } catch (e) {}
@@ -311,7 +294,7 @@ const handlePause = async (row) => {
 
 const handleResume = async (row) => {
   try {
-    await schedulerAPI.resume(row.id)
+    await schedulerAPI.resumeTask(row.id)
     row.status = 'RUNNING'
     ElMessage.success('已恢复')
   } catch (e) {}
@@ -321,9 +304,9 @@ const handleSubmit = async () => {
   try {
     await formRef.value.validate()
     if (form.id) {
-      await schedulerAPI.update(form.id, { ...form, taskIds: selectedTaskIds.value })
+      await schedulerAPI.updateTask(form.id, { ...form, taskIds: selectedTaskIds.value })
     } else {
-      await schedulerAPI.create({ ...form, taskIds: selectedTaskIds.value })
+      await schedulerAPI.createTask({ ...form, taskIds: selectedTaskIds.value })
     }
     ElMessage.success('操作成功')
     dialogVisible.value = false

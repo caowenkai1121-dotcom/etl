@@ -401,17 +401,11 @@ const runTest = async () => {
   const startTime = Date.now()
   try {
     const params = testInputParams.value ? JSON.parse(testInputParams.value) : {}
-    await new Promise(resolve => setTimeout(resolve, 800))
-    testOutput.value = {
-      code: 200,
-      data: [{ id: 1, name: '示例数据1' }, { id: 2, name: '示例数据2' }],
-      total: 2,
-      message: 'success',
-      params: params
-    }
+    const res = await apiServiceAPI.test(form.id, params)
+    testOutput.value = res.data ?? { code: 200, data: [], message: 'success' }
     testDuration.value = Date.now() - startTime
   } catch (e) {
-    testOutput.value = { code: 400, message: 'JSON参数格式错误' }
+    testOutput.value = { code: 400, message: e?.response?.data?.message || '请求失败' }
     testDuration.value = Date.now() - startTime
   } finally {
     runningTest.value = false
