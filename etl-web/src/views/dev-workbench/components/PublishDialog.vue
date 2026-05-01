@@ -127,10 +127,26 @@ const changeSummary = ref({
   deletedNodes: 0
 })
 
-// 监听taskId变化
+// 监听taskId变化，加载版本信息
 watch(() => props.taskId, async (id) => {
   if (id) {
-    // TODO: 加载任务版本信息和变更摘要
+    try {
+      const res = await devAPI.getTaskVersionHistory(id)
+      if (res.data) {
+        const versions = res.data.records || res.data.list || res.data || []
+        if (versions.length > 0) {
+          const latest = versions[0]
+          changeSummary.value = {
+            totalChanges: latest.totalChanges ?? versions.length,
+            addedNodes: latest.addedNodes ?? 0,
+            modifiedNodes: latest.modifiedNodes ?? 0,
+            deletedNodes: latest.deletedNodes ?? 0
+          }
+        }
+      }
+    } catch (e) {
+      console.error('加载版本信息失败:', e)
+    }
   }
 })
 

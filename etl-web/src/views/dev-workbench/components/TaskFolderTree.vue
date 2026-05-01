@@ -76,7 +76,11 @@
 
 <script setup>
 import { ref, computed, watch } from 'vue'
+import { useRouter } from 'vue-router'
 import { ElMessage, ElMessageBox } from 'element-plus'
+import { createFolder, updateFolder, deleteFolder as deleteFolderApi } from '@/api'
+
+const router = useRouter()
 
 const props = defineProps({
   data: {
@@ -161,8 +165,9 @@ const createSubFolder = async (parentFolder) => {
       cancelButtonText: '取消'
     })
     if (value) {
-      // TODO: 调用API创建文件夹
+      await createFolder({ name: value, parentId: parentFolder.id || parentFolder.value || 0 })
       ElMessage.success('创建成功')
+      emit('select-folder', { action: 'refresh' })
     }
   } catch (e) {
     // 用户取消
@@ -171,7 +176,7 @@ const createSubFolder = async (parentFolder) => {
 
 // 创建任务
 const createTask = (folder) => {
-  // TODO: 跳转到任务创建页面
+  router.push({ path: '/dev-workbench', query: { folderId: folder.id, action: 'createTask' } })
   emit('select-folder', { ...folder, action: 'createTask' })
 }
 
@@ -184,8 +189,9 @@ const renameFolder = async (folder) => {
       inputValue: folder.name
     })
     if (value && value !== folder.name) {
-      // TODO: 调用API重命名
+      await updateFolder(folder.id, { name: value })
       ElMessage.success('重命名成功')
+      emit('select-folder', { action: 'refresh' })
     }
   } catch (e) {
     // 用户取消
@@ -198,8 +204,9 @@ const deleteFolder = async (folder) => {
     await ElMessageBox.confirm('确定删除该文件夹？文件夹内的任务将移至根目录。', '提示', {
       type: 'warning'
     })
-    // TODO: 调用API删除
+    await deleteFolderApi(folder.id)
     ElMessage.success('删除成功')
+    emit('select-folder', { action: 'refresh' })
   } catch (e) {
     // 用户取消
   }
