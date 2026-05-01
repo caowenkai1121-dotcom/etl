@@ -19,6 +19,17 @@ const routes = [
         component: () => import('@/views/demo-center/index.vue'),
         meta: { section: 'demo', title: 'Demo中心' }
       },
+      {
+        path: 'demo/quickstart',
+        redirect: '/demo-center',
+        meta: { section: 'demo', title: '快速入门' }
+      },
+      {
+        path: 'demo/templates',
+        name: 'DemoTemplates',
+        component: () => import('@/views/task-templates/index.vue'),
+        meta: { section: 'demo', title: '任务模板' }
+      },
 
       // ========== O&M Center ==========
       {
