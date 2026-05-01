@@ -533,14 +533,44 @@
         </el-button>
       </div>
     </div>
+    <!-- Data Preview Dialog -->
+    <el-dialog v-model="previewVisible" title="Data Preview" width="900px" :close-on-click-modal="false" destroy-on-close>
+      <div v-loading="previewLoading" class="preview-container">
+        <div v-if="previewError" class="preview-error">
+          <el-icon :size="32"><WarningFilled /></el-icon>
+          <p>{{ previewError }}</p>
+        </div>
+        <template v-else-if="previewColumns.length > 0">
+          <div class="preview-info">
+            <span>Table: <strong>{{ previewTableName }}</strong></span>
+            <el-tag size="small" type="info">{{ previewRows.length }} rows</el-tag>
+          </div>
+          <el-table :data="previewRows" border stripe size="small" max-height="400" class="preview-table">
+            <el-table-column
+              v-for="col in previewColumns"
+              :key="col"
+              :prop="col"
+              :label="col"
+              min-width="120"
+              show-overflow-tooltip
+            />
+          </el-table>
+        </template>
+        <el-empty v-else-if="!previewLoading" description="No data available" />
+      </div>
+      <template #footer>
+        <el-button @click="previewVisible = false">Close</el-button>
+        <el-button type="primary" @click="handleDataPreview" :loading="previewLoading">Refresh</el-button>
+      </template>
+    </el-dialog>
   </div>
 </template>
 
 <script setup>
 import { ref, computed, watch, onMounted, shallowRef } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
-import { InfoFilled, Close, Delete, ArrowDown, ArrowUp } from '@element-plus/icons-vue'
-import { getDatasourceList, getTables } from '@/api'
+import { InfoFilled, Close, Delete, ArrowDown, ArrowUp, WarningFilled } from '@element-plus/icons-vue'
+import { getDatasourceList, getTables, getTableInfo, testConnection } from '@/api'
 import FieldSelect from './operators/FieldSelect.vue'
 import FieldRename from './operators/FieldRename.vue'
 import DataFilter from './operators/DataFilter.vue'
@@ -790,21 +820,58 @@ const handleRemoveMappingRow = (index) => {
   emitUpdate()
 }
 
+// 数据预览
+const previewVisible = ref(false)
+const previewLoading = ref(false)
+const previewColumns = ref([])
+const previewRows = ref([])
+const previewTableName = ref('')
+const previewError = ref('')
+
 // 数据源操作
-const handleTestConnection = () => {
+const handleTestConnection = async () => {
   if (!nodeData.value.config.datasourceId) {
     ElMessage.warning('请先选择数据连接')
     return
   }
-  ElMessage.success('Connection test successful')
+  try {
+    await testConnection(nodeData.value.config.datasourceId)
+    ElMessage.success('Connection test successful')
+  } catch (e) {
+    ElMessage.error('Connection test failed')
+  }
 }
 
-const handleDataPreview = () => {
+const handleDataPreview = async () => {
   if (!nodeData.value.config.datasourceId || !nodeData.value.config.tableName) {
     ElMessage.warning('请先选择数据连接和数据表')
     return
   }
-  ElMessage.info('Data preview feature coming soon')
+  previewVisible.value = true
+  previewLoading.value = true
+  previewError.value = ''
+  previewColumns.value = []
+  previewRows.value = []
+  previewTableName.value = nodeData.value.config.tableName
+  try {
+    const res = await getTableInfo(nodeData.value.config.datasourceId, nodeData.value.config.tableName)
+    const data = res.data || {}
+    if (data.columns && data.columns.length > 0) {
+      previewColumns.value = data.columns.map(c => c.name || c.field || c)
+    }
+    if (data.rows && data.rows.length > 0) {
+      previewRows.value = data.rows
+    } else if (data.sampleData && data.sampleData.length > 0) {
+      previewRows.value = data.sampleData
+    }
+    if (previewColumns.value.length === 0 && previewRows.value.length > 0) {
+      previewColumns.value = Object.keys(previewRows.value[0])
+    }
+  } catch (e) {
+    previewError.value = 'Failed to load preview data: ' + (e.message || 'Unknown error')
+  } finally {
+    previewLoading.value = false
+  }
 }
 
 // 生成数据转换节点
@@ -1088,5 +1155,31 @@ const handleDeleteEdge = async () => {
 
 :deep(.el-radio-button__inner) {
   padding: 5px 12px;
+}
+
+// ====== 数据预览对话框 ======
+.preview-container {
+  min-height: 200px;
+  .preview-error {
+    text-align: center;
+    padding: 40px 0;
+    color: #f56c6c;
+    p { margin-top: 8px; font-size: 13px; }
+  }
+  .preview-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #606266;
+  }
+  .preview-table {
+    border-radius: 8px;
+    :deep(.el-table__header th) {
+      background: #f5f7fa;
+      font-weight: 600;
+    }
+  }
 }
 </style>

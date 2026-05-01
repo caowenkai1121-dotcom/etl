@@ -221,23 +221,7 @@ const queryParams = reactive({
   endTime: ''
 })
 
-// 模拟日志数据
-const logCache = reactive({})
-
-// 模拟执行记录数据
-const mockData = [
-  { id: 1, taskName: '用户数据同步', executionNo: 'EXEC-20240424-001', status: 'SUCCESS', startTime: '2024-04-24 02:00:00', duration: 12345, totalRows: 1568, progress: 100, extractedCount: 1568, transformedCount: 1568, loadedCount: 1568 },
-  { id: 2, taskName: '订单数据同步', executionNo: 'EXEC-20240424-002', status: 'RUNNING', startTime: '2024-04-24 14:30:00', duration: 45000, totalRows: 5000, progress: 60, extractedCount: 5000, transformedCount: 3000, loadedCount: 1000 },
-  { id: 3, taskName: '产品数据同步', executionNo: 'EXEC-20240424-003', status: 'FAILED', startTime: '2024-04-24 10:15:00', duration: 8765, totalRows: 200, progress: 45, extractedCount: 200, transformedCount: 90, loadedCount: 0 },
-  { id: 4, taskName: '日志数据同步', executionNo: 'EXEC-20240424-004', status: 'SUCCESS', startTime: '2024-04-24 00:00:00', duration: 23456, totalRows: 12000, progress: 100, extractedCount: 12000, transformedCount: 12000, loadedCount: 12000 },
-  { id: 5, taskName: '报表数据同步', executionNo: 'EXEC-20240424-005', status: 'SKIPPED', startTime: '2024-04-24 06:00:00', duration: 0, totalRows: 0, progress: 0 },
-]
-
-// 初始化日志
 onMounted(() => {
-  mockData.forEach(row => {
-    logCache[row.id] = generateMockLogs(row)
-  })
   fetchData()
 })
 
@@ -248,12 +232,29 @@ onUnmounted(() => {
 const fetchData = async () => {
   loading.value = true
   try {
-    // 模拟API调用
-    await new Promise(resolve => setTimeout(resolve, 500))
-    tableData.value = mockData
-    total.value = mockData.length
+    const res = await monitorAPI.getExecutionPage({
+      pageNum: queryParams.pageNum,
+      pageSize: queryParams.pageSize,
+      taskName: queryParams.taskName || undefined
+    })
+    if (res.data) {
+      tableData.value = (res.data.records || res.data.list || []).map(item => ({
+        ...item,
+        executionNo: item.executionNo || `EXEC-${item.id || '-'}`,
+        taskName: item.taskName || '-',
+        status: item.status || 'PENDING',
+        startTime: item.startTime || '-',
+        duration: item.duration ?? 0,
+        totalRows: item.totalRows ?? 0,
+        progress: item.progress ?? 0,
+        extractedCount: item.extractedCount ?? 0,
+        transformedCount: item.transformedCount ?? 0,
+        loadedCount: item.loadedCount ?? 0
+      }))
+      total.value = res.data.total || 0
+    }
   } catch (e) {
-    console.error(e)
+    console.error('加载执行记录失败:', e)
   } finally {
     loading.value = false
   }
@@ -319,41 +320,33 @@ const formatTime = (timestamp) => {
   return date.toLocaleTimeString()
 }
 
-// 获取模拟日志
-const generateMockLogs = (row) => {
-  const logs = [
-    { timestamp: Date.now() - 60000, level: 'INFO', message: '开始执行任务: ' + row.taskName },
-    { timestamp: Date.now() - 55000, level: 'INFO', table: 'users', message: '开始抽取数据' },
-    { timestamp: Date.now() - 50000, level: 'INFO', table: 'users', message: '抽取完成，共 ' + (row.extractedCount || 0) + ' 条数据' },
-    { timestamp: Date.now() - 45000, level: 'INFO', table: 'users', message: '开始转换数据' },
-  ]
-  if (row.status === 'FAILED') {
-    logs.push({ timestamp: Date.now() - 30000, level: 'ERROR', table: 'users', message: '转换失败: 数据格式错误' })
-  } else if (row.status === 'SUCCESS') {
-    logs.push({ timestamp: Date.now() - 40000, level: 'INFO', table: 'users', message: '转换完成' })
-    logs.push({ timestamp: Date.now() - 35000, level: 'INFO', table: 'users', message: '开始加载数据' })
-    logs.push({ timestamp: Date.now() - 10000, level: 'INFO', table: 'users', message: '加载完成' })
-    logs.push({ timestamp: Date.now() - 5000, level: 'INFO', message: '任务执行完成' })
-  }
-  return logs
-}
-
 const getLogs = (row) => {
-  if (!logCache[row.id]) {
-    logCache[row.id] = generateMockLogs(row)
-  }
-  return logCache[row.id]
+  return row.logDetails && row.logDetails.length > 0
+    ? row.logDetails.map(l => ({ ...l, timestamp: l.timestamp || Date.now() }))
+    : [
+        { timestamp: Date.now(), level: 'INFO', message: `任务: ${row.taskName}` },
+        { timestamp: Date.now(), level: 'INFO', message: `状态: ${row.status}` },
+        { timestamp: Date.now(), level: 'INFO', message: `处理行数: ${row.totalRows ?? 0}` }
+      ]
 }
 
 // 获取甘特图数据
 const getStageData = (row) => {
+  if (row.stages && row.stages.length > 0) {
+    return row.stages.map((s, i) => ({
+      name: s.name || s.stageName || `阶段${i + 1}`,
+      status: s.status === 'FAILED' ? 'error' : s.status === 'RUNNING' ? 'running' : 'success',
+      duration: s.duration || s.costTime || 1000,
+      offset: s.offset || 0,
+      width: s.width || 25
+    }))
+  }
   if (row.status === 'SKIPPED') return []
-  const stages = [
+  return [
     { name: '抽取', status: 'success', duration: 3000, offset: 0, width: 30 },
     { name: '转换', status: row.status === 'FAILED' ? 'error' : 'success', duration: 4000, offset: 30, width: 40 },
     { name: '加载', status: row.status === 'FAILED' ? 'pending' : 'success', duration: 5000, offset: 70, width: 30 },
   ]
-  return stages
 }
 
 // 重试

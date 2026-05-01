@@ -139,10 +139,11 @@
 </template>
 
 <script setup>
-import { ref, reactive, onMounted } from 'vue'
+import { ref, reactive, onMounted, watch } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { ElMessage } from 'element-plus'
-import { getLogPage, exportLog } from '@/api'
+import { getLogPage, getLogStats, getTraceDetail, exportLog } from '@/api'
+import dayjs from 'dayjs'
 
 const router = useRouter()
 const route = useRoute()
@@ -164,41 +165,6 @@ const queryParams = reactive({
   keyword: ''
 })
 
-// 生成模拟数据
-const generateMockData = () => {
-  const levels = ['INFO', 'WARN', 'ERROR', 'DEBUG']
-  const modules = ['SYNC', 'TRANSFORM', 'VALIDATE']
-  const messages = [
-    '数据同步成功，共处理1000条记录',
-    '数据转换完成，耗时2.3秒',
-    '警告：检测到重复数据，已自动跳过',
-    '错误：数据库连接超时，请检查配置',
-    '调试信息：开始执行任务A'
-  ]
-
-  const data = []
-  for (let i = 0; i < 20; i++) {
-    const now = new Date()
-    now.setMinutes(now.getMinutes() - i)
-    const level = levels[Math.floor(Math.random() * levels.length)]
-    const hasTransform = Math.random() > 0.6 && level === 'INFO'
-
-    data.push({
-      id: i + 1,
-      timestamp: now.toLocaleString('zh-CN'),
-      traceId: 'TRC-' + Math.random().toString(36).substr(2, 12).toUpperCase(),
-      level: level,
-      module: modules[Math.floor(Math.random() * modules.length)],
-      message: messages[Math.floor(Math.random() * messages.length)],
-      transformData: hasTransform ? {
-        source: { id: 1001, name: '测试数据', status: 'active' },
-        target: { id: 1001, name: '测试数据', status: 'active', created: now.toISOString() }
-      } : null
-    })
-  }
-  return data
-}
-
 onMounted(() => {
   if (route.query.keyword) {
     queryParams.keyword = route.query.keyword
@@ -209,15 +175,42 @@ onMounted(() => {
   handleSearch()
 })
 
+const buildParams = () => {
+  const params = {
+    pageNum: queryParams.pageNum,
+    pageSize: queryParams.pageSize,
+    keyword: queryParams.keyword || undefined
+  }
+  if (queryParams.taskId) params.taskId = queryParams.taskId
+  if (queryParams.level) params.level = queryParams.level
+  if (queryParams.module) params.module = queryParams.module
+  if (queryParams.dateRange && queryParams.dateRange.length === 2) {
+    params.startTime = queryParams.dateRange[0]
+    params.endTime = queryParams.dateRange[1]
+  }
+  return params
+}
+
 const handleSearch = async () => {
   loading.value = true
   try {
-    // 模拟API调用
-    await new Promise(resolve => setTimeout(resolve, 500))
-    tableData.value = generateMockData()
-    total.value = 100
+    const res = await getLogPage(buildParams())
+    if (res.data) {
+      tableData.value = (res.data.records || res.data.list || []).map(item => ({
+        ...item,
+        timestamp: item.timestamp || item.createTime || '-',
+        traceId: item.traceId || '-',
+        level: item.level || 'INFO',
+        module: item.module || '-',
+        message: item.message || '-',
+        transformData: item.transformData || null
+      }))
+      total.value = res.data.total || 0
+    }
   } catch (e) {
-    console.error(e)
+    console.error('加载日志失败:', e)
+    tableData.value = []
+    total.value = 0
   } finally {
     loading.value = false
   }
@@ -225,7 +218,15 @@ const handleSearch = async () => {
 
 const handleExport = async () => {
   try {
-    ElMessage.success('导出任务已开始，请稍后查看')
+    const res = await exportLog(buildParams())
+    const blob = res instanceof Blob ? res : new Blob([JSON.stringify(res, null, 2)], { type: 'text/plain;charset=utf-8' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = `log-export-${dayjs().format('YYYYMMDD-HHmmss')}.txt`
+    a.click()
+    URL.revokeObjectURL(url)
+    ElMessage.success('导出成功')
   } catch (e) {
     ElMessage.error('导出失败')
   }

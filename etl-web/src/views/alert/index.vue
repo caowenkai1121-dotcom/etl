@@ -101,7 +101,7 @@
             <el-table-column prop="condition" label="条件" min-width="200" show-overflow-tooltip />
             <el-table-column prop="enabled" label="状态" width="80">
               <template #default="{ row }">
-                <el-switch v-model="row.enabled" @change="toggleRule(row)" />
+                <el-switch v-model="row.enabled" @change="(val) => toggleRule(row, val)" />
               </template>
             </el-table-column>
             <el-table-column label="操作" width="140">
@@ -267,7 +267,8 @@ import { ElMessage, ElMessageBox } from 'element-plus'
 import * as echarts from 'echarts'
 import {
   getAlertRecordPage, getAlertRulePage, createAlertRule, updateAlertRule, deleteAlertRule,
-  toggleAlertRule, getAlertChannelList, createAlertChannel, updateAlertChannel
+  toggleAlertRule, getAlertChannelList, createAlertChannel, updateAlertChannel,
+  resolveAlert, ignoreAlert
 } from '@/api'
 
 const activeTab = ref('list')
@@ -338,39 +339,6 @@ const webhookConfig = reactive({
 const trendChartRef = ref(null)
 let trendChart = null
 
-// 生成模拟数据
-const generateAlertData = () => {
-  const severities = ['CRITICAL', 'ERROR', 'WARNING', 'INFO']
-  const types = ['同步延迟', '连接异常', '系统错误', '阈值超限']
-  const statuses = ['PENDING', 'CONFIRMED', 'RESOLVED']
-
-  const data = []
-  for (let i = 0; i < 8; i++) {
-    const severity = severities[Math.floor(Math.random() * severities.length)]
-    const status = statuses[Math.floor(Math.random() * statuses.length)]
-    const now = new Date()
-    now.setMinutes(now.getMinutes() - i * 30)
-    data.push({
-      id: i + 1,
-      timestamp: now.toLocaleString('zh-CN'),
-      ruleName: `规则${i + 1}`,
-      type: types[Math.floor(Math.random() * types.length)],
-      severity: severity,
-      message: `检测到${severity === 'CRITICAL' ? '严重' : severity === 'ERROR' ? '错误' : severity === 'WARNING' ? '警告' : '信息'}级告警，需要及时处理`,
-      status: status
-    })
-  }
-  return data
-}
-
-const generateRuleData = () => {
-  return [
-    { id: 1, name: '同步延迟告警', type: 'THRESHOLD', severity: 'WARNING', condition: '{"delay": 30}', channels: ['EMAIL'], enabled: true },
-    { id: 2, name: '成功率告警', type: 'TREND', severity: 'ERROR', condition: '{"successRate": 0.9}', channels: ['EMAIL', 'DINGTALK'], enabled: true },
-    { id: 3, name: '资源使用告警', type: 'SMART', severity: 'CRITICAL', condition: '{"cpu": 90}', channels: ['DINGTALK', 'WEBHOOK'], enabled: false }
-  ]
-}
-
 onMounted(() => {
   fetchAlertList()
   fetchRuleList()
@@ -379,11 +347,26 @@ onMounted(() => {
 const fetchAlertList = async () => {
   loading.value = true
   try {
-    await new Promise(resolve => setTimeout(resolve, 500))
-    alertList.value = generateAlertData()
-    listTotal.value = 25
+    const res = await getAlertRecordPage({
+      pageNum: listQuery.pageNum,
+      pageSize: listQuery.pageSize,
+      severity: listQuery.severity || undefined,
+      status: listQuery.status || undefined
+    })
+    if (res.data) {
+      alertList.value = (res.data.records || res.data.list || []).map(item => ({
+        ...item,
+        timestamp: item.timestamp || item.createTime || '-',
+        ruleName: item.ruleName || '-',
+        type: item.type || '-',
+        severity: item.severity || 'INFO',
+        message: item.message || '-',
+        status: item.status || 'PENDING'
+      }))
+      listTotal.value = res.data.total || 0
+    }
   } catch (e) {
-    console.error(e)
+    console.error('加载告警列表失败:', e)
   } finally {
     loading.value = false
   }
@@ -391,36 +374,40 @@ const fetchAlertList = async () => {
 
 const fetchRuleList = async () => {
   ruleLoading.value = true
+  rulesLoaded.value = false
   try {
-    await new Promise(resolve => setTimeout(resolve, 300))
-    ruleList.value = generateRuleData()
+    const res = await getAlertRulePage({ pageNum: 1, pageSize: 50 })
+    if (res.data) {
+      ruleList.value = res.data.records || res.data.list || []
+    }
   } catch (e) {
-    console.error(e)
+    console.error('加载规则列表失败:', e)
   } finally {
     ruleLoading.value = false
+    setTimeout(() => { rulesLoaded.value = true }, 300)
   }
 }
 
-const confirmAlert = (row) => {
-  ElMessageBox.confirm(`确定要确认该告警吗？`, '提示', {
-    confirmButtonText: '确认',
-    cancelButtonText: '取消',
-    type: 'warning'
-  }).then(() => {
-    row.status = 'CONFIRMED'
+const confirmAlert = async (row) => {
+  try {
+    await ElMessageBox.confirm('确定要确认该告警吗？', '提示', { type: 'warning' })
+    await resolveAlert(row.id)
+    row.status = 'RESOLVED'
     ElMessage.success('告警已确认')
-  }).catch(() => {})
+  } catch (e) { /* cancel */ }
 }
 
-const silenceAlert = (row) => {
-  ElMessageBox.prompt('请输入静默时间（分钟）', '静默告警', {
-    confirmButtonText: '确定',
-    cancelButtonText: '取消',
-    inputPattern: /^[0-9]+$/,
-    inputErrorMessage: '请输入有效的数字'
-  }).then(({ value }) => {
+const silenceAlert = async (row) => {
+  try {
+    const { value } = await ElMessageBox.prompt('请输入静默时间（分钟）', '静默告警', {
+      confirmButtonText: '确定',
+      cancelButtonText: '取消',
+      inputPattern: /^[0-9]+$/,
+      inputErrorMessage: '请输入有效的数字'
+    })
+    await ignoreAlert(row.id)
     ElMessage.success(`告警已静默 ${value} 分钟`)
-  }).catch(() => {})
+  } catch (e) { /* cancel */ }
 }
 
 const showTrend = async () => {
@@ -532,12 +519,15 @@ const deleteRule = async (row) => {
   }
 }
 
-const toggleRule = async (row) => {
+const rulesLoaded = ref(false)
+
+const toggleRule = async (row, val) => {
+  if (!rulesLoaded.value) return
   try {
-    await toggleAlertRule(row.id, row.enabled)
-    ElMessage.success(row.enabled ? '规则已启用' : '规则已禁用')
+    await toggleAlertRule(row.id, val)
+    ElMessage.success(val ? '规则已启用' : '规则已禁用')
   } catch (e) {
-    row.enabled = !row.enabled
+    row.enabled = !val
     console.error(e)
   }
 }
