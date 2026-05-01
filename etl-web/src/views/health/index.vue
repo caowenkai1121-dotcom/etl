@@ -168,7 +168,7 @@
 <script setup>
 import { ref, reactive, onMounted, onUnmounted } from 'vue'
 import { ElMessage } from 'element-plus'
-import { getHealthDetail } from '@/api'
+import { getHealthDetail, getPoolStatus, getThreadPoolStatus, getSystemInfo } from '@/api'
 
 const systemStatus = ref('UP')
 const lastCheckTime = ref('')
@@ -250,23 +250,37 @@ const updateTime = () => {
 const refreshData = async () => {
   refreshing.value = true
   try {
-    // 模拟API调用
-    await new Promise(resolve => setTimeout(resolve, 800))
-    // 更新随机数据
-    poolStats.active = Math.floor(Math.random() * 15) + 5
-    poolStats.idle = 20 - poolStats.active
-    poolStats.usage = Math.floor((poolStats.active / 20) * 100)
+    const [healthRes, poolRes, sysRes] = await Promise.all([
+      getHealthDetail().catch(() => ({})),
+      getPoolStatus().catch(() => ({})),
+      getSystemInfo().catch(() => ({}))
+    ])
+
+    const healthData = healthRes.data || healthRes || {}
+    const poolData = poolRes.data || poolRes || {}
+    const sysData = sysRes.data || sysRes || {}
+
+    systemStatus.value = healthData.status || 'UP'
+    dbStatus.mysql = healthData.mysql || healthData.mysqlStatus || dbStatus.mysql
+    dbStatus.redis = healthData.redis || healthData.redisStatus || dbStatus.redis
+
+    if (poolData.active !== undefined) poolStats.active = poolData.active
+    if (poolData.idle !== undefined) poolStats.idle = poolData.idle
+    if (poolData.max !== undefined) poolStats.max = poolData.max
+    if (poolData.waiting !== undefined) poolStats.waiting = poolData.waiting
+    poolStats.usage = Math.floor((poolStats.active / Math.max(poolStats.max, 1)) * 100)
     poolStats.idlePercent = 100 - poolStats.usage
-    poolStats.waiting = Math.floor(Math.random() * 3)
 
-    jvmStats.used = Math.floor(Math.random() * 2000000000) + 2000000000
-    jvmStats.usage = Math.floor((jvmStats.used / jvmStats.max) * 100)
-    jvmStats.threads = Math.floor(Math.random() * 50) + 130
-    jvmStats.gcCount += Math.floor(Math.random() * 5)
+    if (sysData.heapUsed !== undefined) jvmStats.used = sysData.heapUsed
+    if (sysData.heapMax !== undefined) jvmStats.max = sysData.heapMax
+    jvmStats.usage = Math.floor((jvmStats.used / Math.max(jvmStats.max, 1)) * 100)
+    if (sysData.threads !== undefined) jvmStats.threads = sysData.threads
+    if (sysData.gcCount !== undefined) jvmStats.gcCount = sysData.gcCount
 
-    diskStats.usage = Math.floor(Math.random() * 20) + 70
-    diskStats.used = Math.floor((diskStats.usage / 100) * diskStats.total)
+    if (sysData.diskUsed !== undefined) diskStats.used = sysData.diskUsed
+    if (sysData.diskTotal !== undefined) diskStats.total = sysData.diskTotal
     diskStats.free = diskStats.total - diskStats.used
+    diskStats.usage = Math.floor((diskStats.used / Math.max(diskStats.total, 1)) * 100)
     diskStats.freePercent = 100 - diskStats.usage
 
     updateTime()
