@@ -190,7 +190,7 @@
           <template #header>
             <div class="card-header">
               <span class="card-title"><el-icon><Document /></el-icon> 操作日志</span>
-              <el-button text type="primary">更多</el-button>
+              <el-button text type="primary" @click="router.push('/log')">更多</el-button>
             </div>
           </template>
           <el-timeline>
@@ -216,8 +216,11 @@
 
 <script setup>
 import { ref, reactive, computed, onMounted, onUnmounted, nextTick } from 'vue'
+import { useRouter } from 'vue-router'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import * as echarts from 'echarts'
+
+const router = useRouter()
 
 const loading = ref(false)
 const tableData = ref([])
@@ -402,7 +405,7 @@ const startAutoRefresh = () => {
 }
 
 const handleViewLog = (row) => {
-  ElMessage.info(`查看任务 ${row.taskName} 的执行日志`)
+  router.push({ path: '/log', query: { task: row.taskName } })
 }
 
 const handleKill = async (row) => {

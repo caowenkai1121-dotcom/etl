@@ -140,11 +140,12 @@
 
 <script setup>
 import { ref, reactive, onMounted } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import { ElMessage } from 'element-plus'
 import { getLogPage, exportLog } from '@/api'
 
 const router = useRouter()
+const route = useRoute()
 
 const loading = ref(false)
 const sqlMode = ref(false)
@@ -199,6 +200,12 @@ const generateMockData = () => {
 }
 
 onMounted(() => {
+  if (route.query.keyword) {
+    queryParams.keyword = route.query.keyword
+  }
+  if (route.query.task) {
+    queryParams.keyword = route.query.task
+  }
   handleSearch()
 })
 
