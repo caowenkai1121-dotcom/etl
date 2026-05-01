@@ -252,6 +252,7 @@
 import { ref, reactive, onMounted, computed } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { Share, Plus, ArrowLeft, Check, CaretRight, Close, View } from '@element-plus/icons-vue'
+import { getTransformPipelinePage } from '@/api'
 
 // 状态
 const showEditor = ref(false)
@@ -317,14 +318,6 @@ const allRules = [
   { id: 'type_infer', name: '类型推断', category: 'advanced', icon: '🎯', config: [] }
 ]
 
-// 模拟数据
-const mockPipelines = [
-  { id: 1, name: '用户数据清洗', description: '清洗用户数据，脱敏手机号和邮箱', status: 'ENABLED', stageCount: 4, source: 'MySQL', target: 'PostgreSQL' },
-  { id: 2, name: '订单数据转换', description: '订单数据格式转换', status: 'ENABLED', stageCount: 3, source: 'MySQL', target: 'Elasticsearch' },
-  { id: 3, name: '日志数据处理', description: '日志数据解析和处理', status: 'DISABLED', stageCount: 5, source: 'Kafka', target: 'ClickHouse' },
-  { id: 4, name: '产品数据同步', description: '产品数据转换和同步', status: 'ENABLED', stageCount: 2, source: 'PostgreSQL', target: 'MongoDB' }
-]
-
 onMounted(() => {
   fetchData()
 })
@@ -332,9 +325,20 @@ onMounted(() => {
 const fetchData = async () => {
   loading.value = true
   try {
-    await new Promise(resolve => setTimeout(resolve, 500))
-    pipelineList.value = mockPipelines
-    total.value = mockPipelines.length
+    const res = await getTransformPipelinePage({
+      pageNum: queryParams.pageNum,
+      pageSize: queryParams.pageSize,
+      keyword: queryParams.name || undefined
+    })
+    if (res.data) {
+      pipelineList.value = (res.data.records || res.data.list || []).map(item => ({
+        ...item,
+        stageCount: item.stageCount ?? item.stages?.length ?? 0,
+        source: item.source || '-',
+        target: item.target || '-'
+      }))
+      total.value = res.data.total || 0
+    }
   } catch (e) {
     console.error(e)
   } finally {
