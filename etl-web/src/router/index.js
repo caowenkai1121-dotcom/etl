@@ -207,7 +207,30 @@ const routes = [
       },
 
       // ========== System Management ==========
-      // (routes shared with system section in menu)
+      {
+        path: 'system',
+        name: 'SystemManagement',
+        component: () => import('@/views/system/index.vue'),
+        meta: { section: 'system', title: '系统管理' }
+      },
+      {
+        path: 'system/users',
+        name: 'SystemUsers',
+        component: () => import('@/views/system/index.vue'),
+        meta: { section: 'system', title: '用户管理' }
+      },
+      {
+        path: 'system/roles',
+        name: 'SystemRoles',
+        component: () => import('@/views/system/index.vue'),
+        meta: { section: 'system', title: '角色管理' }
+      },
+      {
+        path: 'system/settings',
+        name: 'SystemSettings',
+        component: () => import('@/views/system/index.vue'),
+        meta: { section: 'system', title: '系统设置' }
+      },
 
       // ========== Recycle Bin ==========
       {

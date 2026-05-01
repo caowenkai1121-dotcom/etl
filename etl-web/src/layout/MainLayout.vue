@@ -302,8 +302,9 @@ const moduleSubMenus = {
     {
       group: '系统管理',
       items: [
-        { path: '/config', label: '系统配置', icon: 'Setting' },
-        { path: '/health', label: '健康检查', icon: 'FirstAidKit' }
+        { path: '/system', label: '用户管理', icon: 'User' },
+        { path: '/system/roles', label: '角色管理', icon: 'Avatar' },
+        { path: '/system/settings', label: '系统设置', icon: 'Setting' }
       ]
     }
   ],
