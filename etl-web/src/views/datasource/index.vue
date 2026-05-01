@@ -526,8 +526,11 @@ const handleBatchTest = async () => {
 const handleTestConnection = async () => {
   testConnLoading.value = true
   try {
-    // 实际应调用API
-    await new Promise(resolve => setTimeout(resolve, 1000))
+    if (form.id) {
+      await datasourceAPI.testConnection(form.id)
+    } else {
+      await datasourceAPI.create(form)
+    }
     ElMessage.success('连接测试成功')
   } catch (e) {
     ElMessage.error('连接测试失败')
