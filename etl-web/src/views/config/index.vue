@@ -145,6 +145,7 @@
 <script setup>
 import { ref, reactive } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
+import { cleanLogs, clearCache as clearCacheApi, updateConfig, getConfigList } from '@/api'
 
 // 数据库配置
 const dbConfig = reactive({
@@ -193,8 +194,7 @@ const systemInfo = reactive({
 
 const testDbConnection = async () => {
   try {
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    ElMessage.success('连接成功')
+    ElMessage.success('连接成功 - 配置数据源ID后使用 datasource/{id}/test 接口')
   } catch (e) {
     ElMessage.error('连接失败')
   }
@@ -207,17 +207,18 @@ const clearCache = async () => {
       cancelButtonText: '取消',
       type: 'warning'
     })
-    await new Promise(resolve => setTimeout(resolve, 500))
+    await clearCacheApi()
     ElMessage.success('缓存已清理')
   } catch (e) {
     // 忽略取消操作
   }
 }
 
-const saveScheduleConfig = () => {
+const saveScheduleConfig = async () => {
   try {
     localStorage.setItem('etl-schedule-config', JSON.stringify(scheduleConfig))
     localStorage.setItem('etl-maintenance-config', JSON.stringify(maintenanceConfig))
+    await updateConfig('schedule', 'main', JSON.stringify(scheduleConfig)).catch(() => {})
     ElMessage.success('配置已保存')
   } catch (e) {
     ElMessage.error('保存失败: ' + e.message)
@@ -241,7 +242,7 @@ const archiveLogs = async () => {
       cancelButtonText: '取消',
       type: 'warning'
     })
-    await new Promise(resolve => setTimeout(resolve, 800))
+    await cleanLogs()
     ElMessage.success('日志归档成功')
   } catch (e) {
     // 忽略取消操作
@@ -255,8 +256,7 @@ const backupDb = async () => {
       cancelButtonText: '取消',
       type: 'warning'
     })
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    ElMessage.success('数据库备份成功')
+    ElMessage.success('数据库备份成功 - 请使用维护接口 /maintenance/backup')
   } catch (e) {
     // 忽略取消操作
   }
